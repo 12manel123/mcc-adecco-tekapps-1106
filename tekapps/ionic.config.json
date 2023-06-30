@@ -1,0 +1,7 @@
+{
+  "name": "tekapps",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
