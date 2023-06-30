@@ -83,19 +83,21 @@
    */
 
   body {
-    --ion-color-primary: #428cff;
+    /** Primary (Usado: Iconos de tabs) **/
+    --ion-color-primary: #FEC600;
     --ion-color-primary-rgb: 66,140,255;
-    --ion-color-primary-contrast: #ffffff;
+    --ion-color-primary-contrast: #000000;
     --ion-color-primary-contrast-rgb: 255,255,255;
-    --ion-color-primary-shade: #3a7be0;
-    --ion-color-primary-tint: #5598ff;
+    --ion-color-primary-shade: #FEC600;
+    --ion-color-primary-tint: #ffe37c;
 
-    --ion-color-secondary: #50c8ff;
+    /** Secondary (Usado: Header) **/
+    --ion-color-secondary: #404040;
     --ion-color-secondary-rgb: 80,200,255;
     --ion-color-secondary-contrast: #ffffff;
     --ion-color-secondary-contrast-rgb: 255,255,255;
-    --ion-color-secondary-shade: #46b0e0;
-    --ion-color-secondary-tint: #62ceff;
+    --ion-color-secondary-shade: #404040;
+    --ion-color-secondary-tint: #636363;
 
     --ion-color-tertiary: #6a64ff;
     --ion-color-tertiary-rgb: 106,100,255;

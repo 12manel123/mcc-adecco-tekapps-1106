@@ -1,18 +1,26 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="secondary"><!--con el color, apartir de "theme->variables.scss" se edita todos los colores primarios-->
+    <ion-buttons slot="end"><!--con slot se posiciona-->
+      <ion-button>
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
     <ion-title>
-      Tab 1
+      <ion-buttons >
+        <ion-button>
+          <img src="../../assets/img/logo_tekapps_color.png">
+        </ion-button>
+      </ion-buttons>
     </ion-title>
+    
+    <ion-action-sheet trigger="open-action-sheet" header="Actions" ></ion-action-sheet>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
+  <h3 class="animate__animated animate__backInLeft">STREAM EN VIVO</h3>
+  <h3 class="animate__animated animate__backInLeft">CATEGORIAS EN VIVO</h3>
+  <h3 class="animate__animated animate__backInLeft">GRUPOS TOP EN VIVO</h3>
 
-      <ion-title size="large">Tab 1 Manel es un Crack soy furro y guapo</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
