@@ -1,0 +1,37 @@
+.scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  
+  .preview-container {
+    display: flex;
+  }
+  
+  .preview-card {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 10px;
+    background-color: #000000;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+  
+    img {
+      width: 100%;
+      max-height: 150px;
+      object-fit: cover;
+      transition: transform 0.3s ease; /* Transición suave */
+  
+      &:hover {
+        transform: scale(1.05); /* Aumentar el tamaño en un 5% */
+      }
+    }
+  }
