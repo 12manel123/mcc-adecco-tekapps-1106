@@ -10,13 +10,21 @@
     display: none;
   }
 }
-h3{
+.preview-card h5 {
+  text-align: left;
+}
+.preview-card p {
+  text-align: left;
+}
+h3 {
   margin-left: 5%;
 }
-hr{
+
+hr {
   background-color: white;
   margin-left: 3%;
 }
+
 .preview-container {
   display: flex;
 }
@@ -45,8 +53,18 @@ hr{
   border-width: 1px;
   border-style: ridge;
 }
-@media (prefers-color-scheme: dark) {
-b{
-  color:#FFE277;
+
+.preview-card h5 {
+  margin-top: 10px;
 }
+
+.preview-card p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+  b {
+    color: #FFE277;
+  }
 }
