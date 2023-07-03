@@ -4,7 +4,6 @@ FormGroup,
 FormControl,
 Validators,
 FormBuilder } from '@angular/forms';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -13,13 +12,16 @@ FormBuilder } from '@angular/forms';
 export class LoginPage implements OnInit {
 
   formularioLogin: FormGroup;
-
+  
   constructor(public fb: FormBuilder) { 
-this.formularioLogin =this.fb.group ({
-  'nombre': new FormControl("",Validators.required),
-  'password': new FormControl("",Validators.required)
-})
+    
+    this.formularioLogin =this.fb.group ({
+      'nombre': new FormControl("",Validators.required),
+      'password': new FormControl("",Validators.required)
+    })
   }
   ngOnInit() {
   }
+
+
 }
