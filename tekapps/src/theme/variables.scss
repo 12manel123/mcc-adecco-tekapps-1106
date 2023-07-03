@@ -4,20 +4,20 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #3880ff;
-  --ion-color-primary-rgb: 56, 128, 255;
-  --ion-color-primary-contrast: #ffffff;
-  --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #3171e0;
-  --ion-color-primary-tint: #4c8dff;
+  --ion-color-primary: #FEC600;
+  --ion-color-primary-rgb: 66,140,255;
+  --ion-color-primary-contrast: #000000;
+  --ion-color-primary-contrast-rgb: 255,255,255;
+  --ion-color-primary-shade: #FEC600;
+  --ion-color-primary-tint: #ffe37c;
 
-  /** secondary **/
-  --ion-color-secondary: #3dc2ff;
-  --ion-color-secondary-rgb: 61, 194, 255;
+  /** Secondary (Usado: Header) **/
+  --ion-color-secondary: #404040;
+  --ion-color-secondary-rgb: 80,200,255;
   --ion-color-secondary-contrast: #ffffff;
-  --ion-color-secondary-contrast-rgb: 255, 255, 255;
-  --ion-color-secondary-shade: #36abe0;
-  --ion-color-secondary-tint: #50c8ff;
+  --ion-color-secondary-contrast-rgb: 255,255,255;
+  --ion-color-secondary-shade: #404040;
+  --ion-color-secondary-tint: #636363;
 
   /** tertiary **/
   --ion-color-tertiary: #5260ff;
@@ -155,7 +155,7 @@
    */
 
   .ios body {
-    --ion-background-color: #000000;
+    --ion-background-color: #1C1C1C;
     --ion-background-color-rgb: 0,0,0;
 
     --ion-text-color: #ffffff;
@@ -199,7 +199,7 @@
    */
 
   .md body {
-    --ion-background-color: #121212;
+    --ion-background-color: #1C1C1C;
     --ion-background-color-rgb: 18,18,18;
 
     --ion-text-color: #ffffff;
