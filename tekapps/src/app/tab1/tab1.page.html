@@ -17,29 +17,23 @@
     <ion-action-sheet trigger="open-action-sheet" header="Actions" ></ion-action-sheet>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
-  <h3 class="animate__animated animate__backInLeft">Stream en vivo</h3>
+  <h3 class="animate__animated animate__backInLeft"><b>Stream</b> en vivo</h3><hr>
   <div class="scroll-container">
     <div class="preview-container">
-      <div class="preview-card">
-        <img src="../../assets/img/gameplay1.png" alt="Preview del directo">
-        <h3>Jugando con los amigos!</h3>
-        <p>Valorant</p>
+      <div class="preview-card" [routerLink]="'canal/'+directos[0].route+'/'">
+        <img [src]="'../../assets/img/' + directos[0].imagen" alt="Preview del directo">
+        <h5>{{directos[0].titulo}}</h5>
+        <p>{{directos[0].descripcion}}</p>
       </div>
-      <div class="preview-card">
-        <img src="../../assets/img/gameplay1.png" alt="Preview del directo">
-        <h3>Jugando con los amigos!</h3>
-        <p>Valorant</p>
-      </div>
-      <div class="preview-card">
-        <img src="../../assets/img/gameplay1.png" alt="Preview del directo">
-        <h3>Jugando con los amigos!</h3>
-        <p>Valorant</p>
+      <div class="preview-card" [routerLink]="'canal/'+directos[1].route+'/'">
+        <img [src]="'../../assets/img/' + directos[1].imagen" alt="Preview del directo">
+        <h5>{{directos[0].titulo}}</h5>
+        <p>{{directos[1].descripcion}}</p>
       </div>
     </div>
   </div>
-  <h3 class="animate__animated animate__backInLeft">Categorias en vivo de Juan</h3>
+  <h3 class="animate__animated animate__backInLeft"><b>Categorías</b> en vivo</h3><hr>
   <div class="scroll-container">
     <div class="preview-container">
       <div class="preview-card">
@@ -59,21 +53,6 @@
       </div>
     </div>
   </div>
-  <h3 class="animate__animated animate__backInLeft">GRUPOS TOP EN VIVO</h3>
-  
+  <h3 class="animate__animated animate__backInLeft"><b>Grupos TOP</b> en vivo</h3><hr>
 
 </ion-content>
-<script>
-  const directos = [
-    {
-      imagen: 'directo1.jpg',
-      titulo: 'Directo 1',
-      descripcion: 'Descripción del directo 1',
-    },
-    {
-      imagen: 'directo2.jpg',
-      titulo: 'Directo 2',
-      descripcion: 'Descripción del directo 2',
-    },
-  ];
-</script>
