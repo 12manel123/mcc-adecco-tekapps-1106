@@ -14,7 +14,19 @@ const routes: Routes = [
   {path: '',
     
   loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-},
+},  {
+    path: 'mi-canal',
+    loadChildren: () => import('./mi-canal/mi-canal.module').then( m => m.MiCanalPageModule)
+  },
+  {
+    path: 'privacidad',
+    loadChildren: () => import('./privacidad/privacidad.module').then( m => m.PrivacidadPageModule)
+  },
+  {
+    path: 'busqueda',
+    loadChildren: () => import('./busqueda/busqueda.module').then( m => m.BusquedaPageModule)
+  },
+
 
 ];
 @NgModule({
