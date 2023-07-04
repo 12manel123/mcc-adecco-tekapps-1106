@@ -14,7 +14,8 @@ const routes: Routes = [
   {path: '',
     
   loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-},  {
+},
+  {
     path: 'mi-canal',
     loadChildren: () => import('./mi-canal/mi-canal.module').then( m => m.MiCanalPageModule)
   },
@@ -46,10 +47,7 @@ const routes: Routes = [
     path: 'ayuda',
     loadChildren: () => import('./ayuda/ayuda.module').then( m => m.AyudaPageModule)
   },
-  {
-    path: 'cerrar-sesion',
-    loadChildren: () => import('./cerrar-sesion/cerrar-sesion.module').then( m => m.CerrarSesionPageModule)
-  },
+ 
 
 
 ];
