@@ -1,3 +1,15 @@
+b {
+  color: #ffc800;
+}
+.preview-card {
+  flex: 0 0 auto;
+  width: 200px;
+  margin-right: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
 .scroll-container {
   width: 100%;
   overflow-x: auto;
@@ -21,7 +33,7 @@ h3 {
 }
 
 hr {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   margin-left: 3%;
 }
 
@@ -33,7 +45,7 @@ hr {
   flex: 0 0 auto;
   width: 200px;
   margin-right: 10px;
-  background-color: #1C1C1C;
+  background-color: #ffffff;
   border-radius: 5px;
   padding: 10px;
   text-align: center;
@@ -68,7 +80,88 @@ hr {
 }
 
 @media (prefers-color-scheme: dark) {
+  
   b {
     color: #FFE277;
+  }
+  .preview-card {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 10px;
+    background-color: #1C1C1C;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+  }
+  h5,p,h3{
+    color: white;
+  }
+  .scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .preview-card h5 {
+    text-align: left;
+  }
+  .preview-card p {
+    text-align: left;
+  }
+  h3 {
+    margin-left: 5%;
+  }
+  
+  hr {
+    background-color: rgb(255, 255, 255);
+    margin-left: 3%;
+  }
+  
+  .preview-container {
+    display: flex;
+  }
+  
+  .preview-card {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 10px;
+    background-color: #1C1C1C;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .preview-card img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 5%;
+    transition: transform 0.3s ease;
+  }
+  .category img{
+    width: 200%;
+    height: 100%;
+  }
+  
+  .preview-card img:hover {
+    transform: scale(1.05); 
+    border-color: #c09000;
+    border-width: 1px;
+    border-style: ridge;
+  }
+  
+  .preview-card h5 {
+    margin-top: 10px;
+  }
+  
+  .preview-card p {
+    margin-top: 5px;
+    font-size: 14px;
   }
 }

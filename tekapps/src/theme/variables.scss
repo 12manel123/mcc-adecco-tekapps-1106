@@ -2,7 +2,11 @@
 // http://ionicframework.com/docs/theming/
 
 /** Ionic CSS Variables **/
+
 :root {
+
+
+  --ion-background-color: #ffffff;
   /** primary **/
   --ion-color-primary: #FEC600;
   --ion-color-primary-rgb: 66,140,255;
@@ -77,13 +81,11 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  /*
-   * Dark Colors
-   * -------------------------------------------
-   */
+
 
   body {
-    /** Primary (Usado: Iconos de tabs) **/
+    --ion-background-color: #1C1C1C;
+
     --ion-color-primary: #FEC600;
     --ion-color-primary-rgb: 66,140,255;
     --ion-color-primary-contrast: #000000;
@@ -91,7 +93,6 @@
     --ion-color-primary-shade: #FEC600;
     --ion-color-primary-tint: #ffe37c;
 
-    /** Secondary (Usado: Header) **/
     --ion-color-secondary: #404040;
     --ion-color-secondary-rgb: 80,200,255;
     --ion-color-secondary-contrast: #ffffff;
