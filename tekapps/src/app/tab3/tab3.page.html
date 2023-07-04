@@ -55,39 +55,26 @@
       <ion-toggle slot="end"></ion-toggle>
     </ion-item>
     <ion-item>
-      <ion-label>Privacidad y Seguridad</ion-label>
-      <ion-select interface="action-sheet">
-        <ion-select-option value="en">Contacto</ion-select-option>
-        <ion-select-option value="es">Contraseña</ion-select-option>
-        </ion-select>
+      <ion-label [routerLink]="['/privacidad-seguridad']">Privacidad y Seguridad</ion-label>
+      <div slot="end" class="subtitle">Contacto, Contraseña</div>
       </ion-item>
       <ion-item>
-        <ion-label>Preferencias</ion-label>
-        <ion-select interface="action-sheet">
-          <ion-select-option value="en">Sonido emergente</ion-select-option>
-          <ion-select-option value="es">Reproductor de Fondo</ion-select-option>
-          </ion-select>
-        </ion-item>
-        <ion-item>
-        <ion-label>Recomendaciones</ion-label>
+        <ion-label [routerLink]="['/conexiones']">Conexiones</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label>Conexiones</ion-label>
+        <ion-label [routerLink]="['/sistema']">Sistema</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label>Sistema</ion-label>
+        <ion-label [routerLink]="['/directrices-comunidad']">Directrices De La Comunidad</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label>Directrices De La Comunidad</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>Ayuda</ion-label>
+        <ion-label [routerLink]="['/ayuda']">Ayuda</ion-label>
       </ion-item>
       <ion-item>
         <ion-label [routerLink]="['/privacidad']">Terminos de Servicios</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label>Cerrar Sesión</ion-label>
+        <ion-label [routerLink]="['/cerrar-sesion']">Cerrar Sesión</ion-label>
       </ion-item>
 
   </ion-list>

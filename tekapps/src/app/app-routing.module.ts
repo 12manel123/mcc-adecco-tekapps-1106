@@ -26,6 +26,30 @@ const routes: Routes = [
     path: 'busqueda',
     loadChildren: () => import('./busqueda/busqueda.module').then( m => m.BusquedaPageModule)
   },
+  {
+    path: 'conexiones',
+    loadChildren: () => import('./conexiones/conexiones.module').then( m => m.ConexionesPageModule)
+  },
+  {
+    path: 'sistema',
+    loadChildren: () => import('./sistema/sistema.module').then( m => m.SistemaPageModule)
+  },
+  {
+    path: 'privacidad-seguridad',
+    loadChildren: () => import('./privacidad-seguridad/privacidad-seguridad.module').then( m => m.PrivacidadSeguridadPageModule)
+  },
+  {
+    path: 'directrices-comunidad',
+    loadChildren: () => import('./directrices-comunidad/directrices-comunidad.module').then( m => m.DirectricesComunidadPageModule)
+  },
+  {
+    path: 'ayuda',
+    loadChildren: () => import('./ayuda/ayuda.module').then( m => m.AyudaPageModule)
+  },
+  {
+    path: 'cerrar-sesion',
+    loadChildren: () => import('./cerrar-sesion/cerrar-sesion.module').then( m => m.CerrarSesionPageModule)
+  },
 
 
 ];
