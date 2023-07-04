@@ -14,32 +14,29 @@
 <ion-content>
   <ion-card>
 <ion-card-header>
-  <ion-card-title>Registro</ion-card-title>
+  <ion-card-title color="primary"><b>Registro</b></ion-card-title>
   </ion-card-header>
   <ion-card-content>
   <form [formGroup]= "formularioRegister" (keyup.enter)= "guardar()">
   <ion-item>
-    <ion-label position ="floating">Nombre</ion-label>
-    <ion-input formControlName ="nombre"></ion-input>
+    <ion-label position ="floating" color="primary">Nombre</ion-label>
+    <ion-input formControlName ="nombre" color="primary"></ion-input>
 </ion-item>
 <ion-item>
-<ion-label position ="floating">Contraseña</ion-label>
-<ion-input formControlName ="password" type="password"></ion-input>
-</ion-item><ion-item>
-  <ion-label position ="floating">Confirmar Contraseña</ion-label>
-  <ion-input formControlName ="confirmacionPassword" type="password"></ion-input>
+<ion-label position ="floating" color="primary">Contraseña</ion-label>
+<ion-input formControlName ="password" type="password" color="primary"></ion-input>
 </ion-item>
 <ion-item>
-<ion-label position ="floating">Numero de Telefono</ion-label>
-<ion-input formControlName ="NumeroDeTelefono"></ion-input>
+<ion-label position ="floating" color="primary">Numero de Telefono</ion-label>
+<ion-input formControlName ="NumeroDeTelefono" color="primary"></ion-input>
 </ion-item>
 <ion-item>
-  <ion-label position ="floating">Fecha de Nacimiento</ion-label>
-  <ion-input displayFormat="DD/MM/YYYY" formControlName ="FechaDeNacimiento"></ion-input>
+  <ion-label position ="floating" color="primary">Fecha de Nacimiento</ion-label>
+  <ion-input displayFormat="DD/MM/YYYY" formControlName ="FechaDeNacimiento" color="primary"></ion-input>
   </ion-item>
   <br>
   <ion-buttons>
-    <ion-button [routerLink] ="['/login']">Ya tienes cuenta? Logueate</ion-button>
+    <ion-button [routerLink] ="['/login']" clas="link">Ya tienes cuenta? Logueate</ion-button>
   </ion-buttons>
   <br>
   <ion-button [routerLink] ="['/tabs/tab1']">Registrarse</ion-button>
