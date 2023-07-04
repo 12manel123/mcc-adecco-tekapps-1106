@@ -47,6 +47,14 @@ const routes: Routes = [
     path: 'ayuda',
     loadChildren: () => import('./ayuda/ayuda.module').then( m => m.AyudaPageModule)
   },
+  {
+    path: 'licencia',
+    loadChildren: () => import('./licencia/licencia.module').then( m => m.LicenciaPageModule)
+  },
+  {
+    path: 'creditos',
+    loadChildren: () => import('./creditos/creditos.module').then( m => m.CreditosPageModule)
+  },
  
 
 
