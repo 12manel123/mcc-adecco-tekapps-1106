@@ -46,6 +46,10 @@ hr {
   border-radius: 5%;
   transition: transform 0.3s ease;
 }
+.category img{
+  width: 200%;
+  height: 100%;
+}
 
 .preview-card img:hover {
   transform: scale(1.05); 
