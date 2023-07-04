@@ -1,9 +1,13 @@
 <ion-header>
-  <ion-toolbar color ="primary">
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Registro</ion-title>
+  <ion-toolbar color="secondary"><!--con el color, apartir de "theme->variables.scss" se edita todos los colores primarios-->
+    <ion-title>
+      <ion-buttons >
+        <ion-button>
+          <img src="../../assets/img/logo_tekapps_color.png">
+        </ion-button>
+      </ion-buttons>
+    </ion-title>
+    <ion-action-sheet trigger="open-action-sheet" header="Actions" ></ion-action-sheet>
   </ion-toolbar>
 </ion-header>
 
@@ -34,9 +38,15 @@
   <ion-input displayFormat="DD/MM/YYYY" formControlName ="FechaDeNacimiento"></ion-input>
   </ion-item>
   <br>
+  <ion-buttons>
+    <ion-button [routerLink] ="['/login']">Ya tienes cuenta? Logueate</ion-button>
+  </ion-buttons>
+  <br>
   <ion-button [routerLink] ="['/tabs/tab1']">Registrarse</ion-button>
 
 </form>
+
+
 </ion-card-content>
 </ion-card>
 </ion-content>
