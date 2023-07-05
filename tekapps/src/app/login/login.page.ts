@@ -12,8 +12,8 @@ export class LoginPage {
 
   constructor(private router: Router) {
     this.formularioLogin = new FormGroup({
-      nombre: new FormControl('*', Validators.required),
-      password: new FormControl('*', Validators.required)
+      nombre: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required)
     });
   }
   onIngresar() {
