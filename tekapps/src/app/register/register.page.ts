@@ -1,3 +1,4 @@
+import { VariableBinding } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { 
   FormGroup,
@@ -15,6 +16,7 @@ import { AlertController } from '@ionic/angular';
 export class RegisterPage implements OnInit {
 
   formularioRegister: FormGroup;
+
   constructor(public fb: FormBuilder,
     public alertController:AlertController) { 
     this.formularioRegister = this.fb.group({
@@ -29,6 +31,8 @@ export class RegisterPage implements OnInit {
   }
 async guardar(){
   var f = this.formularioRegister.value;
+
+
   if(this.formularioRegister.invalid){
     const alert = await this.alertController.create({
       header: 'Datos incompletos',
@@ -37,6 +41,12 @@ async guardar(){
     });
     await alert.present();
     return;
-  }}
+  }
+var usuario ={
+  nombre: f.nombre,
+  password: f.password
+}
+localStorage.setItem('usuario',JSON.stringify(usuario))
+}
 
 }

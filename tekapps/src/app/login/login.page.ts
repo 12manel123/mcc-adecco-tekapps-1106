@@ -8,8 +8,8 @@ FormBuilder } from '@angular/forms';
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
-
 })
+
 export class LoginPage implements OnInit {
   formularioLogin: FormGroup;
   constructor(public fb: FormBuilder) {
