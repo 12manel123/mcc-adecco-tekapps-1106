@@ -14,24 +14,24 @@
 <ion-content>
   <ion-card>
 <ion-card-header>
-  <ion-card-title color="primary"><b>Registro</b></ion-card-title>
+  <ion-card-title color="tertiary"><b>Registro</b></ion-card-title>
   </ion-card-header>
   <ion-card-content>
   <form [formGroup]= "formularioRegister" (keyup.enter)= "guardar()">
   <ion-item>
-    <ion-label position ="floating" color="primary">Nombre</ion-label>
+    <ion-label position ="floating" color="tertiary">Nombre</ion-label>
     <ion-input formControlName ="nombre" color="primary"></ion-input>
 </ion-item>
 <ion-item>
-<ion-label position ="floating" color="primary">Contraseña</ion-label>
+<ion-label position ="floating" color="tertiary">Contraseña</ion-label>
 <ion-input formControlName ="password" type="password" color="primary"></ion-input>
 </ion-item>
 <ion-item>
-<ion-label position ="floating" color="primary">Numero de Telefono</ion-label>
+<ion-label position ="floating" color="tertiary">Numero de Telefono</ion-label>
 <ion-input formControlName ="NumeroDeTelefono" color="primary"></ion-input>
 </ion-item>
 <ion-item>
-  <ion-label position ="floating" color="primary">Fecha de Nacimiento</ion-label>
+  <ion-label position ="floating" color="tertiary">Fecha de Nacimiento</ion-label>
   <ion-input displayFormat="DD/MM/YYYY" formControlName ="FechaDeNacimiento" color="primary"></ion-input>
   </ion-item>
   <br>

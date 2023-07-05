@@ -18,7 +18,7 @@
     </ion-toolbar>
   </ion-header>
   <ion-toolbar>
-    <ion-title>Configuración</ion-title>
+    <ion-title color="tertiary"><b>Configuración</b></ion-title>
   </ion-toolbar>
 
 
@@ -28,16 +28,16 @@
   <ion-list lines="full">
 
     <ion-item>
-      <ion-label [routerLink]="['/mi-canal']">Mi Canal</ion-label>
+      <ion-label color="tertiary" [routerLink]="['/mi-canal']"><ion-icon name="person"></ion-icon> Mi Canal</ion-label>
     </ion-item>
 
     <ion-item>
-      <ion-label>Notificaciones</ion-label>
+      <ion-label  color="tertiary"><ion-icon name="notification"></ion-icon> Notificaciones</ion-label>
       <ion-toggle slot="end"></ion-toggle>
     </ion-item>
 
     <ion-item>
-      <ion-label>Idioma</ion-label>
+      <ion-label color="tertiary"><ion-icon name="lanuage"></ion-icon> Idioma</ion-label>
       <ion-select interface="action-sheet">
         <ion-select-option value="en">Inglés</ion-select-option>
         <ion-select-option value="es">Español</ion-select-option>
@@ -50,25 +50,25 @@
       </ion-select>
     </ion-item>
     <ion-item>
-      <ion-label [routerLink]="['/privacidad-seguridad']">Privacidad y Seguridad</ion-label>
+      <ion-label color="tertiary" [routerLink]="['/privacidad-seguridad']"><ion-icon name="privacity"></ion-icon> Privacidad y Seguridad</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label [routerLink]="['/conexiones']">Conexiones</ion-label>
+        <ion-label color="tertiary" [routerLink]="['/conexiones']"><ion-icon name="conexion"></ion-icon> Conexiones</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label [routerLink]="['/sistema']">Sistema</ion-label>
+        <ion-label color="tertiary" [routerLink]="['/sistema']"><ion-icon name="system"></ion-icon> Sistema</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label [routerLink]="['/directrices-comunidad']">Directrices De La Comunidad</ion-label>
+        <ion-label color="tertiary" [routerLink]="['/directrices-comunidad']"><ion-icon name="comunity"></ion-icon> Directrices De La Comunidad</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label [routerLink]="['/ayuda']">Ayuda</ion-label>
+        <ion-label color="tertiary" [routerLink]="['/ayuda']"><ion-icon name="help"></ion-icon> Ayuda</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label [routerLink]="['/privacidad']">Terminos de Servicios</ion-label>
+        <ion-label color="tertiary" [routerLink]="['/privacidad']"><ion-icon name="services"></ion-icon> Terminos de Servicios</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label [routerLink]="['/login']">Cerrar Sesión</ion-label>
+        <ion-label color="tertiary" [routerLink]="['/login']"><ion-icon name="log-out"></ion-icon> Cerrar Sesión</ion-label>
       
       </ion-item>
   </ion-list>

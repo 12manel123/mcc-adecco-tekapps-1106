@@ -1,5 +1,5 @@
 b {
-  color: #ffc800;
+  color: #695302;
 }
 .preview-card {
   flex: 0 0 auto;
@@ -65,9 +65,10 @@ hr {
 
 .preview-card img:hover {
   transform: scale(1.05); 
-  border-color: #c09000;
+  /*border-color: #c09000;
   border-width: 1px;
   border-style: ridge;
+  /*Añado esto y se mueve lo otro, como hago para uqe no se mueva*/
 }
 
 .preview-card h5 {
@@ -149,12 +150,7 @@ hr {
     height: 100%;
   }
   
-  .preview-card img:hover {
-    transform: scale(1.05); 
-    border-color: #c09000;
-    border-width: 1px;
-    border-style: ridge;
-  }
+
   
   .preview-card h5 {
     margin-top: 10px;

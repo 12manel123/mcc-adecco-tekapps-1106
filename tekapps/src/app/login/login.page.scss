@@ -1,8 +1,13 @@
 .link{
-    color:lightgray;
+    color:rgb(102, 84, 30);
     font-size: 12px;
     font-weight: normal;
 }
 *{
-    --ion-background-color: #1C1C1C;
+    --ion-background-color: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+    *{
+        --ion-background-color: #000000;
+    } 
 }
