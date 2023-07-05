@@ -18,12 +18,9 @@ export class LoginPage {
   }
   onIngresar() {
     if (this.formularioLogin.valid) {
-      // El formulario es válido, realiza la lógica necesaria para el inicio de sesión
-      console.log('Inicio de sesión exitoso');
       this.router.navigateByUrl('/tabs/tab1');    } else {
-      // El formulario es inválido, muestra un mensaje de error o realiza alguna acción adicional
-      console.log('Error en el formulario de inicio de sesión');
-      alert("ERROR!");
+    
+      alert("Debes rellenar todos los campos");
     }
   }
 
