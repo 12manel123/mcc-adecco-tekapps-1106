@@ -5,8 +5,8 @@ import { Router, RouterFeature } from '@angular/router';
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
-
 })
+
 export class LoginPage {
   formularioLogin: FormGroup;
 
