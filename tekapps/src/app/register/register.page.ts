@@ -1,52 +1,34 @@
-import { VariableBinding } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component, } from '@angular/core';
 import { 
   FormGroup,
   FormControl,
-  Validators,
-  FormBuilder } from '@angular/forms';
-import { AlertController } from '@ionic/angular';
-
+  Validators,} from '@angular/forms';
+import { Router} from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
   styleUrls: ['./register.page.scss'],
   
 })
-export class RegisterPage implements OnInit {
-
+export class RegisterPage {
   formularioRegister: FormGroup;
 
-  constructor(public fb: FormBuilder,
-    public alertController:AlertController) { 
-    this.formularioRegister = this.fb.group({
-'nombre': new FormControl("",Validators.required),
-'password': new FormControl("",Validators.required),
-'confirmacionPassword': new FormControl("",Validators.required),
-'NumeroDeTelefono': new FormControl("",Validators.required),
-'FechaDeNacimiento': new FormControl("",Validators.required)
-  });
-  }
-  ngOnInit() {
-  }
-async guardar(){
-  var f = this.formularioRegister.value;
-
-
-  if(this.formularioRegister.invalid){
-    const alert = await this.alertController.create({
-      header: 'Datos incompletos',
-      message: 'Tienes que llenar todos los datos.',
-      buttons: ["Aceptar"]
+  constructor(private router: Router) {
+    this.formularioRegister = new FormGroup({
+      nombre: new FormControl('', Validators.minLength(1)),
+      password: new FormControl('', Validators.minLength(1)),
+      NumeroDeTelefono: new FormControl('', Validators.minLength(1)),
+      FechaDeNacimiento: new FormControl('', Validators.minLength(1))
     });
-    await alert.present();
-    return;
   }
-var usuario ={
-  nombre: f.nombre,
-  password: f.password
-}
-localStorage.setItem('usuario',JSON.stringify(usuario))
-}
+  onIngresar() {
+    if (this.formularioRegister.valid) {
+      
+     
+      this.router.navigateByUrl('/tabs/tab1');    } else {
+      
 
+      alert("Debes de completar todos los campos");
+    }
+  }
 }
