@@ -28,7 +28,7 @@
 </ion-item>
 <ion-item>
 <ion-label position ="floating" color="tertiary">Numero de Telefono</ion-label>
-<ion-input required formControlName ="NumeroDeTelefono" color="primary"></ion-input>
+<ion-input required formControlName ="NumeroDeTelefono" color="primary" inputmode="numeric"></ion-input>
 </ion-item>
 <ion-item>
   <ion-label position ="floating" color="tertiary">Fecha de Nacimiento</ion-label>
@@ -39,6 +39,11 @@
     <ion-button [routerLink] ="['/login']" clas="link">Ya tienes cuenta? Logueate</ion-button>
   </ion-buttons>
   <br>
+  <ion-checkbox><p><u>Aceptar Teminos y Condiciones</u></p></ion-checkbox>
+  <br>
+  <ion-buttons>
+  <ion-button [routerLink]="['/privacidad']" color="secondary"><u><p>Leer terminos y condiciones</p></u></ion-button>
+</ion-buttons>
   <ion-button (click)="onIngresar()">Registrarse</ion-button>
 
 </form>
@@ -47,3 +52,4 @@
 </ion-card-content>
 </ion-card>
 </ion-content>
+
