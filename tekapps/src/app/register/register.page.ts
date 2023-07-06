@@ -19,8 +19,10 @@ export class RegisterPage {
       password: new FormControl('', Validators.minLength(1)),
       NumeroDeTelefono: new FormControl('', [Validators.minLength(1), Validators.pattern(/^[0-9]+$/)]),
       FechaDeNacimiento: new FormControl('', Validators.required,)
-      
+    
     });
+ 
+    
   }
   aceptarTerminos(event: Event) {
     event.stopPropagation();
@@ -34,5 +36,6 @@ export class RegisterPage {
       this.router.navigateByUrl('/tabs/tab1');    } else {
       alert("Debes de completar todos los campos");
     }
+
   }
 }

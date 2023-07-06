@@ -17,11 +17,11 @@ const routes: Routes = [
 },
   {
     path: 'mi-canal',
-    loadChildren: () => import('./mi-canal/mi-canal.module').then( m => m.MiCanalPageModule)
+    loadChildren: () => import('./configuracion/mi-canal/mi-canal.module').then( m => m.MiCanalPageModule)
   },
   {
     path: 'privacidad',
-    loadChildren: () => import('./privacidad/privacidad.module').then( m => m.PrivacidadPageModule)
+    loadChildren: () => import('./configuracion/privacidad/privacidad.module').then( m => m.PrivacidadPageModule)
   },
   {
     path: 'busqueda',
@@ -29,31 +29,31 @@ const routes: Routes = [
   },
   {
     path: 'conexiones',
-    loadChildren: () => import('./conexiones/conexiones.module').then( m => m.ConexionesPageModule)
+    loadChildren: () => import('./configuracion/conexiones/conexiones.module').then( m => m.ConexionesPageModule)
   },
   {
     path: 'sistema',
-    loadChildren: () => import('./sistema/sistema.module').then( m => m.SistemaPageModule)
+    loadChildren: () => import('./configuracion/sistema/sistema.module').then( m => m.SistemaPageModule)
   },
   {
     path: 'privacidad-seguridad',
-    loadChildren: () => import('./privacidad-seguridad/privacidad-seguridad.module').then( m => m.PrivacidadSeguridadPageModule)
+    loadChildren: () => import('./configuracion/privacidad-seguridad/privacidad-seguridad.module').then( m => m.PrivacidadSeguridadPageModule)
   },
   {
     path: 'directrices-comunidad',
-    loadChildren: () => import('./directrices-comunidad/directrices-comunidad.module').then( m => m.DirectricesComunidadPageModule)
+    loadChildren: () => import('./configuracion/directrices-comunidad/directrices-comunidad.module').then( m => m.DirectricesComunidadPageModule)
   },
   {
     path: 'ayuda',
-    loadChildren: () => import('./ayuda/ayuda.module').then( m => m.AyudaPageModule)
+    loadChildren: () => import('./configuracion/ayuda/ayuda.module').then( m => m.AyudaPageModule)
   },
   {
     path: 'licencia',
-    loadChildren: () => import('./licencia/licencia.module').then( m => m.LicenciaPageModule)
+    loadChildren: () => import('./configuracion/licencia/licencia.module').then( m => m.LicenciaPageModule)
   },
   {
     path: 'creditos',
-    loadChildren: () => import('./creditos/creditos.module').then( m => m.CreditosPageModule)
+    loadChildren: () => import('./configuracion/creditos/creditos.module').then( m => m.CreditosPageModule)
   },
  
 
