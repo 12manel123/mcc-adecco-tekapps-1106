@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MiCanalPage } from './mi-canal.page';
+import { CanalPage } from './canal.page';
 
-describe('MiCanalPage', () => {
-  let component: MiCanalPage;
-  let fixture: ComponentFixture<MiCanalPage>;
+describe('CanalPage', () => {
+  let component: CanalPage;
+  let fixture: ComponentFixture<CanalPage>;
 
   beforeEach(async(() => {
-    fixture = TestBed.createComponent(MiCanalPage);
+    fixture = TestBed.createComponent(CanalPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

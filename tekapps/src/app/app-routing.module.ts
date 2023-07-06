@@ -16,10 +16,6 @@ const routes: Routes = [
   loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
 },
   {
-    path: 'mi-canal',
-    loadChildren: () => import('./configuracion/mi-canal/mi-canal.module').then( m => m.MiCanalPageModule)
-  },
-  {
     path: 'privacidad',
     loadChildren: () => import('./configuracion/privacidad/privacidad.module').then( m => m.PrivacidadPageModule)
   },
@@ -54,6 +50,14 @@ const routes: Routes = [
   {
     path: 'creditos',
     loadChildren: () => import('./configuracion/creditos/creditos.module').then( m => m.CreditosPageModule)
+  },
+  {
+    path: 'en-directo',
+    loadChildren: () => import('./en-directo/en-directo.module').then( m => m.EnDirectoPageModule)
+  },
+  {
+    path: 'canal',
+    loadChildren: () => import('./canal/canal.module').then( m => m.CanalPageModule)
   },
  
 

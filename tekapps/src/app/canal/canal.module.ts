@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { MiCanalPageRoutingModule } from './mi-canal-routing.module';
+import { CanalPageRoutingModule } from './canal-routing.module';
 
-import { MiCanalPage } from './mi-canal.page';
+import { CanalPage } from './canal.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MiCanalPageRoutingModule
+    CanalPageRoutingModule
   ],
-  declarations: [MiCanalPage]
+  declarations: [CanalPage]
 })
-export class MiCanalPageModule {}
+export class CanalPageModule {}

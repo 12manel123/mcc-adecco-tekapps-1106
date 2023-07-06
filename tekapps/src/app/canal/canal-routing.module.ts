@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { MiCanalPage } from './mi-canal.page';
+import { CanalPage } from './canal.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: MiCanalPage
+    component: CanalPage
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class MiCanalPageRoutingModule {}
+export class CanalPageRoutingModule {}
