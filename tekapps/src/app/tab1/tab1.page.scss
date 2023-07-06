@@ -65,10 +65,7 @@ hr {
 
 .preview-card img:hover {
   transform: scale(1.05); 
-  /*border-color: #c09000;
-  border-width: 1px;
-  border-style: ridge;
-  /*Añado esto y se mueve lo otro, como hago para uqe no se mueva*/
+  box-shadow: 0 0 2px 2px rgba(192, 144, 0, 0.8);
 }
 
 .preview-card h5 {
