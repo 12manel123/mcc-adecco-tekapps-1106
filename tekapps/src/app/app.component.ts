@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoginPage } from './login/login.page';
+import { LoginPage } from './modulo-vista/login/login.page';
 
 @Component({
   selector: 'app-root',

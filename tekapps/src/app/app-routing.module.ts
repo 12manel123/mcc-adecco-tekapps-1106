@@ -4,12 +4,12 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./modulo-vista/login/login.module').then( m => m.LoginPageModule)
   },
   
   {
     path: 'register',
-    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+    loadChildren: () => import('./modulo-vista/register/register.module').then( m => m.RegisterPageModule)
   },
   {path: '',
     
@@ -17,47 +17,47 @@ const routes: Routes = [
 },
   {
     path: 'privacidad',
-    loadChildren: () => import('./configuracion/privacidad/privacidad.module').then( m => m.PrivacidadPageModule)
+    loadChildren: () => import('./modulo-vista/privacidad/privacidad.module').then( m => m.PrivacidadPageModule)
   },
   {
     path: 'busqueda',
-    loadChildren: () => import('./busqueda/busqueda.module').then( m => m.BusquedaPageModule)
+    loadChildren: () => import('./modulo-vista/busqueda/busqueda.module').then( m => m.BusquedaPageModule)
   },
   {
     path: 'conexiones',
-    loadChildren: () => import('./configuracion/conexiones/conexiones.module').then( m => m.ConexionesPageModule)
+    loadChildren: () => import('./modulo-vista/conexiones/conexiones.module').then( m => m.ConexionesPageModule)
   },
   {
     path: 'sistema',
-    loadChildren: () => import('./configuracion/sistema/sistema.module').then( m => m.SistemaPageModule)
+    loadChildren: () => import('./modulo-vista/sistema/sistema.module').then( m => m.SistemaPageModule)
   },
   {
     path: 'privacidad-seguridad',
-    loadChildren: () => import('./configuracion/privacidad-seguridad/privacidad-seguridad.module').then( m => m.PrivacidadSeguridadPageModule)
+    loadChildren: () => import('./modulo-vista/privacidad-seguridad/privacidad-seguridad.module').then( m => m.PrivacidadSeguridadPageModule)
   },
   {
     path: 'directrices-comunidad',
-    loadChildren: () => import('./configuracion/directrices-comunidad/directrices-comunidad.module').then( m => m.DirectricesComunidadPageModule)
+    loadChildren: () => import('./modulo-vista/directrices-comunidad/directrices-comunidad.module').then( m => m.DirectricesComunidadPageModule)
   },
   {
     path: 'ayuda',
-    loadChildren: () => import('./configuracion/ayuda/ayuda.module').then( m => m.AyudaPageModule)
+    loadChildren: () => import('./modulo-vista/ayuda/ayuda.module').then( m => m.AyudaPageModule)
   },
   {
     path: 'licencia',
-    loadChildren: () => import('./configuracion/licencia/licencia.module').then( m => m.LicenciaPageModule)
+    loadChildren: () => import('./modulo-vista/licencia/licencia.module').then( m => m.LicenciaPageModule)
   },
   {
     path: 'creditos',
-    loadChildren: () => import('./configuracion/creditos/creditos.module').then( m => m.CreditosPageModule)
+    loadChildren: () => import('./modulo-vista/creditos/creditos.module').then( m => m.CreditosPageModule)
   },
   {
     path: 'en-directo',
-    loadChildren: () => import('./en-directo/en-directo.module').then( m => m.EnDirectoPageModule)
+    loadChildren: () => import('./modulo-vista/en-directo/en-directo.module').then( m => m.EnDirectoPageModule)
   },
   {
     path: 'canal',
-    loadChildren: () => import('./canal/canal.module').then( m => m.CanalPageModule)
+    loadChildren: () => import('./modulo-vista/canal/canal.module').then( m => m.CanalPageModule)
   },
  
 
