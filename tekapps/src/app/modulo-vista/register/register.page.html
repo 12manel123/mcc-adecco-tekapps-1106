@@ -14,7 +14,7 @@
 <ion-content>
   <ion-card>
 <ion-card-header>
-  <ion-card-title color="tertiary"><b>Registro</b></ion-card-title>
+  <ion-card-title color="tertiary"><b>Registrarse</b></ion-card-title>
   </ion-card-header>
   <ion-card-content>
   <form [formGroup]= "formularioRegister">
@@ -34,24 +34,23 @@
   <ion-label position ="floating" color="tertiary">Fecha de Nacimiento</ion-label>
   <ion-input required displayFormat="DD/MM/YYYY" formControlName ="FechaDeNacimiento" color="primary"></ion-input>
   </ion-item>
-  <label>Dime tu edad</label>
 
   <br>
   <ion-buttons>
-    <ion-button [routerLink] ="['/login']" clas="link">Ya tienes cuenta? Logueate</ion-button>
+    <ion-button style="display: block; margin: 0 auto;" [routerLink] ="['/login']" clas="link">Ya tienes cuenta? Logueate</ion-button>
   </ion-buttons>
   <br>
-  <ion-checkbox><p><u>Aceptar Teminos y Condiciones</u></p></ion-checkbox>
-  <br>
-  <ion-buttons>
-  <ion-button [routerLink]="['/privacidad']" color="secondary"><u><p>Leer terminos y condiciones</p></u></ion-button>
-</ion-buttons>
-  <ion-button (click)="onIngresar()">Registrarse</ion-button>
+
+  <ion-button (click)="onIngresar()" style="display: block; margin: 0 auto; width: 200px;">Registrarse</ion-button>
+
 
 </form>
 
 
 </ion-card-content>
 </ion-card>
+<ion-buttons>
+  <ion-button style="display: block; margin: 0 auto;" [routerLink]="['/privacidad']" color="secondary"><u>Al registrarte, aceptas los terminos<br>y condiciones</u></ion-button>
+</ion-buttons>
 </ion-content>
 
