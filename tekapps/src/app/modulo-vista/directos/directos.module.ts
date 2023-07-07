@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { EnDirectoPageRoutingModule } from './en-directo-routing.module';
+import { DirectosPageRoutingModule } from './directos-routing.module';
 
-import { EnDirectoPage } from './en-directo.page';
+import { DirectosPage } from './directos.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    EnDirectoPageRoutingModule
+    DirectosPageRoutingModule
   ],
-  declarations: [EnDirectoPage]
+  declarations: [DirectosPage]
 })
-export class EnDirectoPageModule {}
+export class DirectosPageModule {}
