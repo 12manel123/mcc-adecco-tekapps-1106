@@ -21,13 +21,13 @@
   <h3 class="animate__animated animate__backInLeft"><b>Stream</b> en vivo</h3><hr>
   <div class="scroll-container">
     <div class="preview-container">
-      <div class="preview-card direct" [routerLink]="'/canal/'+directos[0].route+'/'">
+      <div [routerLink]= "['/en-directo']"class="preview-card direct">
         <img [src]="'../../assets/img/' + directos[0].imagen" alt="Preview del directo">
         <h5>{{directos[0].titulo}}</h5>
         <p>{{directos[0].descripcion}}</p>
       </div>
-      <div class="preview-card direct" [routerLink]="'canal/'+directos[1].route+'/'">
-        <img [src]="'../../assets/img/' + directos[1].imagen" alt="Preview del directo">
+      <div class="preview-card direct">
+        <img [routerLink]= "['/en-directo']" [src]="'../../assets/img/' + directos[1].imagen" alt="Preview del directo">
         <h5>{{directos[1].titulo}}</h5>
         <p>{{directos[1].descripcion}}</p>
       </div>
