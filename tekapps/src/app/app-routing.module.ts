@@ -52,13 +52,14 @@ const routes: Routes = [
     loadChildren: () => import('./modulo-vista/creditos/creditos.module').then( m => m.CreditosPageModule)
   },
   {
-    path: 'en-directo',
-    loadChildren: () => import('./modulo-vista/en-directo/en-directo.module').then( m => m.EnDirectoPageModule)
-  },
-  {
     path: 'canal',
     loadChildren: () => import('./modulo-vista/canal/canal.module').then( m => m.CanalPageModule)
   },
+  {
+    path: 'directos',
+    loadChildren: () => import('./modulo-vista/directos/directos.module').then( m => m.DirectosPageModule)
+  },
+
  
 
 
