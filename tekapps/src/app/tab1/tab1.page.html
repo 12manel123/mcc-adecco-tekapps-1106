@@ -18,13 +18,15 @@
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
-  <h3 class="animate__animated animate__backInLeft"><b>Stream</b> en vivo</h3><hr>
+  
+  <h3 class="animate__animated animate__backInLeft"><b>Stream</b> en vivo</h3><button [routerLink]= "['/en-directo']">Botón de testing</button><hr>
   <div class="scroll-container">
     <div class="preview-container">
-      <div [routerLink]= "['/en-directo']"class="preview-card direct">
+      <div [routerLink]= "['/en-directo']" class="preview-card direct">
         <img [src]="'../../assets/img/' + directos[0].imagen" alt="Preview del directo">
         <h5>{{directos[0].titulo}}</h5>
         <p>{{directos[0].descripcion}}</p>
+        
       </div>
       <div class="preview-card direct">
         <img [routerLink]= "['/en-directo']" [src]="'../../assets/img/' + directos[1].imagen" alt="Preview del directo">
