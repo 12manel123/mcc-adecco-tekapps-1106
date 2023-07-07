@@ -60,6 +60,8 @@ const routes: Routes = [
     loadChildren: () => import('./modulo-vista/directos/directos.module').then( m => m.DirectosPageModule)
   },
 
+  
+
  
 
 

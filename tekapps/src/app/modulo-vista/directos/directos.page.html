@@ -1,13 +1,45 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>directos</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">directos</ion-title>
+    <ion-toolbar class="toolbar-with-image">
+      <ion-action-sheet trigger="open-action-sheet" header="Actions" ></ion-action-sheet>
+      <img class="full-width-image"style="max-width: 100%; height: 100%;" class="preview-card" src="../assets/img/imagen directo.jpg">
+      <ion-title size="large"></ion-title>
     </ion-toolbar>
   </ion-header>
+</ion-content>
+
+<ion-content>
+  <div class="perfil-canal">
+    <div class="imagen-y-contenido">
+      <img class="imagen-pequena" src="../assets/img/Pokemon.png" alt="">
+      <div class="titulos">
+        <h2 class="nombre-canal">{{ nombreCanal }}</h2>
+        <h3 class="descripcion">{{ descripcion }}</h3>
+      </div>
+    </div>
+  </div>
+
+
+    <ion-button [disabled]="suscrito" (click)="alternarSuscripcion()">
+      <ion-icon [name]="suscrito ? 'heart' : 'heart-outline'"></ion-icon>
+      {{ suscrito ? 'Desuscribirse' : 'Subscribirse' }}
+    
+    </ion-button>
+</ion-content>
+
+<ion-content>
+  <ion-list lines="none">
+    <ion-item *ngFor= "let mensaje of mensajes" [class]="mensaje.propio ? 'mensaje-propio' : 'mensaje-externo'">
+      <div class="mensaje">{{ mensaje.texto }}</div>
+    </ion-item>
+  </ion-list>
+
+  
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-input placeholder="Escribe un mensaje" [(ngModel)]="nuevoMensaje"></ion-input>
+      <ion-button expand="block" (click)="enviarMensaje()">Enviar</ion-button>
+    </ion-toolbar>
+  </ion-footer>
 </ion-content>
