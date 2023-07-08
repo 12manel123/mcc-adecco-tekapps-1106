@@ -1,12 +1,21 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar class="toolbar-with-image">
-      <ion-action-sheet trigger="open-action-sheet" header="Actions" ></ion-action-sheet>
-      <img class="full-width-image"style="max-width: 100%; height: 100%;" class="preview-card" src="../assets/img/imagen directo.jpg">
+      <ion-buttons slot="start" class="back-button-container" [class.show]="showBackButton" (click)="toggleBackButton()">
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-action-sheet trigger="open-action-sheet" header="Actions"></ion-action-sheet>
+      <div class="image-container" (click)="showBackButton = true" (mouseleave)="hideBackButton()">
+        <img src="../assets/img/imagen directo.jpg">
+      </div>
       <ion-title size="large"></ion-title>
     </ion-toolbar>
   </ion-header>
 </ion-content>
+
+
+
+
 
 <ion-content>
   <div class="perfil-canal">
@@ -20,11 +29,13 @@
   </div>
 
 
-    <ion-button [disabled]="suscrito" (click)="alternarSuscripcion()">
-      <ion-icon [name]="suscrito ? 'heart' : 'heart-outline'"></ion-icon>
-      {{ suscrito ? 'Desuscribirse' : 'Subscribirse' }}
-    
-    </ion-button>
+    <ion-button (click)="alternarSuscripcion()">
+  <ion-icon [name]="suscrito ? 'heart' : 'heart-outline'"></ion-icon>
+  {{ suscrito ? 'Desuscribirse' : 'Subscribirse' }}
+</ion-button>
+<ion-button *ngIf="suscrito" (click)="alternarNotificaciones()">
+  <ion-icon [name]="notificaciones ? 'notifications' : 'notifications-outline'"></ion-icon>
+</ion-button>
 </ion-content>
 
 <ion-content>
