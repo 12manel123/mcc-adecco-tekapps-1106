@@ -13,7 +13,8 @@ import { BusquedaPage } from './busqueda.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    BusquedaPageRoutingModule
+    BusquedaPageRoutingModule,
+    
   ],
   declarations: [BusquedaPage]
 })

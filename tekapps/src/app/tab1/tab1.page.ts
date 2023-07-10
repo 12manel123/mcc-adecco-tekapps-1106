@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+  
   directos = [
     {
       imagen: 'gameplay1.png',
@@ -39,16 +40,21 @@ export class Tab1Page {
   grupos = [
     {
       imagen: 'group1.jpg',
-      route:'juegos'
+      route:'juegos',
+      titulo: 'Juegos',
     },
     {
       imagen: 'group2.jpg',
-      route:'juegos'
+      route:'juegos',
+      titulo: 'Musica',
+
 
     },
     {
       imagen: 'group3.jpg',
-      route:'vireal'
+      route:'vireal',
+      titulo: 'Vida Real',
+
     }
   ];
   constructor() {}

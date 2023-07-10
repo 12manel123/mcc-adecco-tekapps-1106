@@ -3,7 +3,7 @@
     <ion-title>
       <ion-buttons >
         <ion-button>
-          <img src="../../assets/img/logo_tekapps_color.png">
+          <img style="max-width: 70%; height: auto;" src="../../assets/img/logo_tekapps_color.png">
         </ion-button>
       </ion-buttons>
     </ion-title>
@@ -19,20 +19,21 @@
  <ion-card-content>
   <form [formGroup]= "formularioLogin">
     <ion-item>
-      <ion-label position ="floating" color="tertiary">Nombre</ion-label>
+      <ion-label position ="floating" color="primary">Nombre</ion-label>
       <ion-input required formControlName ="nombre" color="tertiary"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position ="floating" color="tertiary">Contraseña</ion-label>
+      <ion-label position ="floating" color="primary">Contraseña</ion-label>
       <ion-input required formControlName ="password" type="password" color="tertiary"></ion-input>
     </ion-item>
  </form>
  <br>
  <ion-buttons>
-  <ion-button [routerLink] ="['/register']" class="link">No tienes cuenta? Regístrate</ion-button>
+  <ion-button style="display: block; margin: 0 auto;" [routerLink] ="['/register']">No tienes cuenta? Regístrate</ion-button>
+  <ion-button class="link"></ion-button>
 </ion-buttons>
  <br>
- <ion-button (click)="onIngresar()">Ingresar</ion-button>
+ <ion-button (click)="onIngresar()" style="display: block; margin: 0 auto; width: 200px;">Ingresar</ion-button>
 </ion-card-content>
 </ion-card> 
 </ion-content>

@@ -1,4 +1,7 @@
 <ion-header>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/"></ion-back-button>
+  </ion-buttons>
   <ion-toolbar color ="primary">
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
@@ -11,10 +14,10 @@
   <ion-list lines="full">
 
 <ion-item>
-  <ion-label [routerLink]="['/licencia']">Licencia</ion-label>
+  <ion-label [routerLink]="['/licencia']"><p>Licencia</p></ion-label>
   </ion-item>
   <ion-item>
-    <ion-label [routerLink]="['/creditos']">Creditos</ion-label>
+    <ion-label [routerLink]="['/creditos']"><p>Creditos</p></ion-label>
     </ion-item>
 
   </ion-list>
