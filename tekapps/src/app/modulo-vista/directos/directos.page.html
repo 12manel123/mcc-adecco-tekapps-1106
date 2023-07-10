@@ -1,23 +1,20 @@
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar class="toolbar-with-image">
-      <ion-buttons slot="start" class="back-button-container" [class.show]="showBackButton" (click)="toggleBackButton()">
-        <ion-back-button defaultHref="/"></ion-back-button>
-      </ion-buttons>
-      <ion-action-sheet trigger="open-action-sheet" header="Actions"></ion-action-sheet>
-      <div class="image-container" (click)="showBackButton = true" (mouseleave)="hideBackButton()">
-        <img src="../assets/img/imagen directo.jpg">
-      </div>
-      <ion-title size="large"></ion-title>
-    </ion-toolbar>
+
+  <ion-header >
+
   </ion-header>
-</ion-content>
-
-
 
 
 
 <ion-content>
+  <ion-toolbar class="toolbar-with-image" collapse="condense">
+    <ion-buttons slot="start" class="back-button-container" [class.show]="showBackButton" (click)="toggleBackButton()">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-action-sheet trigger="open-action-sheet" header="Actions"></ion-action-sheet>
+    <div class="image-container" (click)="showBackButton = true" (mouseleave)="hideBackButton()">
+      <img src="../assets/img/imagen directo.jpg">
+    </div>
+  </ion-toolbar>
   <div class="perfil-canal">
     <div class="imagen-y-contenido">
       <img class="imagen-pequena" src="../assets/img/Pokemon.png" alt="">
@@ -36,9 +33,9 @@
 <ion-button *ngIf="suscrito" (click)="alternarNotificaciones()">
   <ion-icon [name]="notificaciones ? 'notifications' : 'notifications-outline'"></ion-icon>
 </ion-button>
-</ion-content>
 
-<ion-content>
+
+
   <ion-list lines="none">
     <ion-item *ngFor= "let mensaje of mensajes" [class]="mensaje.propio ? 'mensaje-propio' : 'mensaje-externo'">
       <div class="mensaje">{{ mensaje.texto }}</div>
