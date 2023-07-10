@@ -11,5 +11,30 @@ export class BusquedaPage implements OnInit {
 
   ngOnInit() {
   }
-
-}
+  searchQuery: string = '';
+searchResults: string[] = [];
+  performSearch(): void {
+   
+    this.searchResults = []; 
+    setTimeout(() => {
+  
+      const allResults = [
+        'Minecraft',
+        '12Manel123',
+        'Valorant',
+        'Fornite',
+        'JuanJose',
+        'JuanVegas',
+        'Manel24',
+        'Charlando',
+        'Illojuan',
+        'Juanito123',
+        'Manelxtrem',
+        'Manel202',
+      ];
+      const searchQuery = this.searchQuery.toLowerCase();
+      this.searchResults = allResults.filter(result => result.toLowerCase().includes(this.searchQuery.toLowerCase()));
+      
+    }, 1000);
+  }
+  }

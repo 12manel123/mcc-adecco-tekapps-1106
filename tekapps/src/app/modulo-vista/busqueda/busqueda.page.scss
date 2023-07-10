@@ -1,0 +1,18 @@
+Copy code
+.custom-searchbar {
+  --background: #3a3535;
+  --color: #b5da12;
+  --border-radius: 10px;
+}
+ion-item {
+    --padding-start: 16px;
+  }
+  
+  ion-icon {
+    --color: #d0ff00;
+    --padding-end: 10px;
+  }
+  
+  ion-label {
+    font-weight: bold;
+  }

@@ -9,6 +9,7 @@ export class DirectosPage implements OnInit {
   nombreCanal: string = '12Manel123';
   descripcion: string = '50000001 subscriptores';
   suscrito: boolean = false;
+  notificaciones: boolean = false;
   mensajes: any[] = [
     { texto: 'Soyfurro29:Hola', propio: true },
     { texto: '12manel123:Eres lo mejor!', propio: false },
@@ -24,11 +25,23 @@ export class DirectosPage implements OnInit {
   ngOnInit() {
   }
  
-  
+  showBackButton: boolean = false;
   nuevoMensaje: string = '';
+  toggleBackButton() {
+    this.showBackButton = !this.showBackButton;
+  }
   
+  hideBackButton() {
+    setTimeout(() => {
+      this.showBackButton = false;
+    }, 10000); // Ocultar el botón después de 10 segundos
+  }
   alternarSuscripcion() {
     this.suscrito = !this.suscrito;
+  }
+  
+  alternarNotificaciones() {
+    this.notificaciones = !this.notificaciones;
   }
   obtenerIcono(): string {
     return this.suscrito ? 'heart' : 'heart-outline';

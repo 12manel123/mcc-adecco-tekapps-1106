@@ -1,16 +1,41 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]= "true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
-    </ion-buttons>
     <ion-title>Canal</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Canal</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ nombreCanal }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="content-container">
+      <div class="image-container">
+      <ion-img [src]="imagen" alt="Imagen del canal"></ion-img>
+    </div>
+    <div class="text-container">
+      <p>{{ descripcion }}</p>
+      <ion-button (click)="editarPerfil()">Editar Perfil</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let image of images">
+      <ion-thumbnail slot="start" class="image-thumbnail">
+        <img [src]="image.imageUrl" alt="Imagen">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ image.title }}</h2>
+        <p>{{ image.description }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+
+
+
+
+
