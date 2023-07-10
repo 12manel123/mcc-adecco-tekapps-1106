@@ -13,15 +13,51 @@
         </ion-button>
       </ion-buttons>
     </ion-title>
-    
+  
     <ion-action-sheet trigger="open-action-sheet" header="Actions" ></ion-action-sheet>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
- <ion-searchbar></ion-searchbar>
-  <h2 class="animate__animated animate__backInLeft"><b>Explorar</b></h2>
-  <iframe width="315" height="200" src="https://www.youtube.com/embed/Dp5jGxWDk3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  <h3 class="animate__animated animate__backInLeft"><b>Directos</b> destacados</h3>
-  <h3 class="animate__animated animate__backInLeft"><b>Categorias</b> destacadas</h3>
-</ion-content>
+<h3 class="animate__animated animate__backInLeft">Explorar</h3><hr>
+<h4 class="animate__animated animate__backInLeft"><b>Directos</b>Destacados</h4><hr>
+  <div class="scroll-container">
+    <div class="preview-container">
+      <div class="preview-card direct" [routerLink]="'/canal/'+directos[0].route+'/'">
+        <img [src]="'../../assets/img/' + directos[0].imagen" alt="Preview del directo">
+        <h5>{{directos[0].titulo}}</h5>
+        <p>{{directos[0].descripcion}}</p>
+      </div>
+      <div class="preview-card direct" [routerLink]="'canal/'+directos[1].route+'/'">
+        <img [src]="'../../assets/img/' + directos[1].imagen" alt="Preview del directo">
+        <h5>{{directos[1].titulo}}</h5>
+        <p>{{directos[1].descripcion}}</p>
+      </div>
+    </div>
+  </div>
+  <h3 class="animate__animated animate__backInLeft"><b>Categorías</b> en vivo</h3><hr>
+  <div class="scroll-container">
+    <div class="preview-container">
+      <div class="preview-card  category" [routerLink]="'/busqueda/'+categorias[0].route+'/'">
+        <img [src]="'../../assets/img/' + categorias[0].imagen" alt="Preview del directo">
+        <h5>{{categorias[0].titulo}}</h5>
+        <p>{{categorias[0].espectadores}} espectadores</p>
+      </div>
+      <div class="preview-card category" [routerLink]="'/busqueda/'+categorias[0].route+'/'">
+        <img [src]="'../../assets/img/' + categorias[1].imagen" alt="Preview del directo">
+        <h5>{{categorias[1].titulo}}</h5>
+        <p>{{categorias[1].espectadores}} espectadores</p>
+      </div>
+    </div>
+  </div>
+  <h3 class="animate__animated animate__backInLeft"><b>Grupos</b> en vivo</h3><hr>
+  <div class="scroll-container">
+    <div class="preview-container">
+      <div class="preview-card grupo" [routerLink]="'/busqueda/'+grupos[0].route+'/'">
+        <img [src]="'../../assets/img/' + grupos[0].imagen" alt="Preview del directo">
+      </div>
+      <div class="preview-card grupo" [routerLink]="'/busqueda/'+grupos[1].route+'/'">
+        <img [src]="'../../assets/img/' + grupos[1].imagen" alt="Preview del directo">
+      </div>
+    </div>
+  </div>
+
