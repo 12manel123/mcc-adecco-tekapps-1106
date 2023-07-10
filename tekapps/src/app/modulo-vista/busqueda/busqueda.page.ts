@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-busqueda',
   templateUrl: './busqueda.page.html',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BusquedaPage implements OnInit {
 
-  constructor() { }
-
+  constructor(private route: ActivatedRoute) { }
+  
   ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      this.searchQuery = params['titulo'];
+      // Realiza la búsqueda inicial utilizando this.searchQuery si es necesario
+    });
   }
   searchQuery: string = '';
 searchResults: string[] = [];

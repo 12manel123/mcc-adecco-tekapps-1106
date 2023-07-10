@@ -5,12 +5,6 @@ describe('BusquedaPage', () => {
   let component: BusquedaPage;
   let fixture: ComponentFixture<BusquedaPage>;
 
-  beforeEach(async(() => {
-    fixture = TestBed.createComponent(BusquedaPage);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  }));
-
   it('should create', () => {
     expect(component).toBeTruthy();
   });
