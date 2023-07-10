@@ -37,12 +37,11 @@
   <h3 class="animate__animated animate__backInLeft"><b>Categorías</b> en vivo</h3><hr>
   <div class="scroll-container">
     <div class="preview-container">
-      <div class="preview-card  category" [routerLink]="'/busqueda/'">
-        <img [src]="'../../assets/img/' + categorias[0].imagen" alt="Categoria">
+      <div class="preview-card category" [routerLink]="'/busqueda/'" [queryParams]="{ titulo: categorias[0].titulo }">        <img [src]="'../../assets/img/' + categorias[0].imagen" alt="Categoria">
         <h5>{{categorias[0].titulo}}</h5>
         <p>{{categorias[0].espectadores}} espectadores</p>
-      </div>
-      <div class="preview-card category" [routerLink]="'/busqueda/'">
+      </div>          
+      <div class="preview-card category" [routerLink]="'/busqueda/'" [queryParams]="{ titulo: categorias[1].titulo }">        <img [src]="'../../assets/img/' + categorias[0].imagen" alt="Categoria">
         <img [src]="'../../assets/img/' + categorias[1].imagen" alt="Categoria">
         <h5>{{categorias[1].titulo}}</h5>
         <p>{{categorias[1].espectadores}} espectadores</p>
@@ -52,10 +51,10 @@
   <h3 class="animate__animated animate__backInLeft"><b>Grupos</b> en vivo</h3><hr>
   <div class="scroll-container">
     <div class="preview-container">
-      <div class="preview-card grupo" [routerLink]="'/busqueda/'">
+      <div class="preview-card grupo" [routerLink]="'/busqueda/'" [queryParams]="{ titulo: grupos[0].titulo }">
         <img [src]="'../../assets/img/' + grupos[0].imagen" alt="Preview del directo">
       </div>
-      <div class="preview-card grupo" [routerLink]="'/busqueda/'">
+      <div class="preview-card grupo" [routerLink]="'/busqueda/'" [queryParams]="{ titulo: grupos[1].titulo }">
         <img [src]="'../../assets/img/' + grupos[1].imagen" alt="Preview del directo">
       </div>
     </div>
