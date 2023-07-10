@@ -1,0 +1,11 @@
+p{
+    color:rgb(0, 0, 0);
+}
+ion-toggle{
+    padding-left: 5px;
+}
+@media (prefers-color-scheme: dark) {
+    p{
+        color:white;
+    }
+}

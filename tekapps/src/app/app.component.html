@@ -1,39 +1,39 @@
 <ion-app>
   <ion-menu side="end" contentId="main-content">
     <ion-header>
-      <ion-toolbar>
+      <ion-toolbar  color="secondary">
         <ion-title>Menu</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-list>
       <ion-menu-toggle auto-hide="true">
-        <ion-item color="prymary" [routerLink]="['tabs/tab1']"><ion-icon name="home"></ion-icon>Inicio</ion-item>
+        <ion-item color="secondary" [routerLink]="['tabs/tab1']"><ion-icon name="home"></ion-icon>Inicio</ion-item>
       </ion-menu-toggle>
       <ion-menu-toggle auto-hide="true">
-        <ion-item color="prymary" [routerLink]="['/canal']"><ion-icon name="person"></ion-icon>Mi canal</ion-item>
+        <ion-item color="secondary" [routerLink]="['/canal']"><ion-icon name="person"></ion-icon>Mi canal</ion-item>
       </ion-menu-toggle>
-      <ion-item color="prymary"><ion-icon name="notifications-outline"></ion-icon> Notificaciones</ion-item>
-      <ion-item color="prymary"><ion-icon name="language-outline"></ion-icon>Idioma</ion-item>
+      <ion-item color="secondary"><ion-icon name="notifications-outline"></ion-icon> Notificaciones</ion-item>
+      <ion-item color="secondary"><ion-icon name="language-outline"></ion-icon>Idioma</ion-item>
       <ion-menu-toggle auto-hide="true">
-        <ion-item color="prymary" [routerLink]="['/privacidad-seguridad']"><ion-icon name="lock-open-outline"></ion-icon>Privacidad y Seguridad</ion-item>
-      </ion-menu-toggle>
-      <ion-menu-toggle auto-hide="true">
-        <ion-item color="prymary" [routerLink]="['/conexiones']"><ion-icon name="lock-open-outline"></ion-icon>Conexiones</ion-item>
+        <ion-item color="secondary" [routerLink]="['/privacidad-seguridad']"><ion-icon name="lock-open-outline"></ion-icon>Privacidad y Seguridad</ion-item>
       </ion-menu-toggle>
       <ion-menu-toggle auto-hide="true">
-        <ion-item color="prymary" [routerLink]="['/sistema']"><ion-icon name="hardware-chip-outline"></ion-icon>Sistemas</ion-item>
+        <ion-item color="secondary" [routerLink]="['/conexiones']"><ion-icon name="lock-open-outline"></ion-icon>Conexiones</ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle auto-hide="true">
+        <ion-item color="secondary" [routerLink]="['/sistema']"><ion-icon name="hardware-chip-outline"></ion-icon>Sistemas</ion-item>
       </ion-menu-toggle>
       <ion-menu-toggle>
-        <ion-item color="prymary" [routerLink]="['/directrices-comunidad']"><ion-icon name="hardware-chip-outline"></ion-icon>Directrices De La Comunidad</ion-item>
+        <ion-item color="secondary" [routerLink]="['/directrices-comunidad']"><ion-icon name="hardware-chip-outline"></ion-icon>Directrices De La Comunidad</ion-item>
       </ion-menu-toggle>
       <ion-menu-toggle auto-hide="true">
-        <ion-item color="prymary" [routerLink]="['/ayuda']"><ion-icon name="help"></ion-icon>Ayuda</ion-item>
+        <ion-item color="secondary" [routerLink]="['/ayuda']"><ion-icon name="help"></ion-icon>Ayuda</ion-item>
       </ion-menu-toggle>
       <ion-menu-toggle auto-hide="true">
-        <ion-item color="prymary" [routerLink]="['/privacidad']"><ion-icon name="people-outline"></ion-icon>Terminos de Servicios</ion-item>
+        <ion-item color="secondary" [routerLink]="['/privacidad']"><ion-icon name="people-outline"></ion-icon>Terminos de Servicios</ion-item>
       </ion-menu-toggle>
       <ion-menu-toggle auto-hide="true">
-        <ion-item color="prymary" [routerLink]="['/login']"><ion-icon name="log-out"></ion-icon> Cerrar Sesión</ion-item>
+        <ion-item color="secondary" [routerLink]="['/login']"><ion-icon name="log-out"></ion-icon> Cerrar Sesión</ion-item>
       </ion-menu-toggle>
     </ion-list>
     <ion-content class="ion-padding"></ion-content>
