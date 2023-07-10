@@ -1,16 +1,28 @@
 <ion-header>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/"></ion-back-button>
+  </ion-buttons>
   <ion-toolbar color ="primary">
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-button (click)="onClick()">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+    </ion-button>
     </ion-buttons>
     <ion-title>Privacidad y Seguridad</ion-title>
   </ion-toolbar>
 </ion-header>
 
+<ion-menu></ion-menu>
+
 <ion-content>
   <ion-list lines="full">
 <ion-item>
-  
+
   <p>Permitir creacion de Cuentas Adicionales</p>
   <ion-toggle slot="end"></ion-toggle>
 </ion-item>
