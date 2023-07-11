@@ -1,6 +1,6 @@
 <ion-header [translucent]= "true">
   <ion-toolbar>
-    <ion-title>Canal</ion-title>
+    <img src= "../assets/img/cabecera.png">
   </ion-toolbar>
 </ion-header>
 
@@ -15,7 +15,7 @@
     </div>
     <div class="text-container">
       <p>{{ descripcion }}</p>
-      <ion-button (click)="editarPerfil()">Editar Perfil</ion-button>
+      <ion-button (click)="editarPerfil()" [routerLink]= "['/editarperfil']">Editar Perfil</ion-button>
       </div>
     </ion-card-content>
   </ion-card>

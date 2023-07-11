@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Editar Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src= "../assets/img/el rubius (2).png" alt="Foto de perfil">
+        
+  <div class="editar-foto">
+    <ion-button (click)="editarFotoPerfil()">Editar foto</ion-button>
+  </div>
+  
+      </ion-avatar>
+      <ion-label position="stacked">Nombre</ion-label>
+      <ion-input [(ngModel)]="nombre" placeholder="Nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Apellido</ion-label>
+      <ion-input [(ngModel)]="apellido" placeholder="Apellido"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Correo electrónico</ion-label>
+      <ion-input [(ngModel)]="correo" placeholder="Correo electrónico"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Contraseña</ion-label>
+      <ion-input [(ngModel)]="contrasena" type="password" placeholder="Contraseña"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div class="buttons">
+    <ion-button expand="block" (click)="guardarCambios()">Guardar cambios</ion-button>
+    <ion-button expand="block" color="danger" (click)="cancelarEdicion()">Cancelar</ion-button>
+  </div>
+
+  <div class="editar-foto">
+    <ion-button (click)="editarFotoPerfil()">Editar foto</ion-button>
+  </div>
+</ion-content>

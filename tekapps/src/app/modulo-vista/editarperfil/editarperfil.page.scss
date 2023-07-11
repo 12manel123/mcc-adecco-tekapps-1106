@@ -1,0 +1,22 @@
+ion-header {
+    ion-toolbar {
+      --background: #ffffff; 
+    }
+  }
+  
+  ion-avatar {
+    width: 100px; 
+    height: 100px;
+  }
+  
+  .editar-foto {
+    margin-top: 20px;
+}
+  
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    margin-top: 20px; 
+  }
+  

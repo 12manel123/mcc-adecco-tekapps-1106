@@ -59,6 +59,11 @@ const routes: Routes = [
     path: 'directos',
     loadChildren: () => import('./modulo-vista/directos/directos.module').then( m => m.DirectosPageModule)
   },
+  {
+    path: 'editarperfil',
+    loadChildren: () => import('./modulo-vista/editarperfil/editarperfil.module').then( m => m.EditarperfilPageModule)
+  },
+
 
   
 
