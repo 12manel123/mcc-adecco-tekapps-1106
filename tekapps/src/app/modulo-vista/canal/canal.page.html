@@ -5,6 +5,9 @@
 </ion-header>
 
 <ion-content>
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
   <ion-card>
     <ion-card-header>
       <ion-card-title>{{ nombreCanal }}</ion-card-title>
@@ -19,8 +22,12 @@
       </div>
     </ion-card-content>
   </ion-card>
-</ion-content>
-<ion-content>
+
+  <ion-toolbar class="back-button-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
   <ion-list>
     <ion-item *ngFor="let image of images">
       <ion-thumbnail slot="start" class="image-thumbnail">

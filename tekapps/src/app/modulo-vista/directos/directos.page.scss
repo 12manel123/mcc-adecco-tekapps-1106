@@ -38,13 +38,6 @@ width: 600px;
   max-width: 100%;
   height: auto;
 }
-
-
-
-
-
-
-
 ion-header {
     position: absolute;
     top: 0;
@@ -117,15 +110,17 @@ ion-header {
   }
   
   .message-container {
-    max-height: calc(100vh - 56px); /* Ajusta la altura máxima del contenedor de mensajes */
-    overflow: hidden; /* Oculta el desbordamiento */
+    max-height: calc(100vh - 56px); 
+    overflow: hidden; 
   }
   
   .message-list {
-    height: 100%; /* Ajusta la altura al 100% del contenedor */
+    height: 100%; 
   }
   
   .mensaje {
-    font-size: smaller; /* Ajusta el tamaño de fuente de los mensajes */
+    font-size: smaller; 
   }
-  
+  ion-content {
+    min-height: 100vh;
+  }

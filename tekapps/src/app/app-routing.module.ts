@@ -61,7 +61,7 @@ const routes: Routes = [
   },
   {
     path: 'editarperfil',
-    loadChildren: () => import('./modulo-vista/editarperfil/editarperfil.module').then( m => m.EditarperfilPageModule)
+    loadChildren: () => import('./editarperfil/editarperfil.module').then( m => m.EditarperfilPageModule)
   },
 
 

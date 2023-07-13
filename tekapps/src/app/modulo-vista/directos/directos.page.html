@@ -1,3 +1,13 @@
+<ion-toolbar class="back-button-toolbar">
+  <ion-buttons slot="end">
+    <ion-button>
+      <ion-icon [routerLink]="['/ayuda']" slot="icon-only" name="cog"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/"></ion-back-button>
+  </ion-buttons>
+</ion-toolbar>
 <ion-content>
   <ion-toolbar class="toolbar-with-image" collapse="condense">
     <ion-buttons slot="start" class="back-button-container" [class.show]="showBackButton" (click)="toggleBackButton()">
@@ -26,14 +36,12 @@
 <ion-button *ngIf="suscrito" (click)="alternarNotificaciones()">
   <ion-icon [name]="notificaciones ? 'notifications' : 'notifications-outline'"></ion-icon>
 </ion-button>
-
-</ion-content>
-
-<ion-content>
   <div class="message-container">
     <ion-list lines="none" class="message-list">
-      <ion-item *ngFor="let mensaje of mensajes.slice(-10)" [class]="mensaje.propio ? 'mensaje-propio' : 'mensaje-externo'">
-        <div class="mensaje">{{ mensaje.texto }}</div>
+      <ion-item *ngFor="let mensaje of mensajes">
+        <div [class.mensaje-propio]="mensaje.propio" [class.mensaje-externo]="!mensaje.propio">
+          {{ mensaje.texto }}
+        </div>
       </ion-item>
     </ion-list>
   </div>
