@@ -10,8 +10,10 @@
     <ion-action-sheet trigger="open-action-sheet" header="Actions" ></ion-action-sheet>
   </ion-toolbar>
 </ion-header>
-
-<ion-content>
+<ion-content *ngIf="loading">
+  <ion-spinner ></ion-spinner>
+</ion-content>
+<ion-content *ngIf="!loading">
   <ion-card>
     <ion-card-header>
       <ion-card-title color="tertiary"><b>Login</b></ion-card-title>
