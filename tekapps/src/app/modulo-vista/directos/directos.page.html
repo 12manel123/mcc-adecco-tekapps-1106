@@ -31,7 +31,7 @@
 
     <ion-button (click)="alternarSuscripcion()">
   <ion-icon [name]="suscrito ? 'heart' : 'heart-outline'"></ion-icon>
-  {{ suscrito ? 'Desuscribirse' : 'Subscribirse' }}
+  {{ suscrito ? 'Suscrito' : 'Subscribirme' }}
 </ion-button>
 <ion-button *ngIf="suscrito" (click)="alternarNotificaciones()">
   <ion-icon [name]="notificaciones ? 'notifications' : 'notifications-outline'"></ion-icon>
