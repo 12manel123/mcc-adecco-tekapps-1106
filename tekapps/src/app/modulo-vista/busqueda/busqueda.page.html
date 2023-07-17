@@ -22,16 +22,9 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Busqueda</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content>
-    <ion-searchbar [(ngModel)]="searchQuery" (ionChange)="performSearch()" class="custom-searchbar"></ion-searchbar>
+    <ion-searchbar [(ngModel)]="searchQuery" (ionInput)="performSearch()" (ionChange)="performSearch()" class="custom-searchbar"></ion-searchbar>
     <ion-list>
-      <ion-item *ngFor="let result of searchResults" [routerLink]="result.isLive ? ['/directos'] : ['/canal']"
-      [queryParams]="{ username: result.name }">
+      <ion-item *ngFor="let result of searchResults" [routerLink]="result.isLive ? ['/directos'] : ['/canal']" [queryParams]="{ username: result.name }" class="slide-in-item">
         <ion-thumbnail slot="start">
           <img [src]="result.image" alt="Imagen del canal" [ngClass]="{ 'is-live': result.isLive }" style="border-radius: 60%;">
         </ion-thumbnail>
