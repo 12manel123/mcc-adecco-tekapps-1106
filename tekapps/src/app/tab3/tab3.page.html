@@ -39,8 +39,8 @@
 
     <ion-item>
       <ion-label color="tertiary"><ion-icon name="language-outline"></ion-icon> {{ 'Idioma' | translate }}</ion-label>
-      <ion-button color="primary" (click)="changeLanguage('en')">Inglés</ion-button>
-      <ion-button color="primary" (click)="changeLanguage('es')">Español</ion-button>
+      <ion-button (click)="changeLanguage('en')">Inglés</ion-button>
+      <ion-button (click)="changeLanguage('es')">Español</ion-button>
     </ion-item>
     <ion-item>
       <ion-label color="tertiary" [routerLink]="['/privacidad-seguridad']"><ion-icon name="lock-open-outline"></ion-icon> {{ 'Privacidad y Seguridad' | translate }}</ion-label>
