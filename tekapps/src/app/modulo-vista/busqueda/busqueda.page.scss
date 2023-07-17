@@ -21,3 +21,17 @@
  ion-title {
   background-color: white;
  }
+ @keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-item {
+  animation: slideInFromTop 0.3s ease-in-out;
+}
