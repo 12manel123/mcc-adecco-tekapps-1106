@@ -14,11 +14,17 @@
   <ion-spinner ></ion-spinner>
 </ion-content>
 <ion-content *ngIf="!loading">
+  <ng-template #loginFormContent>
+    <ion-card>
+      AA
+      <!-- Resto del contenido del formulario -->
+    </ion-card>
+  </ng-template>
   <ion-card>
     <ion-card-header>
       <ion-card-title color="tertiary"><b>Login</b></ion-card-title>
     </ion-card-header>
- <ion-card-content>
+ <ion-card-content #loginFormContent>
   <form [formGroup]= "formularioLogin">
     <ion-item>
       <ion-label position="floating" color="primary">Nombre</ion-label>

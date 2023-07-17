@@ -41,20 +41,22 @@ export class LoginPage {
     if (this.formularioLogin.valid) {
       const nombre = this.formularioLogin.value.nombre;
       const password = this.formularioLogin.value.password;
-  
-      const usuarioEncontrado = this.usuarios.find(
-        (usuario) => usuario.nombre === nombre && usuario.password === password
-      );
-  
-      if (usuarioEncontrado) {
-        this.router.navigateByUrl('/tabs/tab1');
-      } else {
-        alert('Usuario o contraseña incorrectos.');
-      }
+
+
+      // Simulamos una demora de 2 segundos para validar el usuario (esto es solo un ejemplo)
+      setTimeout(() => {
+        const usuarioEncontrado = this.usuarios.find(
+          (usuario) => usuario.nombre === nombre && usuario.password === password
+        );
+
+        if (usuarioEncontrado) {
+          this.router.navigateByUrl('/tabs/tab1');
+        } else {
+          alert('Usuario o contraseña incorrectos.');
+        }
+      }); // Cambia este valor a la duración real de tu validación
     } else {
       alert('Debes rellenar todos los campos.');
     }
   }
-
-
 }
