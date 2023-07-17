@@ -1,6 +1,23 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Busqueda</ion-title>
+  <ion-toolbar color="secondary"><!--con el color, apartir de "theme->variables.scss" se edita todos los colores primarios-->
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end"><!--con slot se posiciona-->
+      <ion-button [routerLink]= "['/busqueda']">
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>
+      <ion-buttons >
+        <ion-button>
+          <img src="../../../assets/img/logo_tekapps_color.png">
+        </ion-button>
+      </ion-buttons>
+    </ion-title>
+
+    <ion-action-sheet trigger="open-action-sheet" header="Actions" ></ion-action-sheet>
   </ion-toolbar>
 </ion-header>
 
@@ -13,8 +30,15 @@
   <ion-content>
     <ion-searchbar [(ngModel)]="searchQuery" (ionChange)="performSearch()" class="custom-searchbar"></ion-searchbar>
     <ion-list>
-      <ion-item *ngFor="let result of searchResults">
-        {{ result }}
+      <ion-item *ngFor="let result of searchResults" [routerLink]="result.isLive ? ['/directos'] : ['/canal']"
+      [queryParams]="{ username: result.name }">
+        <ion-thumbnail slot="start">
+          <img [src]="result.image" alt="Imagen del canal" [ngClass]="{ 'is-live': result.isLive }" style="border-radius: 60%;">
+        </ion-thumbnail>
+        <ion-label>
+          <h2>{{ result.name }}</h2>
+          <p>{{ result.category }}</p>
+        </ion-label>
       </ion-item>
     </ion-list>
   </ion-content>
