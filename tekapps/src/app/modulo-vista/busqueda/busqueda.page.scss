@@ -4,7 +4,7 @@ Copy code
   --color: #b5da12;
   --border-radius: 10px;
 }
-ion-item {
+ ion-item {
     --padding-start: 16px;
   }
   
@@ -16,3 +16,7 @@ ion-item {
   ion-label {
     font-weight: bold;
   }
+
+ ion-title {
+  background-color: white;
+ }
