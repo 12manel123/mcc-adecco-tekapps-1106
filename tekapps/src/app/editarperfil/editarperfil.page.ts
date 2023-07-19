@@ -1,17 +1,19 @@
 import { Component} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ViewChild, ElementRef } from '@angular/core';@Component({
 
-@Component({
   selector: 'app-editarperfil',
   templateUrl: './editarperfil.page.html',
   styleUrls: ['./editarperfil.page.scss'],
 })
 export class EditarPerfilPage {
+  @ViewChild('fileInput', { static: false }) fileInputRef!: ElementRef;
   nombre: string;
     apellido: string;
     correo: string;
     contrasena: string;
     fotoPerfil: string;
+     
 
   constructor() {
     this.nombre = '';
@@ -24,7 +26,8 @@ export class EditarPerfilPage {
 
   guardarCambios() {
    
-    console.log('Se han guardado los cambios');
+    window.alert('Los cambios han sido guardados con éxito.');
+
   }
 
   cancelarEdicion() {
@@ -32,8 +35,15 @@ export class EditarPerfilPage {
     console.log('Se ha cancelado la edición');
   }
 
-  editarFotoPerfil() {
+    editarFotoPerfil() {
+    this.fileInputRef.nativeElement.click();
+  }
   
-    console.log('Editar foto de perfil');
+  handleFileChange(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      console.log('Archivo seleccionado:', file);
+      // ... código para enviar la imagen al servidor ...
+    }
   }
 }

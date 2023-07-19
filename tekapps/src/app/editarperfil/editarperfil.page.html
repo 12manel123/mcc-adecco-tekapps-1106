@@ -13,9 +13,10 @@
       <ion-avatar slot="start">
         <img src= "../assets/img/el rubius (2).png" alt="Foto de perfil">
         
-  <div class="editar-foto">
-    <ion-button (click)="editarFotoPerfil()">Editar foto</ion-button>
-  </div>
+        <div class="editar-foto">
+          <input #fileInput type="file" (change)="handleFileChange($event)" style="display: none" />
+          <ion-button (click)="editarFotoPerfil()">Editar foto</ion-button>
+        </div>
   
       </ion-avatar>
       <ion-label class="label">Nombre</ion-label>
@@ -40,7 +41,4 @@
     <ion-button expand="block" color="danger" (click)="cancelarEdicion()">Cancelar</ion-button>
   </div>
 
-  <div class="editar-foto">
-    <ion-button (click)="editarFotoPerfil()">Editar foto</ion-button>
-  </div>
-</ion-content>
+
