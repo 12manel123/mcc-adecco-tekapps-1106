@@ -2,19 +2,20 @@
   <ion-toolbar>
     <img src= "../assets/img/cabecera.png">
   </ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
 </ion-header>
 
 <ion-content>
-    <ion-buttons slot="start">
-        <ion-back-button></ion-back-button>
-      </ion-buttons>
+   
   <ion-card>
     <ion-card-header>
       <ion-card-title>{{ nombreCanal }}</ion-card-title>
     </ion-card-header>
     <ion-card-content class="content-container">
       <div class="image-container">
-      <ion-img [src]="imagen" alt="Imagen del canal"></ion-img>
+      <ion-img [src]="imagen" alt="Imagen del canal"  class="rounded-image"></ion-img>
     </div>
     <div class="text-container">
       <p>{{ descripcion }}</p>
