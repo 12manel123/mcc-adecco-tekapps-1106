@@ -1,17 +1,10 @@
-<ion-toolbar class="back-button-toolbar">
-  <ion-buttons slot="end">
-    <ion-button>
-      <ion-icon [routerLink]="['/ayuda']" slot="icon-only" name="cog"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-buttons slot="start">
-    <ion-back-button defaultHref="/"></ion-back-button>
-  </ion-buttons>
-</ion-toolbar>
 <ion-content>
   <ion-toolbar class="toolbar-with-image" collapse="condense">
     <ion-buttons slot="start" class="back-button-container" [class.show]="showBackButton" (click)="toggleBackButton()">
       <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons class="pause-button-container" [class.show]="showBackButton" (click)="toggleBackButton()">
+      <ion-button><ion-icon name="pause-outline"></ion-icon></ion-button>
     </ion-buttons>
     <ion-action-sheet trigger="open-action-sheet" header="Actions"></ion-action-sheet>
     <div class="image-container" (click)="showBackButton = true" (mouseleave)="hideBackButton()">
