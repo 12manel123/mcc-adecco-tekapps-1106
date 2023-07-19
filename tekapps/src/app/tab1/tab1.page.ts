@@ -24,7 +24,7 @@ export class Tab1Page {
   categorias = [
     {
       imagen: 'category1.jpg',
-      titulo: 'Just chating',
+      titulo: 'Just Chatting',
       espectadores: 356030,
       type:['IRL','Creative'],
       route:'chating'

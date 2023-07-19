@@ -2,14 +2,14 @@
     <ion-toolbar color="secondary"><!--con el color, apartir de "theme->variables.scss" se edita todos los colores primarios-->
       
       <ion-buttons slot="end"><!--con slot se posiciona-->
-        <ion-button>
+        <ion-button [routerLink]= "['/busqueda']">
           <ion-icon name="search"></ion-icon>
         </ion-button>
       </ion-buttons>
 
       <ion-title>
         <ion-buttons >
-          <ion-button>
+          <ion-button [routerLink]= "['/tabs/tab1']">
             <img  style="max-width: 70%; height: auto;" src="../../assets/img/logo_tekapps_color.png">
           </ion-button>
         </ion-buttons>
@@ -19,7 +19,7 @@
     </ion-toolbar>
   </ion-header>
   <ion-toolbar>
-    <ion-title class="confi"  color="tertiary"><b>Configuración</b></ion-title>
+    <ion-title class="confi"  color="tertiary"><b>{{ 'Configuración' | translate }}</b></ion-title>
   </ion-toolbar>
 
 
@@ -29,47 +29,39 @@
   <ion-list lines="full">
 
     <ion-item>
-      <ion-label color="tertiary" [routerLink]="['/canal']"><ion-icon name="person"></ion-icon> Mi Canal</ion-label>
+      <ion-label color="tertiary" [routerLink]="['/canal']"><ion-icon name="person"></ion-icon> {{ 'Mi Canal' | translate }}</ion-label>
     </ion-item>
 
     <ion-item>
-      <ion-label  color="tertiary"><ion-icon name="notifications-outline"></ion-icon> Notificaciones</ion-label>
+      <ion-label  color="tertiary"><ion-icon name="notifications-outline"></ion-icon> {{ 'Notificaciones' | translate }}</ion-label>
       <ion-toggle slot="end"></ion-toggle>
     </ion-item>
 
     <ion-item>
-      <ion-label color="tertiary"><ion-icon name="language-outline"></ion-icon>Idioma</ion-label>
-      <ion-select  interface="action-sheet">
-        <ion-select-option value="en" style="background-color: cyan;">Inglés</ion-select-option>
-        <ion-select-option value="es">Español</ion-select-option>
-        <ion-select-option value="fr">Francés</ion-select-option>
-        <ion-select-option value="jp">Japonés</ion-select-option>
-        <ion-select-option value="ger">Alemán</ion-select-option>
-        <ion-select-option value="It">Italiano</ion-select-option>
-        <ion-select-option value="cat">Catalán</ion-select-option>
-        <ion-select-option value="Ch">Chino</ion-select-option>
-      </ion-select>
+      <ion-label color="tertiary"><ion-icon name="language-outline"></ion-icon> {{ 'Idioma' | translate }}</ion-label>
+      <ion-button (click)="changeLanguage('en')">Inglés</ion-button>
+      <ion-button (click)="changeLanguage('es')">Español</ion-button>
     </ion-item>
     <ion-item>
-      <ion-label color="tertiary" [routerLink]="['/privacidad-seguridad']"><ion-icon name="lock-open-outline"></ion-icon> Privacidad y Seguridad</ion-label>
+      <ion-label color="tertiary" [routerLink]="['/privacidad-seguridad']"><ion-icon name="lock-open-outline"></ion-icon> {{ 'Privacidad y Seguridad' | translate }}</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label color="tertiary" [routerLink]="['/conexiones']"><ion-icon name="lock-open-outline"></ion-icon>Conexiones</ion-label>
+        <ion-label color="tertiary" [routerLink]="['/conexiones']"><ion-icon name="lock-open-outline"></ion-icon> {{ 'Conexiones' | translate }}</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label color="tertiary" [routerLink]="['/sistema']"><ion-icon name="hardware-chip-outline"></ion-icon> Sistema</ion-label>
+        <ion-label color="tertiary" [routerLink]="['/sistema']"><ion-icon name="hardware-chip-outline"></ion-icon> {{ 'Sistema' | translate }}</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label color="tertiary" [routerLink]="['/directrices-comunidad']"><ion-icon name="hardware-chip-outline"></ion-icon> Directrices De La Comunidad</ion-label>
+        <ion-label color="tertiary" [routerLink]="['/directrices-comunidad']"><ion-icon name="hardware-chip-outline"></ion-icon> {{ 'Directrices De La Comunidad' | translate }}</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label color="tertiary" [routerLink]="['/ayuda']"><ion-icon name="help"></ion-icon> Ayuda</ion-label>
+        <ion-label color="tertiary" [routerLink]="['/ayuda']"><ion-icon name="help"></ion-icon> {{ 'Ayuda' | translate }}</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label color="tertiary" [routerLink]="['/privacidad']"><ion-icon name="people-outline"></ion-icon>Terminos de Servicios</ion-label>
+        <ion-label color="tertiary" [routerLink]="['/privacidad']"><ion-icon name="people-outline"></ion-icon> {{ 'Terminos de Servicios' | translate }}</ion-label>
       </ion-item>
       <ion-item>
-        <ion-label color="tertiary" [routerLink]="['/login']"><ion-icon name="log-out"></ion-icon> Cerrar Sesión</ion-label>
+        <ion-label color="tertiary" [routerLink]="['/login']"><ion-icon name="log-out"></ion-icon> {{ 'Cerrar Sesión' | translate }}</ion-label>
 
       </ion-item>
   </ion-list>

@@ -2,6 +2,8 @@ ion-img {
     width: 50px;
     height: auto;
     margin-top: -10px; 
+    border-radius: 50%;
+
   }
   .content-container {
     display: flex;
@@ -20,5 +22,18 @@ ion-img {
   .image-thumbnail img {
     width: 900px;
     height: auto;}
-
+    
+.icon{
+  border-radius: 60%;
+  width: 50px;
+  height: auto;
+}
+    
+.image-thumbnail img {
+  width: 50px; 
+  height: 50px;
+  border-radius: 5%;
+}   
+    
+    
     

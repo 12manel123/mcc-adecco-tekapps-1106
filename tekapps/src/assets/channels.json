@@ -1,0 +1,51 @@
+[
+    {
+      "name": "12Manel123",
+      "category": "Videojuegos",
+      "image":"assets/img/el rubius (2).png",
+      "isLive": false
+    },
+    {
+      "name": "JuanJose",
+      "category": "Entretenimiento",
+      "image":"assets/img/el rubius (2).png",
+      "isLive": true
+    },
+    {
+      "name": "JuanVegas",
+      "category": "Entretenimiento",
+      "image":"assets/img/el rubius (2).png",
+      "isLive": true
+    },
+    {
+      "name": "Manel24",
+      "category": "Charlando",
+      "image":"assets/img/Pokemon.png",
+      "isLive": false
+    },
+    {
+      "name": "Illojuan",
+      "category": "Just Chatting",
+      "image":"assets/img/el rubius (2).png",
+      "isLive": true
+    },
+    {
+      "name": "Juanito123",
+      "category": "Entretenimiento",
+      "image":"assets/img/el rubius (2).png",
+      "isLive": true
+    },
+    {
+      "name": "Manelxtrem",
+      "category": "Videojuegos",
+      "image":"assets/img/el rubius (2).png",
+      "isLive": true
+    },
+    {
+      "name": "Manel202",
+      "category": "Videojuegos",
+      "image":"assets/img/el rubius (2).png",
+      "isLive": true
+    }
+  ]
+  

@@ -9,9 +9,26 @@ width: 600px;
   z-index: 1;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.398);
+  border-radius: 10%;
 }
 
 .back-button-container.show {
+  opacity: 1;
+}
+
+.pause-button-container {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.398);
+  border-radius: 10%;
+}
+
+.pause-button-container.show {
   opacity: 1;
 }
 
@@ -100,7 +117,9 @@ ion-header {
     vertical-align: middle;
     margin: 0;
   }
-  
+  h2{
+    padding-top: 10%;
+  }
   .nombre-canal {
     font-weight: bold;
   }
@@ -123,4 +142,8 @@ ion-header {
   }
   ion-content {
     min-height: 100vh;
+  }
+
+  div{
+    color: white;
   }
