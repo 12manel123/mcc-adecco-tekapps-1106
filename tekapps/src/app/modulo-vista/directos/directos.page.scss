@@ -1,3 +1,11 @@
+.sub{
+  margin-left:10%;
+}
+.not{
+  margin-left:10%
+}
+
+
 .preview-card{
 height: 700px;
 width: 600px;
@@ -143,7 +151,9 @@ ion-header {
   ion-content {
     min-height: 100vh;
   }
+  @media (prefers-color-scheme: dark) {
 
   div{
     color: white;
   }
+}

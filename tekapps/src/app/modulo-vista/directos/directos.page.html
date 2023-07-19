@@ -1,10 +1,10 @@
 <ion-content>
   <ion-toolbar class="toolbar-with-image" collapse="condense">
     <ion-buttons slot="start" class="back-button-container" [class.show]="showBackButton" (click)="toggleBackButton()">
-      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-back-button defaultHref="/" color="primary"></ion-back-button>
     </ion-buttons>
     <ion-buttons class="pause-button-container" [class.show]="showBackButton" (click)="toggleBackButton()">
-      <ion-button><ion-icon name="pause-outline"></ion-icon></ion-button>
+      <ion-button><ion-icon name="pause-outline" color="primary"></ion-icon></ion-button>
     </ion-buttons>
     <ion-action-sheet trigger="open-action-sheet" header="Actions"></ion-action-sheet>
     <div class="image-container" (click)="showBackButton = true" (mouseleave)="hideBackButton()">
@@ -22,11 +22,11 @@
   </div>
 
 
-    <ion-button (click)="alternarSuscripcion()">
+    <ion-button (click)="alternarSuscripcion()" class="sub">
   <ion-icon [name]="suscrito ? 'heart' : 'heart-outline'"></ion-icon>
   {{ suscrito ? 'Suscrito' : 'Subscribirme' }}
 </ion-button>
-<ion-button *ngIf="suscrito" (click)="alternarNotificaciones()">
+<ion-button *ngIf="suscrito" (click)="alternarNotificaciones()" class="not">
   <ion-icon [name]="notificaciones ? 'notifications' : 'notifications-outline'"></ion-icon>
 </ion-button>
   <div class="message-container">
