@@ -2,6 +2,8 @@ ion-img {
     width: 50px;
     height: auto;
     margin-top: -10px; 
+    border-radius: 50%;
+
   }
   .content-container {
     display: flex;
@@ -21,10 +23,11 @@ ion-img {
     width: 900px;
     height: auto;}
     
-    .rounded-image {
-      border-radius: 50%;
-    }
-   
+.icon{
+  border-radius: 60%;
+  width: 50px;
+  height: auto;
+}
     
     
     
