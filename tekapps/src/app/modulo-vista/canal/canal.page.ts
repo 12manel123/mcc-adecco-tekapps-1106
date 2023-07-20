@@ -67,6 +67,17 @@ export class CanalPage implements OnInit {
 
   ngOnInit() {
   }
+  showBackButton: boolean = false;
+  nuevoMensaje: string = '';
+  toggleBackButton() {
+    this.showBackButton = !this.showBackButton;
+  }
+  
+  hideBackButton() {
+    setTimeout(() => {
+      this.showBackButton = false;
+    }, 10000); // Ocultar el botón después de 10 segundos
+  }
   editarPerfil() {
   }
 }

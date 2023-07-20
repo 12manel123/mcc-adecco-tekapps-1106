@@ -1,12 +1,11 @@
 <ion-header [translucent]= "true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button class=".back-button-container "></ion-back-button>
+    </ion-buttons>
     <img src= "../assets/img/cabecera.png">
   </ion-toolbar>
-  <ion-buttons slot="start">
-    <ion-back-button></ion-back-button>
-  </ion-buttons>
 </ion-header>
-
 <ion-content>
    
   <ion-card>
@@ -15,20 +14,17 @@
     </ion-card-header>
     <ion-card-content class="content-container">
       <div class="image-container">
-      <img src="{{imagen}}" alt="Imagen del canal" class="icon">
+      <ion-img [src]="imagen" alt="Imagen del canal"  class="rounded-image"></ion-img>
     </div>
     <div class="text-container">
       <p>{{ descripcion }}</p>
-      <ion-button (click)="editarPerfil()" [routerLink]= "['/editarperfil']">Editar Perfil</ion-button>
+      <div class="edit-button-container">
+      <ion-button class="edit-button" (click)="editarPerfil()" [routerLink]= "['/editarperfil']">Editar Perfil</ion-button>
       </div>
+    </div>
     </ion-card-content>
   </ion-card>
 
-  <ion-toolbar class="back-button-toolbar">
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
   <ion-list>
     <ion-item *ngFor="let image of images">
       <ion-thumbnail slot="start" class="image-thumbnail">
