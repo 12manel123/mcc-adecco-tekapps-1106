@@ -29,6 +29,7 @@
 <ion-button *ngIf="suscrito" (click)="alternarNotificaciones()" class="not">
   <ion-icon [name]="notificaciones ? 'notifications' : 'notifications-outline'"></ion-icon>
 </ion-button>
+<div class="message-container-father">
   <div class="message-container">
     <ion-list lines="none" class="message-list">
       <ion-item *ngFor="let mensaje of mensajes">
@@ -45,5 +46,6 @@
       <ion-button expand="block" (click)="enviarMensaje()">Enviar</ion-button>
     </ion-toolbar>
   </ion-footer>
+  </div>
 </ion-content>
 

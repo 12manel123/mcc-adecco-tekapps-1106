@@ -34,7 +34,7 @@ export class DirectosPage implements OnInit {
   hideBackButton() {
     setTimeout(() => {
       this.showBackButton = false;
-    }, 10000); // Ocultar el botón después de 10 segundos
+    }, 5000);
   }
   alternarSuscripcion() {
     this.suscrito = !this.suscrito;
