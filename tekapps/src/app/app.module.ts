@@ -10,14 +10,6 @@ import { AppComponent } from './app.component';// Se importa el componente raíz
 import { environment } from '../environments/environment';//contiene variables de entorno y configuraciones específicas para cada entorno.
 import { AngularFireModule } from '@angular/fire/compat';// proporciona integración con Firebase en la aplicación.
 
-
-
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { environment } from '../environments/environment';
-import { AngularFireModule } from '@angular/fire/compat';
-
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
