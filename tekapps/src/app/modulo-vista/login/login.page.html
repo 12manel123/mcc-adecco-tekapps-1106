@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="secondary"><!--con el color, apartir de "theme->variables.scss" se edita todos los colores primarios-->
+  <ion-toolbar color="secondary">
     <ion-title>
       <ion-buttons >
         <ion-button>
@@ -10,31 +10,22 @@
     <ion-action-sheet trigger="open-action-sheet" header="Actions" ></ion-action-sheet>
   </ion-toolbar>
 </ion-header>
-<ion-content *ngIf="loading">
-  <ion-spinner ></ion-spinner>
-</ion-content>
-<ion-content *ngIf="!loading">
-  <ng-template #loginFormContent>
-    <ion-card>
-      AA
-      <!-- Resto del contenido del formulario -->
-    </ion-card>
-  </ng-template>
-  <ion-card>
+
+<ion-content>
+<ion-card>
     <ion-card-header>
       <ion-card-title color="tertiary"><b>Login</b></ion-card-title>
     </ion-card-header>
  <ion-card-content #loginFormContent>
-  <form [formGroup]= "formularioLogin">
+  <form [formGroup]="usuario">
     <ion-item>
-      <ion-label position="floating" color="primary">Nombre</ion-label>
-      <ion-input required formControlName="nombre" color="tertiary" (keyup.enter)="onIngresar()"></ion-input>
+      <ion-label position="floating" color="primary">Email</ion-label>
+      <ion-input formControlName="email" autocapitalize="off" color="tertiary" (keyup.enter)="login()"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating" color="primary">Contraseña</ion-label>
-      <ion-input required formControlName="password" type="password" color="tertiary" (keyup.enter)="onIngresar()"></ion-input>
+      <ion-input formControlName="password" type="password" color="tertiary" (keyup.enter)="login()"></ion-input>
     </ion-item>
-    
  </form>
  <br>
  <ion-buttons>
@@ -42,7 +33,7 @@
   <ion-button class="link"></ion-button>
 </ion-buttons>
  <br>
- <ion-button (click)="onIngresar()" style="display: block; margin: 0 auto; width: 200px;">Ingresar</ion-button>
+ <ion-button (click)="login()" style="display: block; margin: 0 auto; width: 200px;">Ingresar</ion-button>
 </ion-card-content>
 </ion-card> 
 </ion-content>
