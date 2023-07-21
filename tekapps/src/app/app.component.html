@@ -5,7 +5,7 @@
         <ion-title>Menu</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-list>
+    <ion-list> <!--Esto seria la cabecera-->
       <ion-menu-toggle auto-hide="true">
         <ion-item color="secondary" [routerLink]="['tabs/tab1']"><ion-icon name="home"></ion-icon>Inicio</ion-item>
       </ion-menu-toggle>
@@ -34,8 +34,8 @@
       </ion-menu-toggle>
       <ion-menu-toggle auto-hide="true">
         <ion-item color="secondary" [routerLink]="['/login']"><ion-icon name="log-out"></ion-icon> Cerrar Sesión</ion-item>
-      </ion-menu-toggle>
-    </ion-list>
+      </ion-menu-toggle> 
+    </ion-list><!--El Router link de cada uno irá a la página asignada-->
     <ion-content class="ion-padding"></ion-content>
   </ion-menu>
   <div class="ion-page" id="main-content">
@@ -53,4 +53,4 @@
   </div>
   <ion-nav [root]= "rootPage"></ion-nav>
   <ion-router-outlet></ion-router-outlet>
-</ion-app>
+</ion-app><!--Esto seria el menú lateral-->

@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { NgModule } from '@angular/core';//se utiliza para configurar los módulos de la aplicación.
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';//se utiliza para definir las rutas y asociar componentes a esas rutas. 
 
 const routes: Routes = [
   {
@@ -63,7 +63,7 @@ const routes: Routes = [
     path: 'editarperfil',
     loadChildren: () => import('./editarperfil/editarperfil.module').then( m => m.EditarperfilPageModule)
   },
-
+//Esto serian todas las rutas accesibles de la aplicacion
 
   
 
@@ -74,7 +74,8 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
-  ],
+  ],//Se configura el enrutamiento principal de la aplicación utilizando el módulo RouterModule. 
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
+// En este caso, el módulo RouterModule se exporta para que otros módulos puedan importar y utilizar las funcionalidades de enrutamiento proporcionadas por este módulo.
