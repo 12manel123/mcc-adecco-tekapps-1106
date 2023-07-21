@@ -1,6 +1,11 @@
+/* tab1.page.scss */
+
+/* Estilo para elementos <b> (texto en negrita) */
 b {
   color: #695302;
 }
+
+/* Estilo para las tarjetas de vista previa */
 .preview-card {
   flex: 0 0 auto;
   width: 200px;
@@ -10,6 +15,8 @@ b {
   padding: 10px;
   text-align: center;
 }
+
+/* Estilo para el contenedor con desplazamiento horizontal */
 .scroll-container {
   width: 100%;
   overflow-x: auto;
@@ -22,35 +29,34 @@ b {
     display: none;
   }
 }
+
+/* Estilo para el título de las tarjetas de vista previa */
 .preview-card h5 {
   text-align: left;
 }
+
+/* Estilo para el párrafo de las tarjetas de vista previa */
 .preview-card p {
   text-align: left;
 }
+
+/* Estilo para el título de nivel 3 (h3) */
 h3 {
   margin-left: 5%;
 }
 
+/* Estilo para las líneas horizontales */
 hr {
   background-color: rgb(0, 0, 0);
   margin-left: 3%;
 }
 
+/* Estilo para el contenedor de vistas previas */
 .preview-container {
   display: flex;
 }
 
-.preview-card {
-  flex: 0 0 auto;
-  width: 200px;
-  margin-right: 10px;
-  background-color: #ffffff;
-  border-radius: 5px;
-  padding: 10px;
-  text-align: center;
-}
-
+/* Estilo para las imágenes de las tarjetas de vista previa */
 .preview-card img {
   width: 100%;
   max-height: 150px;
@@ -58,30 +64,38 @@ hr {
   border-radius: 5%;
   transition: transform 0.3s ease;
 }
+
+/* Estilo para las imágenes de categorías */
 .category img{
   width: 200%;
   height: 100%;
 }
 
+/* Estilo para el efecto de escala y sombra al hacer hover sobre las imágenes */
 .preview-card img:hover {
   transform: scale(1.05); 
   box-shadow: 0 0 2px 2px rgba(192, 144, 0, 0.8);
 }
 
+/* Estilo para el título de las tarjetas de vista previa */
 .preview-card h5 {
   margin-top: 10px;
 }
 
+/* Estilo para el párrafo de las tarjetas de vista previa */
 .preview-card p {
   margin-top: 5px;
   font-size: 14px;
 }
 
+/* Estilos para el modo oscuro (media query para dispositivos con preferencia de color oscuro) */
 @media (prefers-color-scheme: dark) {
-  
+  /* Estilo para elementos <b> en modo oscuro */
   b {
     color: #FFE277;
   }
+  
+  /* Estilo para las tarjetas de vista previa en modo oscuro */
   .preview-card {
     flex: 0 0 auto;
     width: 200px;
@@ -91,9 +105,13 @@ hr {
     padding: 10px;
     text-align: center;
   }
+  
+  /* Estilos para el texto (h5, p, h3) en modo oscuro */
   h5,p,h3{
     color: white;
   }
+  
+  /* Estilo para el contenedor con desplazamiento horizontal en modo oscuro */
   .scroll-container {
     width: 100%;
     overflow-x: auto;
@@ -106,25 +124,34 @@ hr {
       display: none;
     }
   }
+  
+  /* Estilo para el título de las tarjetas de vista previa en modo oscuro */
   .preview-card h5 {
     text-align: left;
   }
+  
+  /* Estilo para el párrafo de las tarjetas de vista previa en modo oscuro */
   .preview-card p {
     text-align: left;
   }
+  
+  /* Estilo para el título de nivel 3 (h3) en modo oscuro */
   h3 {
     margin-left: 5%;
   }
   
+  /* Estilo para las líneas horizontales en modo oscuro */
   hr {
     background-color: rgb(255, 255, 255);
     margin-left: 3%;
   }
   
+  /* Estilo para el contenedor de vistas previas en modo oscuro */
   .preview-container {
     display: flex;
   }
   
+  /* Estilo para las tarjetas de vista previa en modo oscuro */
   .preview-card {
     flex: 0 0 auto;
     width: 200px;
@@ -135,6 +162,7 @@ hr {
     text-align: center;
   }
   
+  /* Estilo para las imágenes de las tarjetas de vista previa en modo oscuro */
   .preview-card img {
     width: 100%;
     max-height: 150px;
@@ -142,17 +170,19 @@ hr {
     border-radius: 5%;
     transition: transform 0.3s ease;
   }
+  
+  /* Estilo para las imágenes de categorías en modo oscuro */
   .category img{
     width: 200%;
     height: 100%;
   }
   
-
-  
+  /* Estilo para el título de las tarjetas de vista previa en modo oscuro */
   .preview-card h5 {
     margin-top: 10px;
   }
   
+  /* Estilo para el párrafo de las tarjetas de vista previa en modo oscuro */
   .preview-card p {
     margin-top: 5px;
     font-size: 14px;
