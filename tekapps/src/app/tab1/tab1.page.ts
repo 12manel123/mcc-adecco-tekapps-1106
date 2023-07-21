@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
   
-  directos = [
+  directos = [//Esto es un array de todos los directos
     {
       imagen: 'gameplay1.png',
       titulo: 'Directo 1',

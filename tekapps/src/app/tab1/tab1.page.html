@@ -1,61 +1,70 @@
+<!-- tab1.page.html -->
 <ion-header [translucent]="true">
-  <ion-toolbar color="secondary"><!--con el color, apartir de "theme->variables.scss" se edita todos los colores primarios-->
-
-    <ion-buttons slot="end"><!--con slot se posiciona-->
-      <ion-button [routerLink]= "['/busqueda']">
+  <ion-toolbar color="secondary"><!-- Barra de herramientas con color secundario definido en "theme->variables.scss" -->
+  
+    <ion-buttons slot="end"><!-- Botones en el lado derecho de la barra -->
+      <ion-button [routerLink]= "['/busqueda']"><!-- Botón con enlace a la página "/busqueda" -->
         <ion-icon name="search"></ion-icon>
       </ion-button>
     </ion-buttons>
 
-    <ion-title>
+    <ion-title><!-- Título de la barra de herramientas -->
       <ion-buttons >
-        <ion-button  [routerLink]= "['/tabs/tab1']" >
-          <img style="max-width: 70%; height: auto;" src="../../assets/img/logo_tekapps_color.png">
+        <ion-button  [routerLink]= "['/tabs/tab1']" ><!-- Botón con enlace a la página "/tabs/tab1" -->
+          <img style="max-width: 70%; height: auto;" src="../../assets/img/logo_tekapps_color.png"><!-- Imagen con el logo de la aplicación -->
         </ion-button>
       </ion-buttons>
     </ion-title>
 
-    <ion-action-sheet trigger="open-action-sheet" header="Actions" ></ion-action-sheet>
+    <ion-action-sheet trigger="open-action-sheet" header="Actions" ></ion-action-sheet><!-- Hoja de acciones (no se muestra el contenido aquí) -->
   </ion-toolbar>
 </ion-header>
+
 <ion-content [fullscreen]="true">
-  <h3 class="animate__animated animate__backInLeft"><b>Stream</b> en vivo</h3><hr>
-  <div class="scroll-container">
-    <div class="preview-container">
-      <div [routerLink]= "['/directos']"class="preview-card direct">
-        <img [src]="'../../assets/img/' + directos[0].imagen" alt="Preview del directo">
-        <h5>{{directos[0].titulo}}</h5>
-        <p>{{directos[0].descripcion}}</p>
+  <!-- Sección de "Stream en vivo" -->
+  <h3 class="animate__animated animate__backInLeft"><b>Stream</b> en vivo</h3><hr><!-- Título con efecto de animación -->
+  <div class="scroll-container"><!-- Contenedor con desplazamiento horizontal -->
+    <div class="preview-container"><!-- Contenedor de vistas previas -->
+      <div [routerLink]= "['/directos']" class="preview-card direct"><!-- Vista previa de directo con enlace a "/directos" -->
+        <img [src]="'../../assets/img/' + directos[0].imagen" alt="Preview del directo"><!-- Imagen de la vista previa del directo -->
+        <h5>{{directos[0].titulo}}</h5><!-- Título del directo -->
+        <p>{{directos[0].descripcion}}</p><!-- Descripción del directo -->
       </div>
-      <div class="preview-card direct">
-        <img [routerLink]= "['/directos']" [src]="'../../assets/img/' + directos[1].imagen" alt="Preview del directo">
-        <h5>{{directos[1].titulo}}</h5>
-        <p>{{directos[1].descripcion}}</p>
+      <div class="preview-card direct"><!-- Otra vista previa de directo -->
+        <img [routerLink]= "['/directos']" [src]="'../../assets/img/' + directos[1].imagen" alt="Preview del directo"><!-- Imagen de la vista previa del directo con enlace a "/directos" -->
+        <h5>{{directos[1].titulo}}</h5><!-- Título del directo -->
+        <p>{{directos[1].descripcion}}</p><!-- Descripción del directo -->
       </div>
     </div>
   </div>
-  <h3 class="animate__animated animate__backInLeft"><b>Categorías</b> en vivo</h3><hr>
-  <div class="scroll-container">
-    <div class="preview-container">
-      <div class="preview-card category" [routerLink]="'/busqueda/'" [queryParams]="{ titulo: categorias[0].titulo }">        <img [src]="'../../assets/img/' + categorias[0].imagen" alt="Categoria">
-        <h5>{{categorias[0].titulo}}</h5>
-        <p>{{categorias[0].espectadores}} espectadores</p>
+
+  <!-- Sección de "Categorías en vivo" -->
+  <h3 class="animate__animated animate__backInLeft"><b>Categorías</b> en vivo</h3><hr><!-- Título con efecto de animación -->
+  <div class="scroll-container"><!-- Contenedor con desplazamiento horizontal -->
+    <div class="preview-container"><!-- Contenedor de vistas previas -->
+      <div class="preview-card category" [routerLink]="'/busqueda/'" [queryParams]="{ titulo: categorias[0].titulo }"><!-- Vista previa de categoría con enlace a "/busqueda/" y parámetro de consulta "titulo" -->
+        <img [src]="'../../assets/img/' + categorias[0].imagen" alt="Categoria"><!-- Imagen de la categoría -->
+        <h5>{{categorias[0].titulo}}</h5><!-- Título de la categoría -->
+        <p>{{categorias[0].espectadores}} espectadores</p><!-- Número de espectadores de la categoría -->
       </div>          
-      <div class="preview-card category" [routerLink]="'/busqueda/'" [queryParams]="{ titulo: categorias[1].titulo }">        <img [src]="'../../assets/img/' + categorias[0].imagen" alt="Categoria">
-        <img [src]="'../../assets/img/' + categorias[1].imagen" alt="Categoria">
-        <h5>{{categorias[1].titulo}}</h5>
-        <p>{{categorias[1].espectadores}} espectadores</p>
+      <div class="preview-card category" [routerLink]="'/busqueda/'" [queryParams]="{ titulo: categorias[1].titulo }"><!-- Otra vista previa de categoría con enlace a "/busqueda/" y parámetro de consulta "titulo" -->
+        <img [src]="'../../assets/img/' + categorias[0].imagen" alt="Categoria"><!-- Imagen de la categoría -->
+        <img [src]="'../../assets/img/' + categorias[1].imagen" alt="Categoria"><!-- Otra imagen de la categoría -->
+        <h5>{{categorias[1].titulo}}</h5><!-- Título de la categoría -->
+        <p>{{categorias[1].espectadores}} espectadores</p><!-- Número de espectadores de la categoría -->
       </div>
     </div>
   </div>
-  <h3 class="animate__animated animate__backInLeft"><b>Grupos</b> en vivo</h3><hr>
-  <div class="scroll-container">
-    <div class="preview-container">
-      <div class="preview-card grupo" [routerLink]="'/busqueda/'" [queryParams]="{ titulo: grupos[0].titulo }">
-        <img [src]="'../../assets/img/' + grupos[0].imagen" alt="Preview del directo">
+
+  <!-- Sección de "Grupos en vivo" -->
+  <h3 class="animate__animated animate__backInLeft"><b>Grupos</b> en vivo</h3><hr><!-- Título con efecto de animación -->
+  <div class="scroll-container"><!-- Contenedor con desplazamiento horizontal -->
+    <div class="preview-container"><!-- Contenedor de vistas previas -->
+      <div class="preview-card grupo" [routerLink]="'/busqueda/'" [queryParams]="{ titulo: grupos[0].titulo }"><!-- Vista previa de grupo con enlace a "/busqueda/" y parámetro de consulta "titulo" -->
+        <img [src]="'../../assets/img/' + grupos[0].imagen" alt="Preview del directo"><!-- Imagen de la vista previa del grupo -->
       </div>
-      <div class="preview-card grupo" [routerLink]="'/busqueda/'" [queryParams]="{ titulo: grupos[1].titulo }">
-        <img [src]="'../../assets/img/' + grupos[1].imagen" alt="Preview del directo">
+      <div class="preview-card grupo" [routerLink]="'/busqueda/'" [queryParams]="{ titulo: grupos[1].titulo }"><!-- Otra vista previa de grupo con enlace a "/busqueda/" y parámetro de consulta "titulo" -->
+        <img [src]="'../../assets/img/' + grupos[1].imagen" alt="Preview del directo"><!-- Imagen de la vista previa del grupo -->
       </div>
     </div>
   </div>
