@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core';//Componente neceario para que Angular funcione. 
 
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  styleUrls: ['tab1.page.scss']//Componentes de la tab 1 Necesarios. 
 })
 export class Tab1Page {
   
@@ -21,7 +21,7 @@ export class Tab1Page {
       route:'pepito'
     }
   ];
-  categorias = [
+  categorias = [//Esto es un array de todas las categorias.
     {
       imagen: 'category1.jpg',
       titulo: 'Just Chatting',
@@ -37,7 +37,7 @@ export class Tab1Page {
       route:'event'
     }
   ];
-  grupos = [
+  grupos = [//Esto es un array de todos los grupos.
     {
       imagen: 'group1.jpg',
       route:'juegos',
@@ -57,6 +57,6 @@ export class Tab1Page {
 
     }
   ];
-  constructor() {}
+  constructor() {}//No hay constructores.
 
 }

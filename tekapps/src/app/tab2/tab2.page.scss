@@ -8,7 +8,7 @@ b {
     background-color: #ffffff;
     border-radius: 5px;
     padding: 10px;
-    text-align: center;
+    text-align: center;// Css de la primera card. 
   }
   .scroll-container {
     width: 100%;
@@ -16,34 +16,34 @@ b {
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    -ms-overflow-style: none;
+    -ms-overflow-style: none;//Css del segundo directo.
     
     &::-webkit-scrollbar {
-      display: none;
+      display: none;//Css del scrollbar.
     }
   }
   .preview-card h5 {
-    text-align: left;
+    text-align: left;//Alineación del texto de la card h5.
   }
   .preview-card p {
-    text-align: left;
+    text-align: left;//Alineación del texto de la card p
   }
   h3 {
-    margin-left: 5%;
+    margin-left: 5%;//Margen del h3
 
   }
 
   h4{
-    color: #ffffff;
+    color: #ffffff;//Color del h4.
   }
   
   hr {
     background-color: rgb(0, 0, 0);
-    margin-left: 3%;
+    margin-left: 3%;//Color del hr.
   }
   
   .preview-container {
-    display: flex;
+    display: flex;//Display, del primer contenedor.
   }
   
   .preview-card {
@@ -53,7 +53,7 @@ b {
     background-color: #ffffff;
     border-radius: 5px;
     padding: 10px;
-    text-align: center;
+    text-align: center;//CSS de la primera card más completo
   }
   
   .preview-card img {
@@ -61,25 +61,25 @@ b {
     max-height: 150px;
     object-fit: cover;
     border-radius: 5%;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease;// Css de la imagen del HTML
   }
   .category img{
     width: 200%;
-    height: 100%;
+    height: 100%;//Altura y ancho de la Imagen.
   }
   
   .preview-card img:hover {
     transform: scale(1.05); 
-    box-shadow: 0 0 2px 2px rgba(192, 144, 0, 0.8);
+    box-shadow: 0 0 2px 2px rgba(192, 144, 0, 0.8);// Sombra de la imagen.
   }
   
   .preview-card h5 {
-    margin-top: 10px;
+    margin-top: 10px;//Margen del h5
   }
   
   .preview-card p {
     margin-top: 5px;
-    font-size: 14px;
+    font-size: 14px;//Margen y fuente de la card p.
   }
   
   @media (prefers-color-scheme: dark) {
@@ -94,10 +94,10 @@ b {
       background-color: #1C1C1C;
       border-radius: 5px;
       padding: 10px;
-      text-align: center;
+      text-align: center;//Css cuando los colores son oscuros.
     }
     h5,p,h3{
-      color: white;
+      color: white;//Color de las letras.
     }
     .scroll-container {
       width: 100%;
@@ -105,29 +105,29 @@ b {
       white-space: nowrap;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
-      -ms-overflow-style: none;
+      -ms-overflow-style: none;//Css del Scroll Container
       
       &::-webkit-scrollbar {
-        display: none;
+        display: none;// Css del scrollbar.
       }
     }
     .preview-card h5 {
-      text-align: left;
+      text-align: left;//Tema del texto del h5.
     }
     .preview-card p {
-      text-align: left;
+      text-align: left;//Tema del texto de la preview card.
     }
     h3 {
-      margin-left: 5%;
+      margin-left: 5%;//Margen del h3.
     }
     
     hr {
       background-color: rgb(255, 255, 255);
-      margin-left: 3%;
+      margin-left: 3%;//Margen y color del hr.
     }
     
     .preview-container {
-      display: flex;
+      display: flex;//Display del preview Container.
     }
     
     .preview-card {
@@ -137,7 +137,7 @@ b {
       background-color: #1C1C1C;
       border-radius: 5px;
       padding: 10px;
-      text-align: center;
+      text-align: center;//Css modo oscuro de preview card.
     }
     
     .preview-card img {
@@ -145,21 +145,21 @@ b {
       max-height: 150px;
       object-fit: cover;
       border-radius: 5%;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease;//Tamaños de la imagen 2.
     }
     .category img{
       width: 200%;
-      height: 100%;
+      height: 100%;//Altura y anchura de la 2nda imagen.
     }
     
   
     
     .preview-card h5 {
-      margin-top: 10px;
+      margin-top: 10px;//Margen de la card h5
     }
     
     .preview-card p {
       margin-top: 5px;
-      font-size: 14px;
+      font-size: 14px;//Margen de la card p.
     }
   }

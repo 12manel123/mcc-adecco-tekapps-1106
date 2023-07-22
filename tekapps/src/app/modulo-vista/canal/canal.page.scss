@@ -43,17 +43,17 @@ ion-img {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   background-color: rgba(0, 0, 0, 0.398);
-  border-radius: 10%;
+  border-radius: 10%;//Css de la pagina canal
 }
 .text-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;// Display y dirección de la pagina.
 }
 
 .edit-button {
   font-size: smaller; 
-  align-self: flex-end; 
+  align-self: flex-end; //Css del boton
 }   
 .edit-button-container {
-  margin-top: 10px; 
+  margin-top: 10px; //Margen del edit button
 }

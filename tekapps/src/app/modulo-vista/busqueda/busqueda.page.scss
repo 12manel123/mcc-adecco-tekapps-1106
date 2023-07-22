@@ -4,23 +4,23 @@
 
 }
 .custom-searchbar {
-  --border-radius: 10px;
+  --border-radius: 10px;// borde de el css de la searchbar.
 }
  ion-item {
-    --padding-start: 16px;
+    --padding-start: 16px;// Padding de todos los items.
   }
   
   ion-icon {
     --color: #d0ff00;
-    --padding-end: 10px;
+    --padding-end: 10px;//Pading de los iconos.
   }
   
   ion-label {
-    font-weight: bold;
+    font-weight: bold;//Fuente del Ion label.
   }
 
  ion-title {
-  background-color: rgb(63, 62, 62);
+  background-color: rgb(63, 62, 62);//Color del título.
  }
  @keyframes slideInFromTop {
   0% {
@@ -29,16 +29,16 @@
   }
   100% {
     transform: translateY(0);
-    opacity: 1;
+    opacity: 1;//Opacidad y sombra de los botones.
   }
 }
 
 .slide-in-item {
-  animation: slideInFromTop 0.3s ease-in-out;
+  animation: slideInFromTop 0.3s ease-in-out;//Animacion de el css.
 }
 @media (prefers-color-scheme: dark) {
   .custom-searchbar{
     --background: #3a3535;
-    --border-radius: 10px;
+    --border-radius: 10px;//Borde y tema de color.
   }
 }

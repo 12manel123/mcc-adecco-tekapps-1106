@@ -12,7 +12,7 @@
           <img style="max-width: 70%; height: auto;" src="../../assets/img/logo_tekapps_color.png">
         </ion-button>
       </ion-buttons>
-    </ion-title>
+    </ion-title><!--Cabecera de la pagina-->
   
     <ion-action-sheet trigger="open-action-sheet" header="Actions" ></ion-action-sheet>
   </ion-toolbar>
@@ -25,7 +25,7 @@
         <img [src]="'../../assets/img/' + directos[1].imagen" alt="Preview del directo">
         <h5>Genshin Impact</h5>
         <p>Jugando un Rato a este RPG tan Popular</p>
-      </div>
+      </div><!--Primera imagen, y descripción y titulo-->
     </div>
   </div>
   <h3 class="animate__animated animate__backInLeft"><b>Categorías</b> Destacadas</h3><hr>
@@ -34,12 +34,12 @@
       <div class="preview-card  category" [routerLink]="'/busqueda/'+categorias[0].route+'/'">
         <img [src]="'../../assets/img/' + categorias[0].imagen" alt="Preview del directo">
         <h5>De Charla con Amigos</h5>
-        <p>250.000 Espectadores</p>
+        <p>250.000 Espectadores</p><!--Segunda imagen, descripción y titulo-->
       </div>
       <div class="preview-card category" [routerLink]="'/busqueda/'+categorias[0].route+'/'">
         <img [src]="'../../assets/img/' + categorias[1].imagen" alt="Preview del directo">
         <h5>{{categorias[1].titulo}}</h5>
-        <p>{{categorias[1].espectadores}} espectadores</p>
+        <p>{{categorias[1].espectadores}} espectadores</p><!--Espectadores-->
       </div>
     </div>
   </div>

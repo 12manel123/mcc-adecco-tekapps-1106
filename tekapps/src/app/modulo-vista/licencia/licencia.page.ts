@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';//Para que el angular y el Ionic funcionen bien.
 
 @Component({
   selector: 'app-licencia',
   templateUrl: './licencia.page.html',
-  styleUrls: ['./licencia.page.scss'],
+  styleUrls: ['./licencia.page.scss'],//Componentes de la pagina licencia.
 })
-export class LicenciaPage implements OnInit {
+export class LicenciaPage implements OnInit {//Export class de la pagina licencia.
 
-  constructor() { }
+  constructor() { }//No hay constructor.
 
   ngOnInit() {
   }

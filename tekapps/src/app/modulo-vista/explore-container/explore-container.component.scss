@@ -5,23 +5,23 @@
   left: 0;
   right: 0;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%);//Posicion absoluta del container y demás.
 }
 
 #container strong {
   font-size: 20px;
-  line-height: 26px;
+  line-height: 26px;//Css del container Strong.
 }
 
 #container p {
   font-size: 16px;
-  line-height: 22px;
+  line-height: 22px;//Css del container p
 
   color: #8c8c8c;
 
   margin: 0;
-}
+}//Margen y color.
 
 #container a {
-  text-decoration: none;
+  text-decoration: none;// Decoracion del texto del container a.
 }

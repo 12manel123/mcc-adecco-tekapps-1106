@@ -19,7 +19,7 @@ export class BusquedaPage implements OnInit {
   }
 
   searchQuery: string = '';
-  searchResults: any[] = [];
+  searchResults: any[] = [];//Resultado de las pagina busqueda.
 
   performSearch(): void {
     this.searchResults = []; // Limpia los resultados antes de realizar una nueva búsqueda
@@ -30,7 +30,7 @@ export class BusquedaPage implements OnInit {
         (result) =>
           result.name.toLowerCase().includes(searchQuery) ||
           result.category.toLowerCase().includes(searchQuery)
-      );
+      );//Busca los resultados en una base Jason.
     });
   }
 }

@@ -1,12 +1,12 @@
 .sub{
-  margin-left:10%;
+  margin-left:10%;//margen del segundo titulo
 }
 .not{
-  margin-left:10%
+  margin-left:10%// Margen izquierdo
 }
 .preview-card{
 height: 700px;
-width: 600px;
+width: 600px;//Altura y anchura de la primera card.
 }
 .back-button-container {
   position: absolute;
@@ -16,11 +16,11 @@ width: 600px;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   background-color: rgba(0, 0, 0, 0.398);
-  border-radius: 10%;
+  border-radius: 10%;// Funcionalidad del css del boton de back
 }
 
 .back-button-container.show {
-  opacity: 1;
+  opacity: 1;//Opacidad del boton back.
 }
 
 .pause-button-container {
@@ -31,20 +31,20 @@ width: 600px;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   background-color: rgba(0, 0, 0, 0.398);
-  border-radius: 10%;
+  border-radius: 10%;//css del boton Pause
 }
 
 .pause-button-container.show {
-  opacity: 1;
+  opacity: 1;//Opacidad del boton pause.
 }
 
 .image-container {
-  position: relative;
+  position: relative;//Posicion de la imagen.
 }
 .image-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;//Ancho y alto de la del container de la imagen.
 }
 .image-container::before {
   content: '';
@@ -54,12 +54,12 @@ width: 600px;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0);
-  z-index: 0;
+  z-index: 0;// Informacion del css de la imagen del contenedor.
 }
 
 .full-width-image {
   max-width: 100%;
-  height: auto;
+  height: auto;// Altura y ancho de la imagen.
 }
 ion-header {
     position: absolute;
@@ -68,94 +68,94 @@ ion-header {
     right: 0;
     z-index: 999;
     margin: 0;
-  padding: 0;
+  padding: 0;// css del de la cabecera.
   }
   ion-footer {
     position: relative;
     bottom: 0;
     left: 0;
-    right: 0;
+    right: 0;//Css del pie de la imagen.
   }
   ion-content {
     --padding-top: 0;
     --margin-top: 0;
     margin: 0;
-    padding: 0;
+    padding: 0;// Css del contenido de la pagina.
 
     .toolbar-with-image {
       padding-top: 0;
       margin: 0;
-      padding: 0;
+      padding: 0;// Css de la imagen.
     }
     .full-width-image {
       object-fit: cover;
       margin: 0;
-      padding: 0;
+      padding: 0;//Otro css de la imagen.
     }
   }
   .perfil-canal {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 10px;//Css del perfil y el canal.
   }
 
   .imagen-pequena {
     width: 50px;
     height: auto;
-    margin-right: 10px;
+    margin-right: 10px;// css de la imagen pequeña del canal.
   }
   
   .imagen-y-contenido {
     display: flex;
     align-items: center;
-    margin-left: 20px;
+    margin-left: 20px;// Css de la Imagen y el contenido
   }
     .titulos {
         display: flex;
-        flex-direction: column;
+        flex-direction: column;//Css de los titulos.
   }
   
   h2, p {
     display: table-cell;
     vertical-align: middle;
-    margin: 0;
+    margin: 0;//Css de los h2 y p.
   }
   h2{
-    padding-top: 10%;
+    padding-top: 10%;// Padding del h2.
   }
   .nombre-canal {
-    font-weight: bold;
+    font-weight: bold;//Nombre del canal, la fuente.
   }
   
   .descripcion {
-    font-size: smaller;
+    font-size: smaller;//Fuente de la descripcion
   }
   
   .message-container {
     max-height: calc(100vh - 56px); 
-    overflow: hidden; 
+    overflow: hidden; //css del contenedor del mensaje.
   }
   
   .message-list {
-    height: 100%; 
+    height: 100%; //css de la lista de mensajes.
   }
   
   .mensaje {
-    font-size: smaller; 
+    font-size: smaller; //Css de el tamaño del mensaje
   }
   ion-content {
-    min-height: 100vh;
+    min-height: 100vh;//ccs de los contenedores.
   }
   @media (prefers-color-scheme: dark) {
 
   div{
-    color: white;
+    color: white;// Color de los divs
   }
 }
 
 .ios ion-footer ion-toolbar{
-  --background: red !important;
+  --background: red !important;//Color de la capsula de donde se envian los mensajes.
 }
 .message-container-father{
-  position: fixed;
+  position: fixed;//Css del contenedor de los mensajes.
 }
