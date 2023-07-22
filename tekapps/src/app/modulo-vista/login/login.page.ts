@@ -42,22 +42,6 @@ export class LoginPage implements OnInit {
         });
       });
   }
-
-  signin() {
-    this.auth.registerUser(this.usuario.value.email, this.usuario.value.password)
-      .then(result => {
-        this.router.navigate(['/tabs']);
-      })
-      .catch(err => {
-        this.alertCtrl.create({
-          header: 'Error',
-          subHeader: err.message,
-          buttons: ['Aceptar']
-        }).then(alert => {
-          alert.present();
-        });
-      });
-  }
   
   ngOnInit() {
   }
