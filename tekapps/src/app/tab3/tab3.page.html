@@ -20,7 +20,7 @@
   </ion-header>
   <ion-toolbar>
     <ion-title class="confi"  color="tertiary"><b>{{ 'Configuración' | translate }}</b></ion-title>
-  </ion-toolbar>
+  </ion-toolbar><!--Esto es la cabecera-->
 
 
 
@@ -30,18 +30,18 @@
 
     <ion-item>
       <ion-label color="tertiary" [routerLink]="['/canal']"><ion-icon name="person"></ion-icon> {{ 'Mi Canal' | translate }}</ion-label>
-    </ion-item>
+    </ion-item><!--Te lleva a mi canal-->
 
     <ion-item>
       <ion-label  color="tertiary"><ion-icon name="notifications-outline"></ion-icon> {{ 'Notificaciones' | translate }}</ion-label>
       <ion-toggle slot="end"></ion-toggle>
-    </ion-item>
+    </ion-item><!--Tema notificaciones-->
 
     <ion-item>
       <ion-label color="tertiary"><ion-icon name="language-outline"></ion-icon> {{ 'Idioma' | translate }}</ion-label>
       <ion-button (click)="changeLanguage('en')">Inglés</ion-button>
       <ion-button (click)="changeLanguage('es')">Español</ion-button>
-    </ion-item>
+    </ion-item><!--Lenguajes y sus tipos-->
     <ion-item>
       <ion-label color="tertiary" [routerLink]="['/privacidad-seguridad']"><ion-icon name="lock-open-outline"></ion-icon> {{ 'Privacidad y Seguridad' | translate }}</ion-label>
       </ion-item>
@@ -62,7 +62,7 @@
       </ion-item>
       <ion-item>
         <ion-label color="tertiary" [routerLink]="['/login']"><ion-icon name="log-out"></ion-icon> {{ 'Cerrar Sesión' | translate }}</ion-label>
-
+<!--Todas las siguientes te redirigen a la página asignada-->
       </ion-item>
   </ion-list>
 
