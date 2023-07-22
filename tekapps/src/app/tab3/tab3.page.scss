@@ -1,14 +1,14 @@
 .subtitle {
     font-size: 14px;
-    color: white;
+    color: white;// Se describe el tamaño de la fuente y el color. 
   }
   
 @media (prefers-color-scheme: dark) {
   .confi{
     background-color: #1C1C1C;
-  }
+  }// se utiliza para aplicar estilos específicos cuando el usuario tiene habilitado el modo de color oscuro (dark mode) en su sistema operativo o dispositivo.
 }
 
 ion-button{
-  color: rgb(9, 9, 9);
+  color: rgb(9, 9, 9);// Se establece el color del texto de los botones ion-button en un tono de gris oscuro.
 }

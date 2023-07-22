@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     path: 'tabs',
     component: TabsPage,
-    children: [
+    children: [// El nombre de la pagina de los componentes y sus rutas.
       {
         path: 'tab1',
         loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
@@ -22,14 +22,14 @@ const routes: Routes = [
       {
         path: '',
         redirectTo: '/tabs/tab1',
-        pathMatch: 'full'
+        pathMatch: 'full'//Esta es la redirección a cada una de las tabs existentes
       }
     ]
   },
   {
     path: '',
     redirectTo: '/login',
-    pathMatch: 'full'
+    pathMatch: 'full'// La página principal que se mostrará
   }
 ];
 
