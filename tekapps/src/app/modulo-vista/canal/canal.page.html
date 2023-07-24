@@ -27,8 +27,7 @@
 
   <ion-list>
     <ion-item *ngFor="let image of images">
-      <ion-thumbnail slot="start" class="image-thumbnail">
-        <img [src]="image.imageUrl" alt="Imagen">
+      <ion-thumbnail slot="start" class="image-thumbnail" >      <img [src]="image.imageUrl" alt="Imagen">
       </ion-thumbnail>
       <ion-label>
         <h2>{{ image.title }}</h2>
@@ -36,6 +35,9 @@
       </ion-label>
     </ion-item>
   </ion-list><!--Imagenes de los videos-->
+  <div class="Favorite-button-container">
+    <ion-button class="favorite-button" (click)="Favoritos()" [routerLink]= "['/favoritos']">Favoritos</ion-button>
+    </div>
 </ion-content>
 
 

@@ -7,6 +7,9 @@ import { NavController } from '@ionic/angular';//Navegador de la pagina canal.
   styleUrls: ['./canal.page.scss'],//Componentes de la pagina Canal.
 })
 export class CanalPage implements OnInit {
+Favoritos() {
+throw new Error('Method not implemented.');
+}
     nombreCanal: string = "ElRubius";
     imagen: string = "../assets/img/el rubius (2).png";
     descripcion: string = "Bienvenido a mi canal. Aquí encontrarás contenido increíble.";
