@@ -14,6 +14,7 @@ throw new Error('Method not implemented.');
     imagen: string = "../assets/img/el rubius (2).png";
     descripcion: string = "Bienvenido a mi canal. Aquí encontrarás contenido increíble.";
   //Descripción de la pagina canal.
+  favorito: boolean= false;
     images = [
       {
         title: "Jugando al Maincrah",// Primera descripcion del primer video.
@@ -76,7 +77,7 @@ throw new Error('Method not implemented.');
     this.showBackButton = !this.showBackButton; 
   }
   favoritos(){
-
+    this.favorito = !this.favorito;
   }
 
   
