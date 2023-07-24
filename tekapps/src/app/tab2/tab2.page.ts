@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';//El decorador Component es una parte esencial de Angular y se utiliza para configurar y definir componentes en la aplicación.
+import { Component } from '@angular/core';//Para que funcione el ionic y el angular. 
 
 @Component({
   selector: 'app-tab2',
