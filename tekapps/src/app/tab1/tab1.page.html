@@ -23,49 +23,42 @@
 <ion-content [fullscreen]="true">
   <!-- Sección de "Stream en vivo" -->
   <h3 class="animate__animated animate__backInLeft"><b>Stream</b> en vivo</h3><hr><!-- Título con efecto de animación -->
-  <div class="scroll-container"><!-- Contenedor con desplazamiento horizontal -->
-    <div class="preview-container"><!-- Contenedor de vistas previas -->
-      <div [routerLink]= "['/directos']" class="preview-card direct"><!-- Vista previa de directo con enlace a "/directos" -->
-        <img [src]="'../../assets/img/' + directos[0].imagen" alt="Preview del directo"><!-- Imagen de la vista previa del directo -->
-        <h5>{{directos[0].titulo}}</h5><!-- Título del directo -->
-        <p>{{directos[0].descripcion}}</p><!-- Descripción del directo -->
-      </div>
-      <div class="preview-card direct"><!-- Otra vista previa de directo -->
-        <img [routerLink]= "['/directos']" [src]="'../../assets/img/' + directos[1].imagen" alt="Preview del directo"><!-- Imagen de la vista previa del directo con enlace a "/directos" -->
-        <h5>{{directos[1].titulo}}</h5><!-- Título del directo -->
-        <p>{{directos[1].descripcion}}</p><!-- Descripción del directo -->
+  <div class="scroll-container">
+    <div class="preview-container">
+      <div *ngFor="let directoJson of directosJson" [routerLink]= "['/directos']" class="preview-card direct"><!-- Vista previa de directo con enlace a "/directos" -->
+        <img [src]=directoJson.direct alt="{{directoJson.directName}}">
+        <h5>{{directoJson.directName}}</h5>
+        <p>{{directoJson.category}}</p>
+        <p><img [src]=directoJson.image  alt="Icon perfil" class="icon_perfil"> {{directoJson.name}}</p>
+        
       </div>
     </div>
   </div>
 
-  <!-- Sección de "Categorías en vivo" -->
-  <h3 class="animate__animated animate__backInLeft"><b>Categorías</b> en vivo</h3><hr><!-- Título con efecto de animación -->
-  <div class="scroll-container"><!-- Contenedor con desplazamiento horizontal -->
-    <div class="preview-container"><!-- Contenedor de vistas previas -->
-      <div class="preview-card category" [routerLink]="'/busqueda/'" [queryParams]="{ titulo: categorias[0].titulo }"><!-- Vista previa de categoría con enlace a "/busqueda/" y parámetro de consulta "titulo" -->
-        <img [src]="'../../assets/img/' + categorias[0].imagen" alt="Categoria"><!-- Imagen de la categoría -->
-        <h5>{{categorias[0].titulo}}</h5><!-- Título de la categoría -->
-        <p>{{categorias[0].espectadores}} espectadores</p><!-- Número de espectadores de la categoría -->
-      </div>          
-      <div class="preview-card category" [routerLink]="'/busqueda/'" [queryParams]="{ titulo: categorias[1].titulo }"><!-- Otra vista previa de categoría con enlace a "/busqueda/" y parámetro de consulta "titulo" -->
-        <img [src]="'../../assets/img/' + categorias[0].imagen" alt="Categoria"><!-- Imagen de la categoría -->
-        <img [src]="'../../assets/img/' + categorias[1].imagen" alt="Categoria"><!-- Otra imagen de la categoría -->
-        <h5>{{categorias[1].titulo}}</h5><!-- Título de la categoría -->
-        <p>{{categorias[1].espectadores}} espectadores</p><!-- Número de espectadores de la categoría -->
-      </div>
+  <!-- Sección de "Test en vivo" -->
+<h3 class="animate__animated animate__backInLeft"><b>Categorias</b> en vivo</h3><hr><!-- Título con efecto de animación -->
+<div class="scroll-container"><!-- Contenedor con desplazamiento horizontal -->
+  <div class="preview-container"><!-- Contenedor de vistas previas -->
+    <div *ngFor="let categoriaJson of categoriasOrdenadas" class="preview-card category" [routerLink]="'/busqueda/'" [queryParams]="{ titulo: categoriaJson.categoria}"><!-- Vista previa de categoría con enlace a "/busqueda/" y parámetro de consulta "titulo" -->
+      <img [src]="'../assets/img/'+categoriaJson.categoria+'.jpg'" alt="{{categoriaJson.categoria}}"><!-- Imagen de la categoría -->
+      <h5>{{categoriaJson.categoria}}</h5><!-- Título de la categoría -->
+      <p>Directos actualmente: {{categoriaJson.conteo }}</p><!-- Número de espectadores de la categoría -->
     </div>
   </div>
+</div>
+
+
+  <!-- Sección de "Categorías en vivo" -->
 
   <!-- Sección de "Grupos en vivo" -->
   <h3 class="animate__animated animate__backInLeft"><b>Grupos</b> en vivo</h3><hr><!-- Título con efecto de animación -->
   <div class="scroll-container"><!-- Contenedor con desplazamiento horizontal -->
     <div class="preview-container"><!-- Contenedor de vistas previas -->
-      <div class="preview-card grupo" [routerLink]="'/busqueda/'" [queryParams]="{ titulo: grupos[0].titulo }"><!-- Vista previa de grupo con enlace a "/busqueda/" y parámetro de consulta "titulo" -->
-        <img [src]="'../../assets/img/' + grupos[0].imagen" alt="Preview del directo"><!-- Imagen de la vista previa del grupo -->
-      </div>
-      <div class="preview-card grupo" [routerLink]="'/busqueda/'" [queryParams]="{ titulo: grupos[1].titulo }"><!-- Otra vista previa de grupo con enlace a "/busqueda/" y parámetro de consulta "titulo" -->
-        <img [src]="'../../assets/img/' + grupos[1].imagen" alt="Preview del directo"><!-- Imagen de la vista previa del grupo -->
+      <div *ngFor="let grupoJson of gruposJson" class="preview-card grupo" [routerLink]="'/busqueda/'" [queryParams]="{ titulo: grupoJson }"><!-- Vista previa de grupo con enlace a "/busqueda/" y parámetro de consulta "titulo" -->
+        <img [src]="'../../assets/img/' + grupoJson+'.jpg'" alt="{{grupoJson}}"><!-- Imagen de la vista previa del grupo -->
       </div>
     </div>
   </div>
+
+  
 </ion-content>

@@ -34,7 +34,7 @@
     <ion-list lines="none" class="message-list">
       <ion-item *ngFor="let mensaje of mensajes">
         <div [class.mensaje-propio]="mensaje.propio" [class.mensaje-externo]="!mensaje.propio">
-          {{ mensaje.texto }}
+          {{mensaje.user}}: {{ mensaje.texto }}
         </div>
       </ion-item>
     </ion-list>

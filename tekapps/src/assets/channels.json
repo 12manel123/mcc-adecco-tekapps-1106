@@ -1,51 +1,114 @@
 [
     {
       "name": "12Manel123",
-      "category": "Videojuegos",
       "image":"assets/img/el rubius (2).png",
-      "isLive": false
+      "isLive": false,
+      "grupo":"Juegos",
+      "videos": [
+        {
+          "nombre": "Video3",
+          "imagen": "assets/img/gameplay1.png",
+          "visitas": 200
+        },
+        {
+          "nombre": "Video4",
+          "imagen": "assets/img/gameplay1.png",
+          "visitas": 300
+        }
+      ]
     },
     {
       "name": "JuanJose",
-      "category": "Entretenimiento",
+      "category": "Only Up",
       "image":"assets/img/el rubius (2).png",
-      "isLive": true
+      "isLive": true,
+      "direct":"assets/img/gameplay1.png",
+      "directName":"Increible! Jugando a among us",
+      "grupo":"Juegos"
     },
     {
       "name": "JuanVegas",
-      "category": "Entretenimiento",
+      "category": "Comida",
       "image":"assets/img/el rubius (2).png",
-      "isLive": true
+      "isLive": true,
+      "direct":"assets/img/gameplay1.png",
+      "directName":"Me han ganado ;-;",
+      "grupo":"Juegos",
+      "videos": [
+        {
+          "nombre": "Video1",
+          "imagen": "assets/img/gameplay2.png",
+          "visitas": 100
+        },
+        {
+          "nombre": "Video2",
+          "imagen": "assets/img/gameplay2.png",
+          "visitas": 50
+        }
+      ]
     },
     {
       "name": "Manel24",
-      "category": "Charlando",
       "image":"assets/img/Pokemon.png",
-      "isLive": false
+      "isLive": false,
+      "grupo":"Musica"
     },
     {
       "name": "Illojuan",
       "category": "Just Chatting",
       "image":"assets/img/el rubius (2).png",
-      "isLive": true
+      "isLive": true,
+      "direct":"assets/img/gameplay1.png",
+      "directName":"Increible! Jugando a among us",
+      "grupo":"IRL",
+      "videos": [
+        {
+          "nombre": "Video5",
+          "imagen": "assets/img/gameplay2.png",
+          "visitas": 100
+        },
+        {
+          "nombre": "Video6",
+          "imagen": "assets/img/gameplay1.png",
+          "visitas": 50
+        }
+      ]
     },
     {
       "name": "Juanito123",
-      "category": "Entretenimiento",
+      "category": "Eventos",
       "image":"assets/img/el rubius (2).png",
-      "isLive": true
+      "isLive": true,
+      "direct":"assets/img/gameplay2.png",
+      "directName":"Increible! Jugando a among us",
+      "grupo":"Juegos"
     },
     {
       "name": "Manelxtrem",
-      "category": "Videojuegos",
+      "category": "Only Up",
       "image":"assets/img/el rubius (2).png",
-      "isLive": true
+      "isLive": true,
+      "direct":"assets/img/gameplay2.png",
+      "directName":"Increible! Jugando a among us",
+      "grupo":"Juegos"
     },
     {
       "name": "Manel202",
-      "category": "Videojuegos",
+      "category": "Eventos",
       "image":"assets/img/el rubius (2).png",
-      "isLive": true
+      "isLive": true,
+      "direct":"assets/img/gameplay1.png",
+      "directName":"Increible! Jugando a among us",
+      "grupo":"Musica"
+    },
+    {
+      "name": "Mangell22222",
+      "category": "Eventos",
+      "image":"assets/img/el rubius (2).png",
+      "isLive": true,
+      "direct":"assets/img/gameplay1.png",
+      "directName":"Increible! Jugando a among us",
+      "grupo":"Musica"
     }
   ]
   

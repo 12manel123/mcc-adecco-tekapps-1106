@@ -29,9 +29,10 @@
           <img [src]="result.image" alt="Imagen del canal" [ngClass]="{ 'is-live': result.isLive }" style="border-radius: 60%;">
         </ion-thumbnail>
         <ion-label>
-          <h2>{{ result.name }}</h2>
+          <h2 [ngClass]="{ 'is-liveText': result.isLive }">{{ result.name }}</h2>
           <p>{{ result.category }}</p>
         </ion-label>
+        <img class="imgDirect" *ngIf="result.isLive" src={{result.direct}} alt="Imagen en vivo">
       </ion-item>
     </ion-list>
   </ion-content><!--redirige a la pagina directos-->
