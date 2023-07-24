@@ -1,13 +1,12 @@
 [
     {
       "name": "12Manel123",
-      "category": "Videojuegos",
       "image":"assets/img/el rubius (2).png",
       "isLive": false
     },
     {
       "name": "JuanJose",
-      "category": "Entretenimiento",
+      "category": "Only Up",
       "image":"assets/img/el rubius (2).png",
       "isLive": true,
       "direct":"assets/img/gameplay1.png",
@@ -15,7 +14,7 @@
     },
     {
       "name": "JuanVegas",
-      "category": "Entretenimiento",
+      "category": "Comida",
       "image":"assets/img/el rubius (2).png",
       "isLive": true,
       "direct":"assets/img/gameplay1.png",
@@ -23,7 +22,6 @@
     },
     {
       "name": "Manel24",
-      "category": "Charlando",
       "image":"assets/img/Pokemon.png",
       "isLive": false
     },
@@ -37,7 +35,7 @@
     },
     {
       "name": "Juanito123",
-      "category": "Entretenimiento",
+      "category": "Eventos",
       "image":"assets/img/el rubius (2).png",
       "isLive": true,
       "direct":"assets/img/gameplay2.png",
@@ -45,7 +43,7 @@
     },
     {
       "name": "Manelxtrem",
-      "category": "Videojuegos",
+      "category": "Only Up",
       "image":"assets/img/el rubius (2).png",
       "isLive": true,
       "direct":"assets/img/gameplay2.png",
@@ -53,7 +51,7 @@
     },
     {
       "name": "Manel202",
-      "category": "Videojuegos",
+      "category": "Eventos",
       "image":"assets/img/el rubius (2).png",
       "isLive": true,
       "direct":"assets/img/gameplay1.png",
@@ -61,7 +59,7 @@
     },
     {
       "name": "Mangell22222",
-      "category": "Videojuegos",
+      "category": "Eventos",
       "image":"assets/img/el rubius (2).png",
       "isLive": true,
       "direct":"assets/img/gameplay1.png",
