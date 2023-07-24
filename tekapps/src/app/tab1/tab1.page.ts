@@ -16,7 +16,16 @@ export class Tab1Page {
     this.http.get<any[]>('assets/channels.json').subscribe((data) => {
       this.directosJson = data.filter(item => item.isLive && item.direct);
       this.categoriasJson = this.directosJson.map(item => item.category).filter((value, index, self) => self.indexOf(value) === index);
-      this.gruposJson = data.filter(item => !item.isLive);
+  
+      // Usar un conjunto (Set) para evitar duplicados de grupos
+      const gruposSet = new Set();
+      this.directosJson.forEach((directo) => {
+        if (directo.grupo && !gruposSet.has(directo.grupo)) {
+          this.gruposJson.push(directo.grupo);
+          gruposSet.add(directo.grupo);
+        }
+      });
+  
       this.categoriasOrdenadas = this.countDirectosPorCategoria();
       this.categoriasOrdenadas.sort((a, b) => b.conteo - a.conteo); // Ordenar categorías por cantidad de directos (mayor a menor)
     });

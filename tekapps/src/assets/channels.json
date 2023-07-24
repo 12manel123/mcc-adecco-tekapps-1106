@@ -2,7 +2,8 @@
     {
       "name": "12Manel123",
       "image":"assets/img/el rubius (2).png",
-      "isLive": false
+      "isLive": false,
+      "grupo":"Juegos"
     },
     {
       "name": "JuanJose",
@@ -10,7 +11,8 @@
       "image":"assets/img/el rubius (2).png",
       "isLive": true,
       "direct":"assets/img/gameplay1.png",
-      "directName":"Increible! Jugando a among us"
+      "directName":"Increible! Jugando a among us",
+      "grupo":"Juegos"
     },
     {
       "name": "JuanVegas",
@@ -18,12 +20,14 @@
       "image":"assets/img/el rubius (2).png",
       "isLive": true,
       "direct":"assets/img/gameplay1.png",
-      "directName":"Me han ganado ;-;"
+      "directName":"Me han ganado ;-;",
+      "grupo":"Juegos"
     },
     {
       "name": "Manel24",
       "image":"assets/img/Pokemon.png",
-      "isLive": false
+      "isLive": false,
+      "grupo":"Musica"
     },
     {
       "name": "Illojuan",
@@ -31,7 +35,8 @@
       "image":"assets/img/el rubius (2).png",
       "isLive": true,
       "direct":"assets/img/gameplay1.png",
-      "directName":"Increible! Jugando a among us"
+      "directName":"Increible! Jugando a among us",
+      "grupo":"IRL"
     },
     {
       "name": "Juanito123",
@@ -39,7 +44,8 @@
       "image":"assets/img/el rubius (2).png",
       "isLive": true,
       "direct":"assets/img/gameplay2.png",
-      "directName":"Increible! Jugando a among us"
+      "directName":"Increible! Jugando a among us",
+      "grupo":"Juegos"
     },
     {
       "name": "Manelxtrem",
@@ -47,7 +53,8 @@
       "image":"assets/img/el rubius (2).png",
       "isLive": true,
       "direct":"assets/img/gameplay2.png",
-      "directName":"Increible! Jugando a among us"
+      "directName":"Increible! Jugando a among us",
+      "grupo":"Juegos"
     },
     {
       "name": "Manel202",
@@ -55,7 +62,8 @@
       "image":"assets/img/el rubius (2).png",
       "isLive": true,
       "direct":"assets/img/gameplay1.png",
-      "directName":"Increible! Jugando a among us"
+      "directName":"Increible! Jugando a among us",
+      "grupo":"Musica"
     },
     {
       "name": "Mangell22222",
@@ -63,7 +71,8 @@
       "image":"assets/img/el rubius (2).png",
       "isLive": true,
       "direct":"assets/img/gameplay1.png",
-      "directName":"Increible! Jugando a among us"
+      "directName":"Increible! Jugando a among us",
+      "grupo":"Musica"
     }
   ]
   
