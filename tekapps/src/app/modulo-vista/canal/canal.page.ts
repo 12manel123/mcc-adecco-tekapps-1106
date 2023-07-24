@@ -76,8 +76,10 @@ throw new Error('Method not implemented.');
     this.showBackButton = !this.showBackButton; 
   }
   favoritos(){
-    
+
   }
+
+  
   hideBackButton() {
     setTimeout(() => {
       this.showBackButton = false;
