@@ -32,14 +32,11 @@
       <ion-label>
         <h2>{{ image.title }}</h2>
         <p>{{ image.description }}</p>
+        <ion-button class="favorite-button" (click)="Favoritos()" [routerLink]= "['/favoritos']">Favoritos</ion-button>
       </ion-label>
     </ion-item>
   </ion-list><!--Imagenes de los videos-->
-  <div class="Favorite-button-container">
-    <ion-button class="favorite-button" (click)="Favoritos()" [routerLink]= "['/favoritos']">Favoritos</ion-button>
-    </div>
-</ion-content>
-
+  </ion-content>
 
 
 
