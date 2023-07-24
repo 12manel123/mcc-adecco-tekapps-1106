@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { Component } from '@angular/core';//Para que funcione el ionic y el angular. 
-
-=======
 import { Component } from '@angular/core';//El decorador Component es una parte esencial de Angular y se utiliza para configurar y definir componentes en la aplicación.
 import { HttpClient } from '@angular/common/http';
 interface VideoInfo {
@@ -12,7 +8,6 @@ interface VideoInfo {
     visitas: number;
   };
 }
->>>>>>> 62056c2b38d1330079c0fc1cd697dca122855b55
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
