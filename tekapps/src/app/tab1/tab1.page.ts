@@ -55,25 +55,5 @@ export class Tab1Page {
   ngOnInit() {
     this.loadDataFromJson();
   }
-  grupos = [//Esto es un array de todos los grupos.
-    {
-      imagen: 'group1.jpg',
-      route:'juegos',
-      titulo: 'Juegos',
-    },
-    {
-      imagen: 'group2.jpg',
-      route:'juegos',
-      titulo: 'Musica',
-
-
-    },
-    {
-      imagen: 'group3.jpg',
-      route:'vireal',
-      titulo: 'Vida Real',
-
-    }
-  ];
 
 }
