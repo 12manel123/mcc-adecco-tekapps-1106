@@ -9,13 +9,15 @@
       "name": "JuanJose",
       "category": "Entretenimiento",
       "image":"assets/img/el rubius (2).png",
-      "isLive": true
+      "isLive": true,
+      "direct":"assets/img/gameplay1.png"
     },
     {
       "name": "JuanVegas",
       "category": "Entretenimiento",
       "image":"assets/img/el rubius (2).png",
-      "isLive": true
+      "isLive": true,
+      "direct":"assets/img/gameplay1.png"
     },
     {
       "name": "Manel24",
@@ -27,25 +29,29 @@
       "name": "Illojuan",
       "category": "Just Chatting",
       "image":"assets/img/el rubius (2).png",
-      "isLive": true
+      "isLive": true,
+      "direct":"assets/img/gameplay1.png"
     },
     {
       "name": "Juanito123",
       "category": "Entretenimiento",
       "image":"assets/img/el rubius (2).png",
-      "isLive": true
+      "isLive": true,
+      "direct":"assets/img/gameplay2.png"
     },
     {
       "name": "Manelxtrem",
       "category": "Videojuegos",
       "image":"assets/img/el rubius (2).png",
-      "isLive": true
+      "isLive": true,
+      "direct":"assets/img/gameplay2.png"
     },
     {
       "name": "Manel202",
       "category": "Videojuegos",
       "image":"assets/img/el rubius (2).png",
-      "isLive": true
+      "isLive": true,
+      "direct":"assets/img/gameplay1.png"
     }
   ]
   

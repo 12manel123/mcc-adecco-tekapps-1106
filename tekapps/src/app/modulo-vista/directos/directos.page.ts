@@ -10,14 +10,17 @@ export class DirectosPage implements OnInit {
   descripcion: string = '50000001 subscriptores';//Numero y nombre del canal.
   suscrito: boolean = false;
   notificaciones: boolean = false;
-  mensajes: any[] = [
-    { texto: 'Soyfurro29:Hola', propio: true },
-    { texto: '12manel123:Eres lo mejor!', propio: false },
-    { texto: 'Soyfurro29:ffffffff', propio: true },
-    { texto: 'Eduardo22:¿Y tú?', propio: true },
-    { texto: 'Soyfurro29:También bien, gracias', propio: false },
-  ];//Funcionalidad del chat.
+  myuser:string='Tekapps';
   
+  mensajes: any[] = [
+    { user:"User1",texto: 'Hola', propio: true },
+    { user:"User2",texto: 'Eres lo mejor!', propio: false },
+    { user:"User3",texto: 'ffffffff', propio: true },
+    { user:"User1",texto: '¿Y tú?', propio: true },
+    { user:"User3",texto: 'También bien, gracias', propio: false },
+  ];//Funcionalidad del chat.
+  showBackButton: boolean = false;
+  nuevoMensaje: string = '';//Variables
   
  
   constructor() { }
@@ -25,8 +28,7 @@ export class DirectosPage implements OnInit {
   ngOnInit() {
   }
  
-  showBackButton: boolean = false;
-  nuevoMensaje: string = '';
+  
   toggleBackButton() {
     this.showBackButton = !this.showBackButton;
   }
@@ -34,7 +36,7 @@ export class DirectosPage implements OnInit {
   hideBackButton() {
     setTimeout(() => {
       this.showBackButton = false;
-    }, 5000);//Para que el boton se active y desaparezca.
+    }, 10000);//Para que el boton se active y desaparezca.
   }
   alternarSuscripcion() {
     this.suscrito = !this.suscrito;//Saber si esta subsctiro o no.
@@ -53,7 +55,8 @@ export class DirectosPage implements OnInit {
 
   enviarMensaje() {
     if (this.nuevoMensaje.trim() !== '') {
-      const mensaje = { texto: this.nuevoMensaje, propio: true };
+
+      const mensaje = { user: this.myuser,texto: this.nuevoMensaje, propio: true };
       this.mensajes.push(mensaje);
       this.nuevoMensaje = '';//Envio del mensaje. Ventana.
     }

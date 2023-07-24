@@ -1,7 +1,12 @@
 .is-live {
-  //border: 4px solid rgb(209, 171, 0);
-  box-shadow: 0 0 3px 3px rgba(192, 144, 0, 0.866);
-
+  box-shadow: 0 0 2px 2px rgba(192, 144, 0, 0.866);//Si esta directo el icono
+}
+.is-liveText {
+  color: rgba(192, 144, 0, 0.866);//Si esta directo el texto el nombre
+}
+.imgDirect{//La imagen de si esta en directo
+  border-radius: 5%;
+  width: 50%;
 }
 .custom-searchbar {
   --border-radius: 10px;// borde de el css de la searchbar.
@@ -37,8 +42,21 @@
   animation: slideInFromTop 0.3s ease-in-out;//Animacion de el css.
 }
 @media (prefers-color-scheme: dark) {
+  .item-detail-icon{
+    color:white;
+  }
   .custom-searchbar{
     --background: #3a3535;
+    color:white;
     --border-radius: 10px;//Borde y tema de color.
+  }
+  .ios p{
+    color:rgb(148, 148, 148);
+  }
+  h2{
+    color:white;//Color para texto en el tema oscuro
+  }
+  .is-liveText {
+    color: rgba(255, 191, 0, 0.866) !important;//Si esta en directo, el color sera amarillo en oscuro
   }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';//Componente neceario para que Angular funcione. 
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-tab1',
@@ -57,6 +58,6 @@ export class Tab1Page {
 
     }
   ];
-  constructor() {}//No hay constructores.
+  constructor(private http: HttpClient) {}
 
 }
