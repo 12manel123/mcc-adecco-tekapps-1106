@@ -73,9 +73,11 @@ throw new Error('Method not implemented.');
   showBackButton: boolean = false;
   nuevoMensaje: string = '';
   toggleBackButton() {//constructor de un verdadero y falso de mensajes.
-    this.showBackButton = !this.showBackButton;
+    this.showBackButton = !this.showBackButton; 
   }
-  
+  favoritos(){
+    
+  }
   hideBackButton() {
     setTimeout(() => {
       this.showBackButton = false;
