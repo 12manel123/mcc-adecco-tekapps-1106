@@ -23,18 +23,23 @@
 <ion-content [fullscreen]="true">
   <!-- Sección de "Stream en vivo" -->
   <h3 class="animate__animated animate__backInLeft"><b>Stream</b> en vivo</h3><hr><!-- Título con efecto de animación -->
+  <div class="scroll-container">
+    <div class="preview-container">
+      <div *ngFor="let directoJson of directosJson" [routerLink]= "['/directos']" class="preview-card direct"><!-- Vista previa de directo con enlace a "/directos" -->
+        <img [src]=directoJson.direct alt="Preview del directo">
+        <h5>{{directoJson.directName}}</h5>
+        <p><img [src]=directoJson.image alt="Icon perfil" class="icon_perfil"> {{directoJson.name}}</p>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="animate__animated animate__backInLeft"><b>Test</b> en vivo</h3><hr><!-- Título con efecto de animación -->
   <div class="scroll-container"><!-- Contenedor con desplazamiento horizontal -->
     <div class="preview-container"><!-- Contenedor de vistas previas -->
-      <div [routerLink]= "['/directos']" class="preview-card direct"><!-- Vista previa de directo con enlace a "/directos" -->
-        <img [src]="'../../assets/img/' + directos[0].imagen" alt="Preview del directo"><!-- Imagen de la vista previa del directo -->
-        <h5>{{directos[0].titulo}}</h5><!-- Título del directo -->
-        <p>{{directos[0].descripcion}}</p><!-- Descripción del directo -->
-      </div>
-      <div class="preview-card direct"><!-- Otra vista previa de directo -->
-        <img [routerLink]= "['/directos']" [src]="'../../assets/img/' + directos[1].imagen" alt="Preview del directo"><!-- Imagen de la vista previa del directo con enlace a "/directos" -->
-        <h5>{{directos[1].titulo}}</h5><!-- Título del directo -->
-        <p>{{directos[1].descripcion}}</p><!-- Descripción del directo -->
-      </div>
+      <div *ngFor="let categoriaJson of categoriasJson" class="preview-card category" [routerLink]="'/busqueda/'" [queryParams]="{ titulo: categoriaJson }"><!-- Vista previa de categoría con enlace a "/busqueda/" y parámetro de consulta "titulo" -->
+        <img [src]="'../assets/img/'+categoriaJson+'.jpg'" alt="Categoria"><!-- Imagen de la categoría -->
+        <h5>{{categoriaJson}}</h5><!-- Título de la categoría -->E
+        <p>Directos actualmente: {{ directosPorCategoria[categoriaJson.category] || 0 }}</p><!-- Número de espectadores de la categoría -->      </div>          
     </div>
   </div>
 

@@ -7,7 +7,35 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['tab1.page.scss']//Componentes de la tab 1 Necesarios. 
 })
 export class Tab1Page {
-  
+  directosJson: any[] = [];
+  categoriasJson: any[] = [];
+  gruposJson: any[] = [];
+  directosPorCategoria: { [categoria: string]: number } = {}; // Objeto para contar directos por categoría
+
+ loadDataFromJson(): void {
+    this.http.get<any[]>('assets/channels.json').subscribe((data) => {
+      this.directosJson = data.filter(item => item.isLive && item.direct);
+      this.categoriasJson = this.directosJson.map(item => item.category).filter((value, index, self) => self.indexOf(value) === index);
+      this.gruposJson = data.filter(item => !item.isLive);
+      this.directosPorCategoria = this.countDirectosPorCategoria();
+    });
+  }
+  constructor(private http: HttpClient) {}
+  countDirectosPorCategoria(): { [categoria: string]: number } {
+    const conteo: { [categoria: string]: number } = {};
+    this.categoriasJson.forEach((directo) => {
+      if (!conteo[directo.category]) {
+        conteo[directo.category] = 1;
+      } else {
+        conteo[directo.category]++;
+      }
+    });
+    return conteo;
+  }
+
+  ngOnInit() {
+    this.loadDataFromJson();
+  }
   directos = [//Esto es un array de todos los directos
     {
       imagen: 'gameplay1.png',
@@ -58,6 +86,5 @@ export class Tab1Page {
 
     }
   ];
-  constructor(private http: HttpClient) {}
 
 }

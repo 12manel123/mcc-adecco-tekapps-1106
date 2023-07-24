@@ -80,12 +80,17 @@ hr {
 /* Estilo para el título de las tarjetas de vista previa */
 .preview-card h5 {
   margin-top: 10px;
+  font-size: small;
 }
 
 /* Estilo para el párrafo de las tarjetas de vista previa */
 .preview-card p {
   margin-top: 5px;
   font-size: 14px;
+}
+.icon_perfil{
+  width: 15%!important;
+  border-radius: 70%!important;
 }
 
 /* Estilos para el modo oscuro (media query para dispositivos con preferencia de color oscuro) */

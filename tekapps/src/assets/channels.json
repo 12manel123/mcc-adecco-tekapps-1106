@@ -10,14 +10,16 @@
       "category": "Entretenimiento",
       "image":"assets/img/el rubius (2).png",
       "isLive": true,
-      "direct":"assets/img/gameplay1.png"
+      "direct":"assets/img/gameplay1.png",
+      "directName":"Increible! Jugando a among us"
     },
     {
       "name": "JuanVegas",
       "category": "Entretenimiento",
       "image":"assets/img/el rubius (2).png",
       "isLive": true,
-      "direct":"assets/img/gameplay1.png"
+      "direct":"assets/img/gameplay1.png",
+      "directName":"Me han ganado ;-;"
     },
     {
       "name": "Manel24",
@@ -30,28 +32,40 @@
       "category": "Just Chatting",
       "image":"assets/img/el rubius (2).png",
       "isLive": true,
-      "direct":"assets/img/gameplay1.png"
+      "direct":"assets/img/gameplay1.png",
+      "directName":"Increible! Jugando a among us"
     },
     {
       "name": "Juanito123",
       "category": "Entretenimiento",
       "image":"assets/img/el rubius (2).png",
       "isLive": true,
-      "direct":"assets/img/gameplay2.png"
+      "direct":"assets/img/gameplay2.png",
+      "directName":"Increible! Jugando a among us"
     },
     {
       "name": "Manelxtrem",
       "category": "Videojuegos",
       "image":"assets/img/el rubius (2).png",
       "isLive": true,
-      "direct":"assets/img/gameplay2.png"
+      "direct":"assets/img/gameplay2.png",
+      "directName":"Increible! Jugando a among us"
     },
     {
       "name": "Manel202",
       "category": "Videojuegos",
       "image":"assets/img/el rubius (2).png",
       "isLive": true,
-      "direct":"assets/img/gameplay1.png"
+      "direct":"assets/img/gameplay1.png",
+      "directName":"Increible! Jugando a among us"
+    },
+    {
+      "name": "Mangell22222",
+      "category": "Videojuegos",
+      "image":"assets/img/el rubius (2).png",
+      "isLive": true,
+      "direct":"assets/img/gameplay1.png",
+      "directName":"Increible! Jugando a among us"
     }
   ]
   
