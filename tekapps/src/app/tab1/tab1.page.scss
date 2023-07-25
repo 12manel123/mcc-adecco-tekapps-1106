@@ -9,11 +9,11 @@ b {
 .preview-card {
   flex: 0 0 auto;
   width: 200px;
-  margin-right: 10px;
+  margin-right: 200px;
   background-color: #ffffff;
   border-radius: 5px;
   padding: 10px;
-  text-align: center;
+  text-align: justify;
 }
 
 /* Estilo para el contenedor con desplazamiento horizontal */
@@ -47,7 +47,7 @@ h3 {
 
 /* Estilo para las líneas horizontales */
 hr {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(251, 242, 242);
   margin-left: 3%;
 }
 
@@ -69,6 +69,7 @@ hr {
 .category img{
   width: 200%;
   height: 100%;
+  margin-right: 200px;
 }
 
 /* Estilo para el efecto de escala y sombra al hacer hover sobre las imágenes */
@@ -103,7 +104,7 @@ hr {
   
   /* Estilo para las tarjetas de vista previa en modo oscuro */
   .preview-card {
-    flex: 0 0 auto;
+    flex: auto;
     width: 200px;
     margin-right: 10px;
     background-color: #1C1C1C;
@@ -162,10 +163,10 @@ hr {
   .preview-card {
     flex: 0 0 auto;
     width: 200px;
-    margin-right: 10px;
+    margin-right: 0px;
     background-color: #1C1C1C;
     border-radius: 5px;
-    padding: 10px;
+    padding: 5px;
     text-align: right;
   }
   
@@ -182,7 +183,7 @@ hr {
   .category img{
     width: 200%;
     height: 100%;
-  }
+    }
   
   /* Estilo para el título de las tarjetas de vista previa en modo oscuro */
   .preview-card h5 {
@@ -193,5 +194,10 @@ hr {
   .preview-card p {
     margin-top: 5px;
     font-size: 14px;
+  }
+}
+@media screen and (min-width: 525px){
+  .preview-card{
+    margin-left: 60px;
   }
 }
