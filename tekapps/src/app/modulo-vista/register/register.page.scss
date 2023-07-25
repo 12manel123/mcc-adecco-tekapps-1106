@@ -9,6 +9,21 @@
 u{
     font-size: 12px;
 }
+@media screen and (min-width: 525px) {
+    ion-header ion-button img {
+        max-width: 35%!important; /* Ajusta el tamaño de la imagen del logo según tus preferencias */
+        height: auto!important;
+    }
+    ion-header ion-button{
+        margin-left: 20% !important;
+    }
+    ion-card {
+        --padding-start: 40px; /* Ajusta el padding izquierdo según tus preferencias */
+        --padding-end: 40px; /* Ajusta el padding derecho según tus preferencias */
+        margin: 0 auto; /* Para centrar horizontalmente */
+        max-width: 400px; /* O el ancho deseado para la tarjeta */
+      }
+}
 @media (prefers-color-scheme: dark) {
     *{
         --ion-background-color: #1C1C1C;
