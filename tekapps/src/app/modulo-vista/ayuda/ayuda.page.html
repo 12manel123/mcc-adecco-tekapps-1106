@@ -11,21 +11,56 @@
 </ion-header><!--Cabecera-->
 
 <ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title><p>Preguntas Frecuentes<p></ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <p>1. ¿Cómo puedo restablecer mi contraseña?</p>
-      <p>Para restablecer tu contraseña, ve a la página de inicio de sesión y haz clic en el enlace "¿Olvidaste tu contraseña?". Sigue las instrucciones para restablecer tu contraseña.</p>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Formulario de Ayuda</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <!-- Formulario de ayuda -->
+            <ion-item>
+              <ion-label position="floating">Nombre</ion-label>
+              <ion-input type="text" name="nombre" required></ion-input>
+            </ion-item>
 
-      <p>2. ¿Cómo puedo contactar al soporte técnico?</p>
-      <p>Puedes contactar a nuestro equipo de soporte técnico enviando un correo electrónico a nilontokiustekapps@gmail.com o llamando al número +34 622 850 518.</p>
+            <ion-item>
+              <ion-label position="floating">Correo electrónico</ion-label>
+              <ion-input name="correo" required></ion-input>
+            </ion-item>
 
-      <p>3. ¿Cómo puedo actualizar mi información de perfil?</p>
-      <p>Para actualizar tu información de perfil, inicia sesión en tu cuenta y ve a la sección "Perfil". Allí podrás editar tus datos personales, como tu nombre, dirección de correo electrónico, foto de perfil, etc.</p>
-    </ion-card-content>
-  </ion-card><!--Ayuda que puede mostrar la pagina de ayuda. Alguno de los problemas que se pueden solucionar a partir de una aexplicación-->
+            <ion-item>
+              <ion-label position="floating">Mensaje</ion-label>
+              <ion-textarea name="mensaje" required></ion-textarea>
+            </ion-item>
+
+            <ion-button expand="full" (click)="enviarMensaje()">Enviar Mensaje</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size-md="6">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Preguntas Frecuentes</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <!-- Contenido de preguntas frecuentes -->
+            <p>1. ¿Cómo puedo restablecer mi contraseña?</p>
+            <p>Para restablecer tu contraseña, ve a la página de inicio de sesión y haz clic en el enlace "¿Olvidaste tu contraseña?". Sigue las instrucciones para restablecer tu contraseña.</p>
+
+            <p>2. ¿Cómo puedo contactar al soporte técnico?</p>
+            <p>Puedes contactar a nuestro equipo de soporte técnico enviando un correo electrónico a nilontokiustekapps@gmail.com o llamando al número +34 622 850 518.</p>
+
+            <p>3. ¿Cómo puedo actualizar mi información de perfil?</p>
+            <p>Para actualizar tu información de perfil, inicia sesión en tu cuenta y ve a la sección "Perfil". Allí podrás editar tus datos personales, como tu nombre, dirección de correo electrónico, foto de perfil, etc.</p>
+            <a href="https://wa.me/622850518" target="_blank">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
-
-
