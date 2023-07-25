@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';//se utiliza para configurar los módul
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';//se utiliza para definir las rutas y asociar componentes a esas rutas. 
 
 const routes: Routes = [
+  
   {
     path: 'login',
     loadChildren: () => import('./modulo-vista/login/login.module').then( m => m.LoginPageModule)
