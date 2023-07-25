@@ -2,7 +2,30 @@
     font-size: 14px;
     color: white;// Se describe el tamaño de la fuente y el color. 
   }
-  
+@media screen and (min-width: 525px) {
+  ion-header ion-button img {
+      max-width: 35%!important; /* Ajusta el tamaño de la imagen del logo según tus preferencias */
+      height: auto!important;
+  }
+  ion-header ion-button{
+      margin-left: 20% !important;
+  }
+  ion-list {
+      margin: 0 auto; /* Para centrar horizontalmente */
+      max-width: 600px; /* O el ancho deseado para la tarjeta */
+  }
+  ion-tab-bar{
+    display:none
+  }
+  .confi{
+    display:none;
+  }
+  @media (prefers-color-scheme: dark) {
+  ion-toolbar{
+    --background: #1C1C1C!important;
+  }}
+}
+
 @media (prefers-color-scheme: dark) {
   .confi{
     background-color: #1C1C1C;
