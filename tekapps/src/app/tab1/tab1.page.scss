@@ -32,12 +32,12 @@ b {
 
 /* Estilo para el título de las tarjetas de vista previa */
 .preview-card h5 {
-  text-align: left;
+  text-align: center;
 }
 
 /* Estilo para el párrafo de las tarjetas de vista previa */
 .preview-card p {
-  text-align: left;
+  text-align: center;
 }
 
 /* Estilo para el título de nivel 3 (h3) */
@@ -98,6 +98,7 @@ hr {
   /* Estilo para elementos <b> en modo oscuro */
   b {
     color: #FFE277;
+    text-align: center;
   }
   
   /* Estilo para las tarjetas de vista previa en modo oscuro */
@@ -113,7 +114,7 @@ hr {
   
   /* Estilos para el texto (h5, p, h3) en modo oscuro */
   h5,p,h3{
-    color: white;
+    color: rgb(255, 253, 253);
   }
   
   /* Estilo para el contenedor con desplazamiento horizontal en modo oscuro */
@@ -133,6 +134,7 @@ hr {
   /* Estilo para el título de las tarjetas de vista previa en modo oscuro */
   .preview-card h5 {
     text-align: left;
+    
   }
   
   /* Estilo para el párrafo de las tarjetas de vista previa en modo oscuro */
@@ -142,13 +144,13 @@ hr {
   
   /* Estilo para el título de nivel 3 (h3) en modo oscuro */
   h3 {
-    margin-left: 5%;
+    margin-left: 1%;
   }
   
   /* Estilo para las líneas horizontales en modo oscuro */
   hr {
     background-color: rgb(255, 255, 255);
-    margin-left: 3%;
+    margin-left: 1%;
   }
   
   /* Estilo para el contenedor de vistas previas en modo oscuro */
@@ -164,7 +166,7 @@ hr {
     background-color: #1C1C1C;
     border-radius: 5px;
     padding: 10px;
-    text-align: center;
+    text-align: right;
   }
   
   /* Estilo para las imágenes de las tarjetas de vista previa en modo oscuro */
@@ -173,7 +175,7 @@ hr {
     max-height: 150px;
     object-fit: cover;
     border-radius: 5%;
-    transition: transform 0.3s ease;
+    transition:all;
   }
   
   /* Estilo para las imágenes de categorías en modo oscuro */
