@@ -4,8 +4,10 @@
       <ion-button [routerLink]="['/busqueda']">
         <ion-icon name="search"></ion-icon>
       </ion-button>
+      <ion-button class="profile" [routerLink]= "['/tabs/tab3']">
+        <ion-icon name="person"></ion-icon>
+      </ion-button>
     </ion-buttons>
-    
     <ion-title>
       <ion-buttons >
         <ion-button [routerLink]= "['/tabs/tab1']">
@@ -13,8 +15,6 @@
         </ion-button>
       </ion-buttons>
     </ion-title><!--Cabecera de la pagina-->
-  
-    <ion-action-sheet trigger="open-action-sheet" header="Actions" ></ion-action-sheet>
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
