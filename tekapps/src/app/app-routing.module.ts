@@ -62,7 +62,7 @@ const routes: Routes = [
   },
   {
     path: 'editarperfil',
-    loadChildren: () => import('./editarperfil/editarperfil.module').then( m => m.EditarperfilPageModule)
+    loadChildren: () => import('./modulo-vista/editarperfil/editarperfil.module').then( m => m.EditarperfilPageModule)
   },
 //Esto serian todas las rutas accesibles de la aplicacion
 
