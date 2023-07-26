@@ -1,3 +1,6 @@
+.left-menu{
+  display: none;
+}
 b {
     color: #695302;
   }
@@ -171,8 +174,14 @@ b {
 .profile{
   display: none;
 }
-  @media screen and (min-width: 525px) {
-    .profile{
-      display: flex !important;
-    }
+@media screen and (min-width: 525px) {
+  .profile{
+    display: flex !important;
   }
+  .left-menu{
+    display: flex;
+    background-color: red!important;
+    width: 50px;
+    height: 100px;    
+  }
+}

@@ -5,8 +5,18 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';//proporciona u
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';//permite el cambio de idioma de la aplicación.
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';//específica para cargar traducciones a través del servicio HttpClient.
 import { HttpClientModule, HttpClient } from '@angular/common/http';//permite realizar solicitudes HTTP para cargar recursos como traducciones.
-import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth'//Este módulo contiene la configuración de firebase.
-import { AngularFireModule } from '@angular/fire/compat';// proporciona integración con Firebase en la aplicación.
+
+import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire/compat'; 
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { ReactiveFormsModule } from '@angular/forms';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import {initializeApp, provideFirebaseApp} from '@angular/fire/app';
+
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyAtWMEi-cdPLM1eu3J0wFNwpgwZwuezzrc",//Es una clave única que identifica tu aplicación ante Firebase y se utiliza para autenticar la aplicación en los servicios de Firebase.
   authDomain: "tekapps-c4324.firebaseapp.com",// Es el dominio de autenticación de Firebase, que se utiliza para el proceso de autenticación y autorización de usuarios.
@@ -31,9 +41,16 @@ export function HttpLoaderFactory(http: HttpClient) {// Esta función se utiliza
 @NgModule({//Aquí se define el decorador NgModule que se utiliza para configurar el módulo raíz.
   declarations: [AppComponent],//Esto indica que AppComponent es parte del módulo raíz y puede ser utilizado en la aplicación.
   imports: [//se configuran los módulos externos que se utilizarán en el módulo actual.
-    BrowserModule, IonicModule.forRoot(), // Es un módulo que proporciona funcionalidades esenciales para aplicaciones que se ejecutan en el navegador.
+    BrowserModule, 
+    IonicModule.forRoot(), // Es un módulo que proporciona funcionalidades esenciales para aplicaciones que se ejecutan en el navegador.
     AppRoutingModule,//Es un módulo de enrutamiento que define las rutas de la aplicación.
-    AngularFireModule.initializeApp(firebaseConfig),//Es un módulo que proporciona integración con Firebase en la aplicación.
+    AngularFireModule, 
+    provideFirestore(() => getFirestore()),
+    //AngularFirestoreModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(firebaseConfig),//adios
+    provideFirebaseApp( () => initializeApp(firebaseConfig)),//Es un módulo que proporciona integración con Firebase en la aplicación.
     AngularFireAuthModule,//Es un módulo específico para la autenticación con Firebase.
     HttpClientModule,// Es un módulo que proporciona el servicio HttpClient para realizar solicitudes HTTP.
     TranslateModule.forRoot({//Es un módulo de internacionalización
