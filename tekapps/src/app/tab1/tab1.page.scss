@@ -198,16 +198,17 @@ hr {
 }
 @media screen and (min-width: 525px){
   .preview-card{
-    margin-left: 60px;
+    margin-left: 100px  
   }
   .category img{
     width: 200%;
     height: 100%;
     position: relative;
-    margin-left: 260px;
+
     
   }
-  .preview-card h5 {
-    margin-right: 300px;
+  .category h5 {
+    text-align: ceen;
   } 
+
 }
