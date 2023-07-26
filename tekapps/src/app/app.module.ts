@@ -49,7 +49,8 @@ export function HttpLoaderFactory(http: HttpClient) {// Esta función se utiliza
     //AngularFirestoreModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(firebaseConfig),//adios
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(firebaseConfig),
     provideFirebaseApp( () => initializeApp(firebaseConfig)),//Es un módulo que proporciona integración con Firebase en la aplicación.
     AngularFireAuthModule,//Es un módulo específico para la autenticación con Firebase.
     HttpClientModule,// Es un módulo que proporciona el servicio HttpClient para realizar solicitudes HTTP.

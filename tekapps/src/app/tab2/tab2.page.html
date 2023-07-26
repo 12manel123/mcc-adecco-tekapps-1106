@@ -59,4 +59,30 @@
     </div>
   </div>
 </div>
+<!--
+  ------------------------------FIREBASE USERS-------------------------------
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+  <div>
+      <label>Name</label>
+      <input type="text" formControlName="name">
+  </div>
+  <div>
+      <label>Image</label>
+      <textarea formControlName="image"></textarea>
+  </div>
+  <div>
+      <label>Directo</label>
+      <input type="text" formControlName="isLive">
+  </div>
+  <input type="submit" value="Enviar">
+</form>
+<div class="places">
+  <div class="place" *ngFor="let user of users">
+      <div class="image" [ngStyle]="{ backgroundImage: 'url('+user.image+')' }"></div>
+      <div class="info">
+          <h4>{{user.name}}</h4>
+          <button class="btn btn-outline-danger" (click)="onClickDelete(user)">Borrar</button>
+      </div>
+  </div>
+</div>-->
 </ion-content>
