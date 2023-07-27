@@ -1,3 +1,4 @@
+
 <ion-content>
   <ion-toolbar class="toolbar-with-image" collapse="condense">
     <ion-buttons slot="start" class="back-button-container" [class.show]="showBackButton" (click)="toggleBackButton()">
@@ -32,9 +33,11 @@
   <div class="message-container" #messageContainer>
     <ion-list lines="none" class="message-list" #messageList>
       <ion-item *ngFor="let mensaje of mensajes">
-        <ion-card [class.mensaje-propio]="mensaje.propio" [class.mensaje-externo]="!mensaje.propio">
+        <ion-card [class.mensaje-propio]="mensaje.propio" [class.mensaje-externo]="!mensaje.propio"[ngClass]="mensaje.user">
           <ion-card-content class="message-text">
-            <ion-text>{{mensaje.user}}: {{ mensaje.texto }}</ion-text>
+            <ion-text>
+              <span [ngClass]="'username user-' + mensaje.user">{{ mensaje.user }}</span>: {{ mensaje.texto }} 
+            </ion-text>
           </ion-card-content>
         </ion-card>
       </ion-item>
@@ -51,3 +54,4 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-footer>
+  
