@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastController } from '@ionic/angular';
 
 
+
 @Component({
   selector: 'app-ayuda',
   templateUrl: './ayuda.page.html',

@@ -4,12 +4,13 @@ import { FormsModule } from '@angular/forms';//Las formas de la pagina de Angula
 import { IonicModule } from '@ionic/angular';//Lo que hace funcionar el ionic.
 import { AyudaPageRoutingModule } from './ayuda-routing.module';//La ruta de la pagina Ayuda. 
 import { AyudaPage } from './ayuda.page';//La pagina ayuda, para que funcione.
-
+import { ReactiveFormsModule } from '@angular/forms'; // Importa ReactiveFormsModule
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    ReactiveFormsModule,
     AyudaPageRoutingModule//Los imports de la pagina de ayuda.
   ],
   declarations: [AyudaPage]//Las declaraciones de la pagina ayuda.
