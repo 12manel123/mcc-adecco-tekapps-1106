@@ -21,7 +21,6 @@
     </div>
   </div>
 
-
     <ion-button (click)="alternarSuscripcion()" class="sub">
   <ion-icon [name]="suscrito ? 'heart' : 'heart-outline'"></ion-icon>
   {{ suscrito ? 'Suscrito' : 'Subscribirme' }}
@@ -30,22 +29,25 @@
   <ion-icon [name]="notificaciones ? 'notifications' : 'notifications-outline'"></ion-icon>
 </ion-button>
 <div class="message-container-father">
-  <div class="message-container">
-    <ion-list lines="none" class="message-list">
+  <div class="message-container" #messageContainer>
+    <ion-list lines="none" class="message-list" #messageList>
       <ion-item *ngFor="let mensaje of mensajes">
-        <div [class.mensaje-propio]="mensaje.propio" [class.mensaje-externo]="!mensaje.propio">
-          {{mensaje.user}}: {{ mensaje.texto }}
-        </div>
+        <ion-card [class.mensaje-propio]="mensaje.propio" [class.mensaje-externo]="!mensaje.propio">
+          <ion-card-content class="message-text">
+            <ion-text>{{mensaje.user}}: {{ mensaje.texto }}</ion-text>
+          </ion-card-content>
+        </ion-card>
       </ion-item>
     </ion-list>
   </div>
+</div>
 
   <ion-footer>
+    <!-- Aquí va la barra de enviar mensajes -->
     <ion-toolbar>
-      <ion-input placeholder="Escribe un mensaje" [(ngModel)]="nuevoMensaje"></ion-input>
-      <ion-button expand="block" (click)="enviarMensaje()">Enviar</ion-button>
+      <ion-input type="text" placeholder="Escribe un mensaje" [(ngModel)]="nuevoMensaje" name="nuevoMensaje"  (keydown)="onKeyPress($event)"></ion-input>
+      <ion-buttons slot="end">
+        <ion-button (click)="enviarMensaje()">Enviar</ion-button>
+      </ion-buttons>
     </ion-toolbar>
   </ion-footer>
-  </div>
-</ion-content>
-

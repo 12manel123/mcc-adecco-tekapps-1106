@@ -4,9 +4,11 @@
 .not{
   margin-left:10%// Margen izquierdo
 }
-.preview-card{
-height: 700px;
-width: 600px;//Altura y anchura de la primera card.
+.preview-card {
+  height: 200px; /* Altura deseada de la preview-card */
+  width: 600px; /* Anchura de la primera card (puedes ajustarla según tus necesidades) */
+  overflow-x: hidden; /* Oculta el scroll horizontal */
+  overflow-y: auto; /* Permite el desplazamiento vertical si es necesario */
 }
 .back-button-container {
   position: absolute;
@@ -131,17 +133,15 @@ ion-header {
     font-size: smaller;//Fuente de la descripcion
   }
   
-  .message-container {
-    max-height: calc(100vh - 56px); 
-    overflow: hidden; //css del contenedor del mensaje.
-  }
-  
   .message-list {
     height: 100%; //css de la lista de mensajes.
   }
   
   .mensaje {
     font-size: smaller; //Css de el tamaño del mensaje
+  }
+  .mensaje {
+    margin-bottom: 5px;
   }
   ion-content {
     min-height: 100vh;//ccs de los contenedores.
@@ -160,8 +160,51 @@ ion-header {
     color:rgb(205, 205, 205) !important;
   }
 }
+ion-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999; /* Asegura que el footer esté por encima del contenido */
+}
+ion-content {
+  padding-bottom: 56px; /* Ajusta este valor según la altura de tu footer */
+}
 
+ion-content {
+  padding-bottom: 56px; /* Ajusta este valor según la altura de tu footer */
+  overflow-y: auto; /* Asegura que haya un scroll vertical si es necesario */
+}
 
-.message-container-father{
+.body{
+  scrollbar-color: #fffdfd00 transparent;
+}
+.message-container {
+  max-height: 300px; /* Ajusta la altura máxima según tus necesidades */
+  overflow-y: auto; /* Permite el desplazamiento vertical si es necesario */
+  scrollbar-width: none; /* Oculta la scrollbar lateral en navegadores que soporten esta propiedad */
+}
+
+.message-container::-webkit-scrollbar {
+  width: 0; /* Oculta la scrollbar lateral en navegadores basados en WebKit (por ejemplo, Chrome y Safari) */
+}
+.mensaje-container {
+  margin-bottom: 5px; /* Ajusta este valor según el espacio deseado entre los mensajes */
+  max-width: 80%; /* Puedes ajustar el porcentaje según tus preferencias */
+  overflow-y: auto;
+}
+.message-container-father {
+  max-height: 80vh; /* Establece la altura máxima del contenedor a un 80% del alto de la pantalla */
+  overflow-y: auto; /* Permite el desplazamiento vertical si los mensajes superan la altura máxima */
   position: fixed;//Css del contenedor de los mensajes.
+}
+ion-card {
+  margin: 5px 0; /* Ajusta este valor según el espacio deseado entre los mensajes */
+}
+.message-text {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  max-height: 60vh;
+  max-width: 100%;
 }
