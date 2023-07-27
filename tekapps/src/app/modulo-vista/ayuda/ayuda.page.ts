@@ -3,48 +3,40 @@ import { HttpClient } from '@angular/common/http';
 import { AlertController } from '@ionic/angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastController } from '@ionic/angular';
+
+
 @Component({
   selector: 'app-ayuda',
   templateUrl: './ayuda.page.html',
-  styleUrls: ['./ayuda.page.scss'],//Componentes de la pagina ayuda. 
+  styleUrls: ['./ayuda.page.scss'],
 })
 export class AyudaPage implements OnInit {
-  ayudaForm: FormGroup;//Exports de la pagina ayuda.
+  ayudaForm: FormGroup;
 
-constructor(private formBuilder: FormBuilder,
-  private alertController: AlertController,
-  private http: HttpClient,
-  private toastController: ToastController)
-   { this.ayudaForm = this.formBuilder.group({
-    nombre: ['', Validators.required],
-    correo: ['', Validators.required,],
-    mensaje: ['', Validators.required],
-  });
-}
+  constructor(private formBuilder: FormBuilder,
+              private alertController: AlertController,
+              private http: HttpClient,
+              private toastController: ToastController) {
+
+    this.ayudaForm = this.formBuilder.group({
+      nombre: ['', Validators.required],
+      correo: ['', Validators.required],
+      mensaje: ['', Validators.required],
+    });
+  }
+
   ngOnInit() {
   }
-    
+
   enviarMensaje() {
     if (this.ayudaForm.valid) {
-      const formData = this.ayudaForm.value;
-
-      // Lógica para enviar los datos al backend mediante una solicitud POST
-      this.http.post('http://tuservidor.com/api/enviar-mensaje', formData)
-        .subscribe(
-          (response) => {
-            // Mostrar una notificación de éxito
-            this.mostrarNotificacion('Mensaje enviado con éxito');
-            // Resetear el formulario después de enviarlo
-            this.ayudaForm.reset();
-          },
-          (error) => {
-            // Manejar cualquier error que pueda ocurrir en la solicitud
-            console.error('Error al enviar el mensaje', error);
-          }
-        );
+      // Mostrar una notificación de éxito
+      this.mostrarNotificacion('Mensaje enviado con éxito');
+      // Resetear el formulario después de enviarlo
+      this.ayudaForm.reset();
     } else {
       // Si el formulario no es válido, muestra un mensaje de error
-      this.mostrarNotificacion('Por favor, rellena todos los campos obligatorios.');
+      this.mostrarNotificacion('Por favor, rellena todos los campos obligatorios y verifica que el correo electrónico sea válido.');
     }
   }
 
@@ -56,5 +48,4 @@ constructor(private formBuilder: FormBuilder,
     });
     toast.present();
   }
-}
-  
+  }

@@ -20,25 +20,33 @@
           </ion-card-header>
           <ion-card-content>
             <!-- Formulario de ayuda -->
-            <ion-item>
-              <ion-label position="floating">Nombre</ion-label>
-              <ion-input type="text" name="nombre" required></ion-input>
-            </ion-item>
+            <form [formGroup]="ayudaForm">
+              <ion-item>
+                <ion-label position="floating">Nombre</ion-label>
+                <ion-input type="text" formControlName="nombre" required></ion-input>
+              </ion-item>
 
-            <ion-item>
-              <ion-label position="floating">Correo electrónico</ion-label>
-              <ion-input name="correo" required></ion-input>
-            </ion-item>
+              <ion-item>
+                <ion-label position="floating">Correo electrónico</ion-label>
+                <ion-input formControlName="correo" required></ion-input>
+              </ion-item>
 
-            <ion-item>
-              <ion-label position="floating">Mensaje</ion-label>
-              <ion-textarea name="mensaje" required></ion-textarea>
-            </ion-item>
+              <ion-item>
+                <ion-label position="floating">Mensaje</ion-label>
+                <ion-textarea formControlName="mensaje" required></ion-textarea>
+              </ion-item>
 
-            <ion-button expand="full" (click)="enviarMensaje()">Enviar Mensaje</ion-button>
+              <ion-button expand="full" (click)="enviarMensaje()">Enviar Mensaje</ion-button>
+              <a href="https://wa.me/622850518" target="_blank"style="display: block; text-align: center; font-size: 24px;">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+              </a></form>
           </ion-card-content>
         </ion-card>
       </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
 
       <ion-col size-md="6">
         <ion-card>
@@ -55,12 +63,10 @@
 
             <p>3. ¿Cómo puedo actualizar mi información de perfil?</p>
             <p>Para actualizar tu información de perfil, inicia sesión en tu cuenta y ve a la sección "Perfil". Allí podrás editar tus datos personales, como tu nombre, dirección de correo electrónico, foto de perfil, etc.</p>
-            <a href="https://wa.me/622850518" target="_blank">
-              <ion-icon name="logo-whatsapp"></ion-icon>
-            </a>
+            
           </ion-card-content>
         </ion-card>
       </ion-col>
-    </ion-row>
-  </ion-grid>
 </ion-content>
+
+
