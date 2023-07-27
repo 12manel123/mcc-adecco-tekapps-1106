@@ -200,7 +200,10 @@ h3 {
 }
 @media screen and (min-width: 525px){
   .preview-card{
-    margin-left: 100px  
+    margin-left: 40px  
+  }
+  .preview-card:first-child {
+  margin-left: 3%;
   }
   .category img{
     width: 200%;
