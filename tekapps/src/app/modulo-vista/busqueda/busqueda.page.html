@@ -3,19 +3,14 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-buttons slot="end"><!--con slot se posiciona-->
-      <ion-button [routerLink]= "['/busqueda']">
-        <ion-icon name="search"></ion-icon>
-      </ion-button>
-    </ion-buttons>
 
     <ion-title>
       <ion-buttons >
-        <ion-button>
-          <img src="../../../assets/img/logo_tekapps_color.png">
+        <ion-button [routerLink]= "['/tabs/tab1']">
+          <img  style="max-width: 70%; height: auto;" src="../../assets/img/logo_tekapps_color.png">
         </ion-button>
       </ion-buttons>
-    </ion-title><!--Cabecera-->
+    </ion-title>
 
     <ion-action-sheet trigger="open-action-sheet" header="Actions" ></ion-action-sheet>
   </ion-toolbar>

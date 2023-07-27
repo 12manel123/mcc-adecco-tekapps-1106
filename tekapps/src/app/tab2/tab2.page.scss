@@ -1,3 +1,7 @@
+.left-menu{
+  display: none;
+  text-align: left;
+}
 b {
     color: #695302;
   }
@@ -26,7 +30,7 @@ b {
     text-align: left;//Alineación del texto de la card h5.
   }
   .preview-card p {
-    text-align: left;//Alineación del texto de la card p
+    text-align: justify;//Alineación del texto de la card p
   }
   h3 {
     margin-left: 5%;//Margen del h3
@@ -75,7 +79,7 @@ b {
   
   .preview-card h5 {
     margin-top: 10px;
-    font-size: medium;
+    font-size: small;
   }
   
   .preview-card p {
@@ -171,8 +175,22 @@ b {
 .profile{
   display: none;
 }
-  @media screen and (min-width: 525px) {
-    .profile{
-      display: flex !important;
-    }
+@media screen and (min-width: 525px){
+  .preview-card{
+    margin-left: 100px  
   }
+  .category img{
+    width: 200%;
+    height: 100%;
+    position: relative;
+
+    
+  }
+  .category h5 {
+    text-align: justify;
+  } 
+  .profile{
+    display: flex;
+  }
+
+}

@@ -39,6 +39,23 @@ export class LoginPage implements OnInit {
         });//Esto es una alerta en forma de mensaje. 
       });
   }
+  loginGoogle() {
+    this.auth.loginWithGoogle()
+      .then(result => {
+        // Si el inicio de sesión con Google es exitoso, puedes redirigir al usuario a la página que desees
+        this.router.navigate(['/tabs']);
+      })
+      .catch(error => {
+        // Manejo del error en caso de fallo al iniciar sesión con Google
+        this.alertCtrl.create({
+          header: 'Error',
+          subHeader: 'Error al iniciar sesión con Google.',
+          buttons: ['Aceptar']
+        }).then(alert => {
+          alert.present();
+        });
+      });
+  }
   
   ngOnInit() {
   }

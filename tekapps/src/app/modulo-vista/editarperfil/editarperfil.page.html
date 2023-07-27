@@ -19,26 +19,27 @@
         </div>
   
       </ion-avatar>
-      <ion-label class="label">Nombre</ion-label>
-      <ion-input [(ngModel)]="nombre"></ion-input>
+      <ion-label class="label" color="primary">Nombre</ion-label>
+      <ion-input [(ngModel)]="nombre" color="tertiary"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label class="label">Apellido</ion-label>
-      <ion-input [(ngModel)]="apellido"></ion-input>
+      <ion-label class="label" color="primary">Apellido</ion-label>
+      <ion-input [(ngModel)]="apellido" color="tertiary"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label class="label">Correo electrónico</ion-label>
-      <ion-input [(ngModel)]="correo"></ion-input>
+      <ion-label class="label" color="primary">Correo electrónico</ion-label>
+      <ion-input [(ngModel)]="correo" color="tertiary"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label class="label">Contraseña</ion-label>
-      <ion-input [(ngModel)]="contrasena"></ion-input>
+      <ion-label class="label" color="primary">Contraseña</ion-label>
+      <ion-input [(ngModel)]="contrasena" color="tertiary"></ion-input>
     </ion-item>
   </ion-list>
 
   <div class="buttons">
     <ion-button expand="block" (click)="guardarCambios()">Guardar cambios</ion-button>
     <ion-button expand="block" color="danger" (click)="cancelarEdicion()">Cancelar</ion-button>
+    <ion-button expand="block" color="danger" (click)="eliminarUsuario()"><ion-icon name="alert"></ion-icon>ELIMIANR USUARIO<ion-icon name="alert"></ion-icon></ion-button>
   </div>
 
 
