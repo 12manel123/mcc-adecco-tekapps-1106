@@ -1,91 +1,61 @@
-import { Component, OnInit } from '@angular/core';//Para que la pagina de angular funcione.
-import { NavController } from '@ionic/angular';//Navegador de la pagina canal.
-
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';  // Importa ActivatedRoute para obtener los parámetros de la URL
+import { NavController } from '@ionic/angular';
+import { HttpClient } from '@angular/common/http'; // Importa HttpClient para hacer la solicitud HTTP al archivo JSON
 @Component({
   selector: 'app-canal',
   templateUrl: './canal.page.html',
   styleUrls: ['./canal.page.scss'],//Componentes de la pagina Canal.
 })
 export class CanalPage implements OnInit {
-Favoritos() {
-throw new Error('Method not implemented.');
-}
-    nombreCanal: string = "ElRubius";
-    imagen: string = "../assets/img/el rubius (2).png";
-    descripcion: string = "Bienvenido a mi canal. Aquí encontrarás contenido increíble.";
-  //Descripción de la pagina canal.
-  favorito: boolean= false;
-    images = [
-      {
-        title: "Jugando al Maincrah",// Primera descripcion del primer video.
-        description: "Wtf no te vas a creer lo que pasó",
-        imageUrl: "/assets/img/rubius 1.png"
-      },
-      {
-        title: "24 h en directo",//segunda descripcion del degundo video.
-        description: "EXTENSIBLE!",
-        imageUrl: "/assets/img/rubius 2.png"
-      },
-      {
-        title: "Entrevista",//Tercera descripcion del tercer video.
-        description: "Aquí con Auron.",
-        imageUrl: "/assets/img/rubius 3.png"
-      },
-      {
-        title: "Bettle Royale",//Cuarta descripcion del Cuarto video
-        description: "Fornite (Torneo)",
-        imageUrl: "/assets/img/rubius 4.png"
-      },{
-        title: "Garrys mod",//5nta descripcion del 5nto video.
-        description: "Garrys mod con amigos",
-        imageUrl: "/assets/img/rubius 5.png"
-      },
-      {
-        title: "Estaba detrás de tigre",//6xta descripcion del sexto video.
-        description: "Soy furro XD",
-        imageUrl: "/assets/img/rubius 6.png"
-      },
-      {
-        title: "Squid Games",//Septima descripcion del 7mo video.
-        description: "Presentación",
-        imageUrl: "/assets/img/rubius 7.png"
-      },
-      {
-        title: "Entrevista",//8va descripcion del Octavo video.
-        description: "Jordi Wild y el Rubius",
-        imageUrl: "/assets/img/rubius 8.png"
-      },
-      {
-        title: "Charlando tranquilamente",//9na descripcion del noveno video
-        description: "E de explicaros una cosa",
-        imageUrl: "/assets/img/rubius 9.png"
-      },
-      {
-        title: "Juego de miedo ;)",//Decima descripcion del decimo video.
-        description: "Noche de terror",
-        imageUrl: "/assets/img/rubius 10.png"
-      },
-    ];
 
-  constructor(private navCtrl: NavController) { }//Constructor del canal.
-
+  nombreCanal: string = "User";
+  imagen: string = "../assets/img/User.png";
+  descripcion: string = "Description";
+//Descripción de la pagina canal.
+  favoritos: any[] = []; // Array para almacenar los videos favoritos    
+  esFavorito(video: any): boolean {
+    return this.favoritos.some(item => item.nombre === video.nombre);
+  }
+  toggleFavorito(video: any): void {
+    if (this.esFavorito(video)) {
+      this.favoritos = this.favoritos.filter(item => item.nombre !== video.nombre);
+    } else {
+      this.favoritos.push(video);
+    }
+  }
+  constructor(
+    private navCtrl: NavController,
+    private route: ActivatedRoute, // Inyecta ActivatedRoute
+    private http: HttpClient
+  ) {}
+  videos: any[] = [];
   ngOnInit() {
+    this.route.queryParams.subscribe((params) => {
+      const username = params['username'];
+      if (username) {
+        this.buscarCanalPorNombre(username);
+      }
+    });
+  }
+
+  buscarCanalPorNombre(username: string): void {
+    this.http.get<any[]>('assets/channels.json').subscribe((data) => {
+      const canal = data.find((c) => c.name === username);
+      if (canal) {
+        this.nombreCanal = canal.name;
+        this.imagen = canal.image;
+        this.descripcion = canal.descripcion;
+        this.videos = canal.videos || []; // Asigna los videos del canal o un array vacío si no hay videos
+      }
+    });
   }
   showBackButton: boolean = false;
   nuevoMensaje: string = '';
   toggleBackButton() {//constructor de un verdadero y falso de mensajes.
     this.showBackButton = !this.showBackButton; 
   }
-  favoritos(){
-    this.favorito = !this.favorito;
-  }
 
-  
-  hideBackButton() {
-    setTimeout(() => {
-      this.showBackButton = false;
-    }, 10000); // Ocultar el botón después de 10 segundos
-  }
   editarPerfil() {
   }
 }

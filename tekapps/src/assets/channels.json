@@ -8,12 +8,14 @@
         {
           "nombre": "Video3",
           "imagen": "assets/img/gameplay1.png",
-          "visitas": 200
+          "visitas": 200,
+          "description":"Jugando mucho rato!"
         },
         {
           "nombre": "Video4",
           "imagen": "assets/img/gameplay1.png",
-          "visitas": 300
+          "visitas": 300,
+          "description":"Jugando poco rato!"
         }
       ]
     },
@@ -33,17 +35,19 @@
       "isLive": true,
       "direct":"assets/img/gameplay1.png",
       "directName":"Me han ganado ;-;",
-      "grupo":"Juegos",
+      "grupo":"IRL",
       "videos": [
         {
           "nombre": "Video1",
           "imagen": "assets/img/gameplay2.png",
-          "visitas": 100
+          "visitas": 100,
+          "description":"Jugando poco!"
         },
         {
           "nombre": "Video2",
           "imagen": "assets/img/gameplay2.png",
-          "visitas": 50
+          "visitas": 50,
+          "description":"Me encanta esto"
         }
       ]
     },
@@ -65,12 +69,14 @@
         {
           "nombre": "Video5",
           "imagen": "assets/img/gameplay2.png",
-          "visitas": 100
+          "visitas": 100,
+          "description":"Muy entretenido"
         },
         {
           "nombre": "Video6",
           "imagen": "assets/img/gameplay1.png",
-          "visitas": 50
+          "visitas": 50,
+          "description":"Quiero dormir"
         }
       ]
     },

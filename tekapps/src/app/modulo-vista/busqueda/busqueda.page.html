@@ -26,6 +26,7 @@
         <ion-label>
           <h2 [ngClass]="{ 'is-liveText': result.isLive }">{{ result.name }}</h2>
           <p>{{ result.category }}</p>
+          <p>{{ result.grupo }}</p> <!-- Muestra el grupo -->
         </ion-label>
         <img class="imgDirect" *ngIf="result.isLive" src={{result.direct}} alt="Imagen en vivo">
       </ion-item>

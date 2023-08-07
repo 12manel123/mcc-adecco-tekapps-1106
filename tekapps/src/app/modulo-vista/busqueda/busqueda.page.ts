@@ -29,7 +29,8 @@ export class BusquedaPage implements OnInit {
       this.searchResults = allResults.filter(
         (result) =>
           result.name.toLowerCase().includes(searchQuery) ||
-          (result.category && result.category.toLowerCase().includes(searchQuery)) // Filtrar por categoría solo si existe una categoría definida
+          (result.category && result.category.toLowerCase().includes(searchQuery)) ||
+          (result.grupo && result.grupo.toLowerCase().includes(searchQuery))// Filtrar por categoría solo si existe una categoría definida
       );
       this.sortChannelsByLiveStatus();
     });

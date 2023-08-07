@@ -23,18 +23,27 @@
     </ion-card-content>
   </ion-card><!--Editar perfil y el nombre del canal, junto a su descripción-->
 
-  <ion-list>
-    <ion-item *ngFor="let image of images">
-      <ion-thumbnail slot="start" class="image-thumbnail" >      
-      <img [src]="image.imageUrl" alt="Imagen">
+
+  <ion-list *ngIf="videos.length > 0">
+    <p *ngIf="videos[0].description">Emisiones Recientes:</p>
+    <ion-item *ngFor="let video of videos">
+      <ion-thumbnail slot="start" class="image-thumbnail">
+        <img [src]="video.imagen" alt="Imagen">
       </ion-thumbnail>
       <ion-label>
-        <h2 class="titule_video">{{ image.title }}</h2>
-        <p class="description_video">{{ image.description }}</p>
-        <ion-button class="favoritos" (click)="favoritos()" [routerLink]= "['/favoritos']"><ion-icon [name]="favorito ? 'star' : 'star-outline'"></ion-icon>favoritos</ion-button>
+        <h2 class="titule_video">{{ video.nombre }}</h2>
+        <p *ngIf="video.description" class="description_video">{{ video.description }}</p>
+        <p class="description_video">{{ video.visitas }}</p>
+        <ion-button class="favoritos" (click)="toggleFavorito(video)">
+          <ion-icon [name]="esFavorito(video) ? 'star' : 'star-outline'"></ion-icon> Favorito
+        </ion-button>
+        <!-- Agrega aquí los demás detalles del video -->
       </ion-label>
     </ion-item>
-  </ion-list><!--Imagenes de los videos-->
+  </ion-list>
+  <p *ngIf="videos.length === 0" class="no-videos-message">
+    El usuario {{ nombreCanal }} no tiene videos aún.
+  </p>
   </ion-content>
 
 
