@@ -13,6 +13,7 @@
     descripcion: string = '50000001 subscriptores';//Numero y nombre del canal.
     suscrito: boolean = false;
     notificaciones: boolean = false;
+    categoria:string='IRL';
     myuser:string='Tekapps';
     @ViewChild('contentRef', { static: false }) contentRef!: IonContent;
     @ViewChild('messageContainer', { read: ElementRef, static: false }) messageContainerRef!: ElementRef;

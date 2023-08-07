@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, RouterFeature } from '@angular/router';// es un servicio que se utiliza para manejar la navegación entre diferentes rutas en la aplicación.
-
+import { Location } from '@angular/common';
 import { ViewChild, ElementRef } from '@angular/core';@Component({
 
   selector: 'app-editarperfil',
@@ -17,7 +17,7 @@ export class EditarPerfilPage {
     fotoPerfil: string;
      
 
-  constructor(private router: Router) {
+  constructor(private router: Router,private location: Location) {
     this.nombre = '';
     this.apellido = '';
     this.correo = '';
@@ -27,14 +27,11 @@ export class EditarPerfilPage {
   
 
   guardarCambios() {
-   
     window.alert('Los cambios han sido guardados con éxito.');
-
   }
 
   cancelarEdicion() {
-   
-    console.log('Se ha cancelado la edición');
+    this.location.back();
   }
   eliminarUsuario() {
     alert("Se ha eleminiado el usuario");
