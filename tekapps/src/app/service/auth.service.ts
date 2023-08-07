@@ -16,6 +16,9 @@ export class AuthService {
   loginWithGoogle() {
     return this.afAuth.signInWithPopup(new GoogleAuthProvider());
   }
+  loginAnonimo() {
+    return this.afAuth.signInAnonymously();
+  }
   /*deleteUser(email: string, password: string){
     return this.afAuth.deleteUserWithEmailAndPassword(email, password);
   }*/

@@ -23,39 +23,70 @@ export class LoginPage implements OnInit {
       password: ['', [Validators.required, Validators.minLength(6)]],
     });// Esto son los validadores de la pagina de registro. 
   }
-  
-  login() {
-    this.auth.loginUser(this.usuario.value.email, this.usuario.value.password)
-      .then(result => {
-        this.router.navigate(['/tabs']);
-      })// Esto son los resultados del loguin que lo lleva a la tab.
-      .catch(err => {
-        this.alertCtrl.create({
-          header: 'Error',
-          subHeader: err.message,
-          buttons: ['Aceptar']
-        }).then(alert => {
-          alert.present();
-        });//Esto es una alerta en forma de mensaje. 
-      });
+  async displayError(error: any) {
+    let errorMessage = 'Ocurrió un error. Por favor, intenta nuevamente.';
+
+    if (error && error.code) {
+      switch (error.code) {
+        case 'auth/invalid-email':
+          errorMessage = 'El correo no está escrito correctamente.';
+          break;
+        case 'auth/wrong-password':
+          errorMessage = 'Contraseña incorrecta.';
+          break;
+        case 'auth/user-not-found':
+          errorMessage = 'Usuario no encontrado.';
+          break;
+        // Agrega más casos según los códigos de error que quieras manejar
+        default:
+          errorMessage = 'Error desconocido. Por favor, intenta nuevamente.';
+          break;
+      }
+    }
+
+    const alert = await this.alertCtrl.create({
+      header: 'Error',
+      subHeader: errorMessage,
+      buttons: ['Aceptar'],
+    });
+
+    await alert.present();
   }
-  loginGoogle() {
-    this.auth.loginWithGoogle()
-      .then(result => {
-        // Si el inicio de sesión con Google es exitoso, puedes redirigir al usuario a la página que desees
+
+
+  login() {
+    this.auth
+      .loginUser(this.usuario.value.email, this.usuario.value.password)
+      .then((result) => {
         this.router.navigate(['/tabs']);
       })
-      .catch(error => {
-        // Manejo del error en caso de fallo al iniciar sesión con Google
-        this.alertCtrl.create({
-          header: 'Error',
-          subHeader: 'Error al iniciar sesión con Google.',
-          buttons: ['Aceptar']
-        }).then(alert => {
-          alert.present();
-        });
+      .catch((err) => {
+        this.displayError(err);
       });
   }
+
+  loginGoogle() {
+    this.auth
+      .loginWithGoogle()
+      .then((result) => {
+        this.router.navigate(['/tabs']);
+      })
+      .catch((error) => {
+        this.displayError(error);
+      });
+  }
+
+  loginAnonimo() {
+    this.auth
+      .loginAnonimo()
+      .then((result) => {
+        this.router.navigate(['/tabs']);
+      })
+      .catch((error) => {
+        this.displayError(error);
+      });
+  }
+
   
   ngOnInit() {
   }
