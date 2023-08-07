@@ -87,7 +87,21 @@
       "isLive": true,
       "direct":"assets/img/gameplay2.png",
       "directName":"Increible! Jugando a among us",
-      "grupo":"Juegos"
+      "grupo":"Juegos",
+      "videos": [
+        {
+          "nombre": "Video7",
+          "imagen": "assets/img/gameplay2.png",
+          "visitas": 1200,
+          "description":"Muy entretenido"
+        },
+        {
+          "nombre": "Video8",
+          "imagen": "assets/img/gameplay1.png",
+          "visitas": 150,
+          "description":"Quiero dormir"
+        }
+      ]
     },
     {
       "name": "Manelxtrem",
@@ -97,6 +111,52 @@
       "direct":"assets/img/gameplay2.png",
       "directName":"Increible! Jugando a among us",
       "grupo":"Juegos"
+    },
+    {
+      "name": "Elpepe123",
+      "category": "Eventos",
+      "image":"assets/img/el rubius (2).png",
+      "isLive": true,
+      "direct":"assets/img/gameplay2.png",
+      "directName":"Increible! Jugando a among us",
+      "grupo":"Juegos",
+      "videos": [
+        {
+          "nombre": "Video7",
+          "imagen": "assets/img/gameplay2.png",
+          "visitas": 1200,
+          "description":"Muy entretenido"
+        },
+        {
+          "nombre": "Video8",
+          "imagen": "assets/img/gameplay1.png",
+          "visitas": 150,
+          "description":"Quiero dormir"
+        }
+      ]
+    },
+    {
+      "name": "Buenas123",
+      "category": "Eventos",
+      "image":"assets/img/el rubius (2).png",
+      "isLive": true,
+      "direct":"assets/img/gameplay2.png",
+      "directName":"Increible! Jugando a among us",
+      "grupo":"Juegos",
+      "videos": [
+        {
+          "nombre": "Video7",
+          "imagen": "assets/img/gameplay2.png",
+          "visitas": 1200,
+          "description":"Muy entretenido"
+        },
+        {
+          "nombre": "Video8",
+          "imagen": "assets/img/gameplay1.png",
+          "visitas": 150,
+          "description":"Quiero dormir"
+        }
+      ]
     },
     {
       "name": "Manel202",

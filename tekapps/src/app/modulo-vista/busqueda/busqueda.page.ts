@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http'; // Importa HttpClient para hacer la solicitud HTTP al archivo JSON
-
+import { ChangeDetectorRef } from '@angular/core';
 @Component({
   selector: 'app-busqueda',
   templateUrl: './busqueda.page.html',
   styleUrls: ['./busqueda.page.scss'],
 })
 export class BusquedaPage implements OnInit {
-  constructor(private route: ActivatedRoute, private http: HttpClient) {}
-
+  constructor(private route: ActivatedRoute, private http: HttpClient, private cdr: ChangeDetectorRef) {}
   ngOnInit() {
     this.route.queryParams.subscribe((params) => {
       this.searchQuery = params['titulo'];
@@ -22,7 +21,7 @@ export class BusquedaPage implements OnInit {
   searchResults: any[] = [];//Resultado de las pagina busqueda.
 
   performSearch(): void {
-    this.searchResults = []; // Limpia los resultados antes de realizar una nueva búsqueda
+    this.searchResults = [];
     this.http.get<any[]>('assets/channels.json').subscribe((data) => {
       const allResults = data;
       const searchQuery = this.searchQuery.toLowerCase();
@@ -33,6 +32,7 @@ export class BusquedaPage implements OnInit {
           (result.grupo && result.grupo.toLowerCase().includes(searchQuery))// Filtrar por categoría solo si existe una categoría definida
       );
       this.sortChannelsByLiveStatus();
+      this.cdr.detectChanges();
     });
   }
   sortChannelsByLiveStatus(): void {
