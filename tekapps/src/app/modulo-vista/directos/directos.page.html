@@ -32,15 +32,15 @@
 <div class="message-container-father">
   <div class="message-container" #messageContainer>
     <ion-list lines="none" class="message-list" #messageList>
-      <ion-item *ngFor="let mensaje of mensajes">
-        <ion-card [class.mensaje-propio]="mensaje.propio" [class.mensaje-externo]="!mensaje.propio"[ngClass]="mensaje.user">
+      <ion-item *ngFor="let mensaje of mensajes" class="message-body" style="padding: 0px!important;">
+        <ion-card [class.mensaje-propio]="mensaje.propio" [class.mensaje-externo]="!mensaje.propio" [ngClass]="mensaje.user">
           <ion-card-content class="message-text">
             <ion-text>
-              <span [ngClass]="'username user-' + mensaje.user">{{ mensaje.user }}</span>: {{ mensaje.texto }} 
+              <span [ngClass]="'username user-' + mensaje.user">{{ mensaje.user }}</span>: {{ mensaje.texto }}
             </ion-text>
           </ion-card-content>
         </ion-card>
-      </ion-item>
+      </ion-item>      
     </ion-list>
   </div>
 </div>
@@ -50,7 +50,7 @@
     <ion-toolbar>
       <ion-input type="text" placeholder="Escribe un mensaje" [(ngModel)]="nuevoMensaje" name="nuevoMensaje"  (keydown)="onKeyPress($event)"></ion-input>
       <ion-buttons slot="end">
-        <ion-button (click)="enviarMensaje()">Enviar</ion-button>
+        <ion-button (click)="enviarMensaje()" color="tertiary">Enviar</ion-button>
       </ion-buttons>
     </ion-toolbar>
   </ion-footer>

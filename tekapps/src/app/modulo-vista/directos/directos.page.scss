@@ -199,7 +199,7 @@ ion-content {
   position: fixed;//Css del contenedor de los mensajes.
 }
 ion-card {
-  margin: 5px 0; /* Ajusta este valor según el espacio deseado entre los mensajes */
+  margin: 0px 0; /* Ajusta este valor según el espacio deseado entre los mensajes */
 }
 .message-text {
   word-wrap: break-word;
@@ -211,7 +211,20 @@ ion-card {
 .user-User1 {
   color: rgb(97, 24, 165);
 }
+ion-card.message-body {
+  width: 100%;
+  padding: 0;
+}
+ion-card.message-body ion-card-content {
+  padding: 10px; /* Ajusta este valor según tus preferencias */
+}
+.mensaje-propio .message-text {
+  padding-right: 50px;
+}
 
+.mensaje-externo .message-text {
+  padding-right: 50px;
+}
 .user-User2 {
   color: rgb(14, 209, 193);
 }
