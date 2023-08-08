@@ -9,27 +9,28 @@
     </ion-buttons>
     <ion-action-sheet trigger="open-action-sheet" header="Actions"></ion-action-sheet>
     <div class="image-container" (click)="showBackButton = true" (mouseleave)="hideBackButton()">
-      <img src="../assets/img/imagen directo.jpg">
+      <img [src]="direct">
     </div>
   </ion-toolbar>
   <div class="perfil-canal">
     <div class="imagen-y-contenido">
-      <img class="imagen-pequena" src="../assets/img/Pokemon.png" alt="" style="border-radius: 60%;">
+      <img [src]="imagen" alt="" style="border-radius: 60%; width: 50px; margin-right:10px;">
       <div class="titulos">
-        <h2 class="nombre-canal">{{ nombreCanal }}</h2>
+        <a routerLink="/canal" [queryParams]="{ username: nombreCanal }" class="imagen-pequena">
+          <h2 class="nombre-canal">{{ nombreCanal }}</h2>
+        </a>
         <h3 class="descripcion">{{ descripcion }}</h3>
         <h3 class="descripcion">{{ categoria }}</h3>
       </div>
     </div>
   </div>
-
-    <ion-button (click)="alternarSuscripcion()" class="sub">
-  <ion-icon [name]="suscrito ? 'heart' : 'heart-outline'"></ion-icon>
-  {{ suscrito ? 'Suscrito' : 'Subscribirme' }}
-</ion-button>
-<ion-button *ngIf="suscrito" (click)="alternarNotificaciones()" class="not">
-  <ion-icon [name]="notificaciones ? 'notifications' : 'notifications-outline'"></ion-icon>
-</ion-button>
+  <ion-button (click)="alternarSuscripcion()" class="sub">
+    <ion-icon [name]="suscrito ? 'heart' : 'heart-outline'"></ion-icon>
+    {{ suscrito ? 'Suscrito' : 'Subscribirme' }}
+  </ion-button>
+  <ion-button *ngIf="suscrito" (click)="alternarNotificaciones()" class="not">
+    <ion-icon [name]="notificaciones ? 'notifications' : 'notifications-outline'"></ion-icon>
+  </ion-button>
 <div class="message-container-father">
   <div class="message-container" #messageContainer>
     <ion-list lines="none" class="message-list" #messageList>

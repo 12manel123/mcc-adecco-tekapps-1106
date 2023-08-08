@@ -55,7 +55,10 @@
     </div>
     </ion-card-content>
   </ion-card><!--Editar perfil y el nombre del canal, junto a su descripción-->
-
+  <div *ngIf="isLive" class="live-indicator">
+    <img [src]="direct" alt="Directo en vivo">
+  </div>
+  
 
   <ion-list *ngIf="videos.length > 0">
     <p *ngIf="videos[0].description">Emisiones Recientes:</p>

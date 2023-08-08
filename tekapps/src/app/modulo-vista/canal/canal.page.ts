@@ -14,6 +14,8 @@ export class CanalPage implements OnInit {
   descripcion: string = "Description";
   suscrito: boolean = false;
   notificaciones: boolean = false;
+  isLive: boolean = false; // Inicializa la variable isLive
+  direct: string = '';
 //Descripción de la pagina canal.
   favoritos: any[] = []; // Array para almacenar los videos favoritos    
   esFavorito(video: any): boolean {
@@ -48,8 +50,10 @@ export class CanalPage implements OnInit {
         this.nombreCanal = canal.name;
         this.imagen = canal.image;
         this.descripcion = canal.descripcion;
-        this.videos = canal.videos || []; // Asigna los videos del canal o un array vacío si no hay videos
-        this.suscrito = false; // Restablece el estado de suscripción al cargar un nuevo canal
+        this.videos = canal.videos || [];
+        this.isLive = canal.isLive || false; // Asigna el valor de isLive del canal o false si no está presente
+        this.direct = canal.direct || ''; // Asigna la URL de la imagen del directo o una cadena vacía si no está presente
+        this.suscrito = false;
       }
     });
   }

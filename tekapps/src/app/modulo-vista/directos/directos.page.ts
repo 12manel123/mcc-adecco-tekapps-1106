@@ -1,7 +1,9 @@
-
-  
   import { Component, OnInit, ViewChild, ElementRef, AfterViewChecked } from '@angular/core';//Para que el ionic y el angular funcione bien.
   import { IonContent, IonList } from '@ionic/angular';
+import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { ChangeDetectorRef } from '@angular/core'; // Importa ChangeDetectorRef para forzar la detección de cambios
+
   @Component({
     selector: 'app-directos',
     templateUrl: './directos.page.html',
@@ -9,6 +11,11 @@
   })
   export class DirectosPage implements OnInit, AfterViewChecked {
     @ViewChild('contentRef', { static: false }) content!: IonContent;
+    usuario: any = {}; // Objeto para almacenar los datos del usuario
+    directo: any = {}; // Objeto para almacenar los detalles del directo
+    imagen: any = {}; // Objeto para almacenar los datos del usuario
+    direct: any = {}; // Objeto para almacenar los detalles del directo
+  
     nombreCanal: string = '12Manel123';
     descripcion: string = '50000001 subscriptores';//Numero y nombre del canal.
     suscrito: boolean = false;
@@ -36,14 +43,34 @@
     coloresUsuarios: { [user: string]: string } = {
      
     }
-    constructor() { }
-  
+    constructor(
+      private route: ActivatedRoute,
+      private http: HttpClient,
+      private cdr: ChangeDetectorRef
+    ) {}
     ngAfterViewChecked() {
       this.scrollToBottom();
     }
   
     ngOnInit() {
-     
+      this.route.queryParams.subscribe((params) => {
+        this.nombreCanal = params['username'];
+        this.obtenerDatosUsuario();
+        // Resto de tu código
+      });
+    }
+    obtenerDatosUsuario(): void {
+      this.http.get<any[]>('assets/channels.json').subscribe((data) => {
+        const usuario = data.find((c) => c.name === this.nombreCanal);
+        if (usuario) {
+          this.usuario = usuario;
+          this.imagen = usuario.image;
+          this.descripcion = usuario.descripcion;
+          this.categoria = usuario.category || '';
+          this.direct = usuario.direct || '';
+          this.suscrito = false;
+        }
+      });
     }
   
     onKeyPress(event: KeyboardEvent) {
