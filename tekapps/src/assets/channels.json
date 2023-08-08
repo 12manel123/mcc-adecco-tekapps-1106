@@ -2,6 +2,7 @@
     {
       "name": "12Manel123",
       "image":"assets/img/el rubius (2).png",
+      "descripcion": "¡Bienvenidos a mi canal de juegos!",
       "isLive": false,
       "grupo":"Juegos",
       "videos": [
@@ -23,6 +24,7 @@
       "name": "JuanJose",
       "category": "Only Up",
       "image":"assets/img/el rubius (2).png",
+      "descripcion": "¡Bienvenidos a mi canal de juegos!",
       "isLive": true,
       "direct":"assets/img/gameplay1.png",
       "directName":"Increible! Jugando a among us",
@@ -32,6 +34,7 @@
       "name": "JuanVegas",
       "category": "Comida",
       "image":"assets/img/el rubius (2).png",
+      "descripcion": "¡Bienvenidos a mi canal de juegos!",
       "isLive": true,
       "direct":"assets/img/gameplay1.png",
       "directName":"Me han ganado ;-;",
@@ -52,15 +55,31 @@
       ]
     },
     {
-      "name": "Manel24",
+      "name": "Tekapps",
       "image":"assets/img/Pokemon.png",
+      "descripcion": "¡Bienvenidos a mi canal de juegos!",
       "isLive": false,
-      "grupo":"Musica"
+      "grupo":"Musica",
+      "videos": [
+        {
+          "nombre": "Video1",
+          "imagen": "assets/img/gameplay2.png",
+          "visitas": 10330,
+          "description":"Jugando poco!"
+        },
+        {
+          "nombre": "Video2",
+          "imagen": "assets/img/gameplay2.png",
+          "visitas": 5111110,
+          "description":"Me encanta esto"
+        }
+      ]
     },
     {
       "name": "Illojuan",
       "category": "Just Chatting",
       "image":"assets/img/el rubius (2).png",
+      "descripcion": "¡Bienvenidos a mi canal de juegos!",
       "isLive": true,
       "direct":"assets/img/gameplay1.png",
       "directName":"Increible! Jugando a among us",
@@ -84,6 +103,7 @@
       "name": "Juanito123",
       "category": "Eventos",
       "image":"assets/img/el rubius (2).png",
+      "descripcion": "¡Bienvenidos a mi canal de juegos!",
       "isLive": true,
       "direct":"assets/img/gameplay2.png",
       "directName":"Increible! Jugando a among us",
@@ -107,6 +127,7 @@
       "name": "Manelxtrem",
       "category": "Only Up",
       "image":"assets/img/el rubius (2).png",
+      "descripcion": "¡Bienvenidos a mi canal de juegos!",
       "isLive": true,
       "direct":"assets/img/gameplay2.png",
       "directName":"Increible! Jugando a among us",
@@ -116,6 +137,7 @@
       "name": "Elpepe123",
       "category": "Eventos",
       "image":"assets/img/el rubius (2).png",
+      "descripcion": "¡Bienvenidos a mi canal de juegos!",
       "isLive": true,
       "direct":"assets/img/gameplay2.png",
       "directName":"Increible! Jugando a among us",
@@ -139,6 +161,7 @@
       "name": "Buenas123",
       "category": "Eventos",
       "image":"assets/img/el rubius (2).png",
+      "descripcion": "¡Bienvenidos a mi canal de juegos!",
       "isLive": true,
       "direct":"assets/img/gameplay2.png",
       "directName":"Increible! Jugando a among us",
@@ -162,6 +185,7 @@
       "name": "Manel202",
       "category": "Eventos",
       "image":"assets/img/el rubius (2).png",
+      "descripcion": "¡Bienvenidos a mi canal de juegos!",
       "isLive": true,
       "direct":"assets/img/gameplay1.png",
       "directName":"Increible! Jugando a among us",
@@ -171,6 +195,7 @@
       "name": "Mangell22222",
       "category": "Eventos",
       "image":"assets/img/el rubius (2).png",
+      "descripcion": "¡Bienvenidos a mi canal de juegos!",
       "isLive": true,
       "direct":"assets/img/gameplay1.png",
       "directName":"Increible! Jugando a among us",

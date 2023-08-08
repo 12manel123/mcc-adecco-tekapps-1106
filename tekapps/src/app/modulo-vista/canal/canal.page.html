@@ -1,14 +1,37 @@
-<ion-header [translucent]= "true">
-  <ion-toolbar>
-    <img src= "../assets/img/cabecera.png">
+<!-- tab1.page.html -->
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary"><!-- Barra de herramientas con color secundario definido en "theme->variables.scss" -->
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end"><!-- Botones en el lado derecho de la barra -->
+      <ion-button [routerLink]= "['/busqueda']"><!-- Botón con enlace a la página "/busqueda" -->
+        <ion-icon style="color:white!important;" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title><!-- Título de la barra de herramientas -->
+      <ion-buttons >
+        <ion-button  [routerLink]= "['/tabs/tab1']" ><!-- Botón con enlace a la página "/tabs/tab1" -->
+          <img style="max-width: 70%; height: auto;" src="../../assets/img/logo_tekapps_color.png"><!-- Imagen con el logo de la aplicación -->
+        </ion-button>
+      </ion-buttons>
+    </ion-title>
+
+    <ion-action-sheet trigger="open-action-sheet" header="Actions" ></ion-action-sheet><!-- Hoja de acciones (no se muestra el contenido aquí) -->
   </ion-toolbar>
 </ion-header>
-<ion-content><!--Cabecera-->
-  <ion-back-button class="back-button" defaultHref="/" color="primary" text="">Back</ion-back-button>
 
+<ion-header>
+    <img src= "../assets/img/cabecera.png">
+
+</ion-header>
+<ion-content><!--Cabecera-->
   <ion-card>
     <ion-card-header>
+      
       <ion-card-title class="namechannel" color="tertiary">{{ nombreCanal }}</ion-card-title>
+
     </ion-card-header>
     <ion-card-content class="content-container">
       <div class="image-container" style="border-radius: 65%!important;">
@@ -16,9 +39,19 @@
     </div>
     <div class="text-container">
       <p>{{ descripcion }}</p>
-      <div class="edit-button-container">
+      <div class="edit-button-container" *ngIf="nombreCanal === usuarioExistente">
       <ion-button class="edit-button" (click)="editarPerfil()" [routerLink]= "['/editarperfil']">Editar Perfil</ion-button>
       </div>
+      <div class="edit-button-container" *ngIf="nombreCanal !== usuarioExistente">
+        <ion-button (click)="alternarSuscripcion()" class="sub">
+          <ion-icon [name]="suscrito ? 'heart' : 'heart-outline'"></ion-icon>
+          {{ suscrito ? 'Suscrito' : 'Subscribirme' }}
+        </ion-button>
+        <ion-button *ngIf="suscrito" (click)="alternarNotificaciones()" class="not">
+          <ion-icon [name]="notificaciones ? 'notifications' : 'notifications-outline'"></ion-icon>
+        </ion-button>
+      </div>
+      
     </div>
     </ion-card-content>
   </ion-card><!--Editar perfil y el nombre del canal, junto a su descripción-->

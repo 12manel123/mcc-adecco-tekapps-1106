@@ -8,10 +8,12 @@ import { HttpClient } from '@angular/common/http'; // Importa HttpClient para ha
   styleUrls: ['./canal.page.scss'],//Componentes de la pagina Canal.
 })
 export class CanalPage implements OnInit {
-
+  usuarioExistente: string = "Tekapps";
   nombreCanal: string = "User";
   imagen: string = "../assets/img/User.png";
   descripcion: string = "Description";
+  suscrito: boolean = false;
+  notificaciones: boolean = false;
 //Descripción de la pagina canal.
   favoritos: any[] = []; // Array para almacenar los videos favoritos    
   esFavorito(video: any): boolean {
@@ -47,6 +49,7 @@ export class CanalPage implements OnInit {
         this.imagen = canal.image;
         this.descripcion = canal.descripcion;
         this.videos = canal.videos || []; // Asigna los videos del canal o un array vacío si no hay videos
+        this.suscrito = false; // Restablece el estado de suscripción al cargar un nuevo canal
       }
     });
   }
@@ -57,5 +60,12 @@ export class CanalPage implements OnInit {
   }
 
   editarPerfil() {
+  }
+  alternarSuscripcion() {
+    this.suscrito = !this.suscrito;//Saber si esta subsctiro o no.
+  }
+  
+  alternarNotificaciones() {
+    this.notificaciones = !this.notificaciones;//Alternanza de notificaciones.
   }
 }
