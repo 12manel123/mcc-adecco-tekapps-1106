@@ -28,11 +28,11 @@
   <h3 class="animate__animated animate__backInLeft"><b>Stream</b> en vivo</h3><hr><!-- Título con efecto de animación -->
   <div class="scroll-container">
     <div class="preview-container">
-      <div *ngFor="let directoJson of directosJson" [routerLink]= "['/directos']" [queryParams]="{ username: directoJson.name }" class="preview-card direct"><!-- Vista previa de directo con enlace a "/directos" -->
-        <img [src]=directoJson.direct alt="{{directoJson.directName}}">
-        <h5>{{directoJson.directName}}</h5>
-        <p>{{directoJson.category}}</p>
-        <p><img [src]=directoJson.image  alt="Icon perfil" class="icon_perfil"> {{directoJson.name}}</p>
+      <div *ngFor="let directoJson of directosJson" class="preview-card direct"><!-- Vista previa de directo con enlace a "/directos" -->
+        <img [routerLink]= "['/directos']" [queryParams]="{ username: directoJson.name }" [src]=directoJson.direct alt="{{directoJson.directName}}">
+        <h5 [routerLink]= "['/directos']" [queryParams]="{ username: directoJson.name }">{{directoJson.directName}}</h5>
+        <p [routerLink]="'/busqueda/'" [queryParams]="{ titulo: directoJson.category}">{{directoJson.category}}</p>
+        <p [routerLink]= "['/canal']" [queryParams]="{ username: directoJson.name }"><img [src]=directoJson.image  alt="Icon perfil" class="icon_perfil"> {{directoJson.name}}</p>
       </div>
     </div>
   </div>

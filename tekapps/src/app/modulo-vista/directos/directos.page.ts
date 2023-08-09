@@ -22,6 +22,8 @@ import { ChangeDetectorRef } from '@angular/core'; // Importa ChangeDetectorRef 
     notificaciones: boolean = false;
     categoria:string='IRL';
     myuser:string='Tekapps';
+    subs: number = 0;
+    users: number = 0;
     @ViewChild('contentRef', { static: false }) contentRef!: IonContent;
     @ViewChild('messageContainer', { read: ElementRef, static: false }) messageContainerRef!: ElementRef;
     @ViewChild('messageList', { static: false }) messageList!: IonList;
@@ -68,7 +70,9 @@ import { ChangeDetectorRef } from '@angular/core'; // Importa ChangeDetectorRef 
           this.descripcion = usuario.descripcion;
           this.categoria = usuario.category || '';
           this.direct = usuario.direct || '';
+          this.subs = usuario.subs || 0; // Asigna el valor de suscriptores del usuario o 0 si no está presente
           this.suscrito = false;
+          this.users=usuario.users||0;
         }
       });
     }

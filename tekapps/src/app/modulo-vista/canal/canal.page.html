@@ -23,7 +23,7 @@
 </ion-header>
 
 <ion-header>
-    <img src= "../assets/img/cabecera.png">
+    <img src='{{banner}}'>
 
 </ion-header>
 <ion-content><!--Cabecera-->
@@ -39,6 +39,7 @@
     </div>
     <div class="text-container">
       <p>{{ descripcion }}</p>
+      <p>{{ subs }} Subs</p>
       <div class="edit-button-container" *ngIf="nombreCanal === usuarioExistente">
       <ion-button class="edit-button" (click)="editarPerfil()" [routerLink]= "['/editarperfil']">Editar Perfil</ion-button>
       </div>
@@ -55,9 +56,10 @@
     </div>
     </ion-card-content>
   </ion-card><!--Editar perfil y el nombre del canal, junto a su descripción-->
-  <div *ngIf="isLive" class="live-indicator">
-    <img [src]="direct" alt="Directo en vivo">
-  </div>
+  <div *ngIf="isLive" class="live-indicator" [routerLink]= "['/directos']" [queryParams]="{ username: nombreCanal }" >
+    <img [src]="direct" alt="Directo en vivo"><br>
+    <p>{{directName}}<br>{{category}} | <ion-icon name="person-circle-outline"></ion-icon>{{users}}</p>
+  </div><hr>
   
 
   <ion-list *ngIf="videos.length > 0">
