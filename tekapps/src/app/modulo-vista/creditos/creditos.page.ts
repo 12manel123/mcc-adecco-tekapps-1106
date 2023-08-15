@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';//Para que la pagina ionic y ANgular funcione correctamente.
+import { MenuController } from '@ionic/angular';//Control del menu de la pagina privacidad y seguridad. 
 
 @Component({
   selector: 'app-creditos',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';//Para que la pagina ionic y A
 })
 export class CreditosPage implements OnInit {//Export clas de la pagina creditos.
 
-  constructor() { }//No hay constructor en la pagina creditos. 
+  constructor( private menuCrtl: MenuController) { }
 
   ngOnInit() {
+  }
+  onClick() {
+    this.menuCrtl.toggle();//Menu para la pagina de privacidad y seguridad, que se accede mediante un click.
   }
 
 }

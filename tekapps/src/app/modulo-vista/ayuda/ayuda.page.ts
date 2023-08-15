@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { AlertController } from '@ionic/angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastController } from '@ionic/angular';
+import { MenuController } from '@ionic/angular';//Control del menu de la pagina privacidad y seguridad. 
 
 
 
@@ -14,10 +15,14 @@ import { ToastController } from '@ionic/angular';
 export class AyudaPage implements OnInit {
   ayudaForm: FormGroup;
 
+  onClick() {
+    this.menuCrtl.toggle();//Menu para la pagina de privacidad y seguridad, que se accede mediante un click.
+  }
   constructor(private formBuilder: FormBuilder,
               private alertController: AlertController,
               private http: HttpClient,
-              private toastController: ToastController) {
+              private toastController: ToastController,
+              private menuCrtl: MenuController) {
 
     this.ayudaForm = this.formBuilder.group({
       nombre: ['', Validators.required],

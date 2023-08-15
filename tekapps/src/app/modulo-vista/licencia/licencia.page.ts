@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';//Para que el angular y el Ionic funcionen bien.
+import { MenuController } from '@ionic/angular';//Control del menu de la pagina privacidad y seguridad. 
 
 @Component({
   selector: 'app-licencia',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';//Para que el angular y el Ion
 })
 export class LicenciaPage implements OnInit {//Export class de la pagina licencia.
 
-  constructor() { }//No hay constructor.
+  constructor( private menuCrtl: MenuController) { }
 
   ngOnInit() {
+  }
+  onClick() {
+    this.menuCrtl.toggle();//Menu para la pagina de privacidad y seguridad, que se accede mediante un click.
   }
 
 }

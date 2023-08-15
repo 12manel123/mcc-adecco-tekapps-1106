@@ -1,11 +1,73 @@
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <ion-toolbar  color="secondary">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list> <!--Esto seria la cabecera-->
+    <ion-menu-toggle auto-hide="true">
+      <ion-item color="secondary" [routerLink]="['tabs/tab1']"><ion-icon name="home"></ion-icon>Inicio</ion-item>
+    </ion-menu-toggle>
+    <ion-menu-toggle auto-hide="true">
+      <ion-item color="secondary" [routerLink]="['/canal']"><ion-icon name="person"></ion-icon>Mi canal</ion-item>
+    </ion-menu-toggle>
+    <ion-item color="secondary"><ion-icon name="notifications-outline"></ion-icon> Notificaciones</ion-item>
+    <ion-item color="secondary"><ion-icon name="language-outline"></ion-icon>Idioma</ion-item>
+    <ion-menu-toggle auto-hide="true">
+      <ion-item color="secondary" [routerLink]="['/privacidad-seguridad']"><ion-icon name="lock-open-outline"></ion-icon>Privacidad y Seguridad</ion-item>
+    </ion-menu-toggle>
+    <ion-menu-toggle auto-hide="true">
+      <ion-item color="secondary" [routerLink]="['/conexiones']"><ion-icon name="lock-open-outline"></ion-icon>Conexiones</ion-item>
+    </ion-menu-toggle>
+    <ion-menu-toggle auto-hide="true">
+      <ion-item color="secondary" [routerLink]="['/sistema']"><ion-icon name="hardware-chip-outline"></ion-icon>Sistemas</ion-item>
+    </ion-menu-toggle>
+    <ion-menu-toggle>
+      <ion-item color="secondary" [routerLink]="['/directrices-comunidad']"><ion-icon name="hardware-chip-outline"></ion-icon>Directrices De La Comunidad</ion-item>
+    </ion-menu-toggle>
+    <ion-menu-toggle auto-hide="true">
+      <ion-item color="secondary" [routerLink]="['/ayuda']"><ion-icon name="help"></ion-icon>Ayuda</ion-item>
+    </ion-menu-toggle>
+    <ion-menu-toggle auto-hide="true">
+      <ion-item color="secondary" [routerLink]="['/privacidad']"><ion-icon name="people-outline"></ion-icon>Terminos de Servicios</ion-item>
+    </ion-menu-toggle>
+    <ion-menu-toggle auto-hide="true">
+      <ion-item color="secondary" [routerLink]="['/login']"><ion-icon name="log-out"></ion-icon> Cerrar Sesión</ion-item>
+    </ion-menu-toggle> 
+  </ion-list><!--El Router link de cada uno irá a la página asignada-->
+  <ion-content class="ion-padding"></ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons>
+        <ion-button>
+        <ion-menu-button></ion-menu-button>
+      </ion-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding"></ion-content>
+</div>
+
+
 <ion-header>
   <ion-toolbar color ="primary">
     <ion-buttons slot="start">
       <ion-back-button text=""></ion-back-button>
     </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-button (click)="onClick()">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+    </ion-button>
+    </ion-buttons>
     <ion-title>Ayuda</ion-title>
   </ion-toolbar>
 </ion-header><!--Cabecera-->
+
 
 <ion-content>
   <ion-grid>
