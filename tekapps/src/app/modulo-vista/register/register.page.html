@@ -38,6 +38,11 @@
       <ion-label position="floating" color="primary"></ion-label>
       <ion-input formControlName="password" type="date" color="tertiary" (keyup.enter)="signin()"></ion-input>
     </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary"></ion-label>
+      <ion-input type="file" accept="image/*" color="tertiary" (change)="onImageChange($event)"></ion-input>
+      <img [src]="imagePreview" *ngIf="imagePreview" style="border-radius: 65%; width: 50px;height: 50px;">
+    </ion-item>
  </form>
  <br>
  <ion-buttons>

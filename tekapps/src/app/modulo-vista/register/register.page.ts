@@ -18,6 +18,7 @@ import { AuthService } from 'src/app/service/auth.service'; //Este servicio prob
 })
 export class RegisterPage implements OnInit {
   usuario: FormGroup;//Export class de la pagina de registro.
+  imagePreview!: string; // Agregar esta línea para la vista previa de la imagen
 
   constructor(public http: HttpClient, private router: Router,private auth:AuthService,private alertCtrl:AlertController ,private platform: Platform,private fb: FormBuilder) {
     //  Constructor de la pagina del registro.
@@ -29,7 +30,19 @@ export class RegisterPage implements OnInit {
 
     });//Validadores de la pagina de registro.
   }
-
+  onImageChange(event: Event) {
+    const input = event.target as HTMLInputElement;
+    const file = input.files?.[0];
+    
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.imagePreview = reader.result as string; // Muestra la vista previa de la imagen
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+  
   signin() {
     // Verifica si las contraseñas coinciden
     if (this.usuario.value.password === this.usuario.value.passwordConfirmation) {
@@ -51,6 +64,7 @@ export class RegisterPage implements OnInit {
       else{alert("Es obligatorio el nombre de usuario")}} 
     else {alert("Las contraseñas no coinciden");}
   }
+  
   loginGoogle() {
     this.auth.loginWithGoogle()
       .then(result => {
