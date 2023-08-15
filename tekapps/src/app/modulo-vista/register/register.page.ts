@@ -18,29 +18,38 @@ import { AuthService } from 'src/app/service/auth.service'; //Este servicio prob
 })
 export class RegisterPage implements OnInit {
   usuario: FormGroup;//Export class de la pagina de registro.
-  
+
   constructor(public http: HttpClient, private router: Router,private auth:AuthService,private alertCtrl:AlertController ,private platform: Platform,private fb: FormBuilder) {
     //  Constructor de la pagina del registro.
     this.usuario= this.fb.group({
+      username:['', [Validators.required, Validators.minLength(3)]],
       email:['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
+      passwordConfirmation: ['', [Validators.required, Validators.minLength(6)]],
+
     });//Validadores de la pagina de registro.
   }
 
   signin() {
-    this.auth.registerUser(this.usuario.value.email, this.usuario.value.password)
-      .then(result => {
-        this.router.navigate(['/login']);
-      })
-      .catch(err => {
-        this.alertCtrl.create({
-          header: 'Error',
-          subHeader: err.message,
-          buttons: ['Aceptar']
-        }).then(alert => {
-          alert.present();//Alerta de si está registrado o no.
+    // Verifica si las contraseñas coinciden
+    if (this.usuario.value.password === this.usuario.value.passwordConfirmation) {
+      if(this.usuario.value.username.length>=3){
+      this.auth.registerUser(this.usuario.value.email, this.usuario.value.password)
+        .then(result => {
+          this.router.navigate(['/tabs']);
+        })
+        .catch(err => {
+          this.alertCtrl.create({
+            header: 'Error',
+            subHeader: err.message,
+            buttons: ['Aceptar']
+          }).then(alert => {
+            alert.present();
+          });
         });
-      });
+      }
+      else{alert("Es obligatorio el nombre de usuario")}} 
+    else {alert("Las contraseñas no coinciden");}
   }
   loginGoogle() {
     this.auth.loginWithGoogle()

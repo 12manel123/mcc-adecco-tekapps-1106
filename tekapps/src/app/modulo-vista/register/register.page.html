@@ -19,12 +19,24 @@
  <ion-card-content #loginFormContent>
   <form [formGroup]="usuario">
     <ion-item>
+      <ion-label position="floating" color="primary">Nombre</ion-label>
+      <ion-input formControlName="username" color="tertiary" (keyup.enter)="signin()"></ion-input>
+    </ion-item>
+    <ion-item>
       <ion-label position="floating" color="primary">Email</ion-label>
       <ion-input formControlName="email" autocapitalize="off" color="tertiary" (keyup.enter)="signin()"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating" color="primary">Contraseña</ion-label>
       <ion-input formControlName="password" type="password" color="tertiary" (keyup.enter)="signin()"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">Verificar Contraseña</ion-label>
+      <ion-input formControlName="passwordConfirmation" type="password" color="tertiary" (keyup.enter)="signin()"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary"></ion-label>
+      <ion-input formControlName="password" type="date" color="tertiary" (keyup.enter)="signin()"></ion-input>
     </ion-item>
  </form>
  <br>
