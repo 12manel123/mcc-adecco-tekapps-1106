@@ -213,8 +213,6 @@ h3 {
     width: 200%;
     height: 100%;
     position: relative;
-
-    
   }
   .category h5 {
     text-align: justify;
@@ -223,5 +221,14 @@ h3 {
     display: flex;
     width: 150%!important;
   }
-
+  ion-header ion-button img {
+    max-width: 35%!important; /* Ajusta el tamaño de la imagen del logo según tus preferencias */
+    height: auto!important;
+  }
+  ion-card {
+      --padding-start: 40px; /* Ajusta el padding izquierdo según tus preferencias */
+      --padding-end: 40px; /* Ajusta el padding derecho según tus preferencias */
+      margin: 0 auto; /* Para centrar horizontalmente */
+      max-width: 400px; /* O el ancho deseado para la tarjeta */
+  }
 }

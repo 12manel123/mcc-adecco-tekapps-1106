@@ -1,3 +1,13 @@
+ion-header ion-button img {
+  max-width: 35%!important; /* Ajusta el tamaño de la imagen del logo según tus preferencias */
+  height: auto!important;
+}
+ion-card {
+    --padding-start: 40px; /* Ajusta el padding izquierdo según tus preferencias */
+    --padding-end: 40px; /* Ajusta el padding derecho según tus preferencias */
+    margin: 0 auto; /* Para centrar horizontalmente */
+    max-width: 400px; /* O el ancho deseado para la tarjeta */
+}
 .is-live {
   box-shadow: 0 0 2px 2px rgba(192, 144, 0, 0.866);//Si esta directo el icono
 }
@@ -60,3 +70,19 @@
     color: rgba(255, 191, 0, 0.866) !important;//Si esta en directo, el color sera amarillo en oscuro
   }
 }
+@media screen and (min-width: 525px) {
+  .imgDirect{//La imagen de si esta en directo
+    border-radius: 5%;
+    width: 20%;
+  }
+  ion-list{
+    margin-left: 30%!important;
+    margin-right: 30%!important;
+  }
+  .custom-searchbar {
+    width: 50%; /* Ajusta el porcentaje de ancho */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+

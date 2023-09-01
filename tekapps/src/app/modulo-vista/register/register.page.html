@@ -36,10 +36,6 @@
     </ion-item>
     <ion-item>
       <ion-label position="floating" color="primary"></ion-label>
-      <ion-input formControlName="password" type="date" color="tertiary" (keyup.enter)="signin()"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating" color="primary"></ion-label>
       <ion-input type="file" accept="image/*" color="tertiary" (change)="onImageChange($event)"></ion-input>
       <img [src]="imagePreview" *ngIf="imagePreview" style="border-radius: 65%; width: 50px;height: 50px;">
     </ion-item>
@@ -50,9 +46,9 @@
   <ion-button class="link"></ion-button>
 </ion-buttons>
  <br>
- <ion-button (click)="signin()" style="display: block; margin: 0 auto; width: 200px;">Ingresar</ion-button><br>
+ <ion-button (click)="signin()" style="display: block; margin: 0 auto; width: 200px;">Registrarse</ion-button><br>
  <ion-button (click)="loginGoogle()" color="secondary" style="display: block; margin: 0 auto; width: 200px;">
-  <ion-icon name="logo-google"></ion-icon> Google
+  <ion-icon class="logoG" name="logo-google"></ion-icon> Google
 </ion-button>
 </ion-card-content>
 </ion-card> 
