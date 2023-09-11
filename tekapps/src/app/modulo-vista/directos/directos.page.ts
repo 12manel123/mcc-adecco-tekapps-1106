@@ -24,6 +24,7 @@ import { ChangeDetectorRef } from '@angular/core'; // Importa ChangeDetectorRef 
     myuser:string='Tekapps';
     subs: number = 0;
     users: number = 0;
+    directName:string='';
     @ViewChild('contentRef', { static: false }) contentRef!: IonContent;
     @ViewChild('messageContainer', { read: ElementRef, static: false }) messageContainerRef!: ElementRef;
     @ViewChild('messageList', { static: false }) messageList!: IonList;
@@ -36,9 +37,8 @@ import { ChangeDetectorRef } from '@angular/core'; // Importa ChangeDetectorRef 
     mensajes: any[] = [
       { user:"User1",texto: 'Hola', propio: true },
       { user:"User2",texto: 'Eres lo mejor!', propio: false },
-      { user:"User3",texto: 'ffffffff', propio: true },
-      { user:"User1",texto: '¿Y tú?', propio: true },
-      { user:"User3",texto: 'También bien, gracias', propio: false },
+      { user:"User3",texto: 'Hi', propio: true },
+ 
     ];//Funcionalidad del chat.
     showBackButton: boolean = false;
     nuevoMensaje: string = '';//Variables
@@ -73,6 +73,7 @@ import { ChangeDetectorRef } from '@angular/core'; // Importa ChangeDetectorRef 
           this.subs = usuario.subs || 0; // Asigna el valor de suscriptores del usuario o 0 si no está presente
           this.suscrito = false;
           this.users=usuario.users||0;
+          this.directName=usuario.directName||'';
         }
       });
     }
