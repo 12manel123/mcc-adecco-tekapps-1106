@@ -42,7 +42,7 @@
 <div class="scroll-container"><!-- Contenedor con desplazamiento horizontal -->
   <div class="preview-container"><!-- Contenedor de vistas previas -->
     <div *ngFor="let categoriaJson of categoriasOrdenadas" class="preview-card category" [routerLink]="'/busqueda/'" [queryParams]="{ titulo: categoriaJson.categoria}"><!-- Vista previa de categoría con enlace a "/busqueda/" y parámetro de consulta "titulo" -->
-      <img [src]="'../assets/img/'+categoriaJson.categoria+'.jpg'" alt="{{categoriaJson.categoria}}"><!-- Imagen de la categoría -->
+      <img [src]="'../assets/img/categories/'+categoriaJson.categoria+'.jpg'" alt="{{categoriaJson.categoria}}"><!-- Imagen de la categoría -->
       <h5>{{categoriaJson.categoria}}</h5><!-- Título de la categoría -->
       <p>Directos actualmente: {{categoriaJson.conteo }}</p><!-- Número de espectadores de la categoría -->
     </div>

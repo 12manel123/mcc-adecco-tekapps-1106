@@ -1,236 +1,171 @@
 [
     {
-      "name": "12Manel123",
-      "image":"assets/img/el rubius (2).png",
+      "name": "12manel123",
+      "image":"assets/img/icon_12manel123.png",
       "descripcion": "¡Bienvenidos a mi canal de juegos!",
-      "banner":"assets/img/cabecera.png",
-      "subs":2333430,
+      "banner":"assets/img/head_default.png",
+      "subs":2330,
       "isLive": false,
       "grupo":"Juegos",
       "videos": [
         {
-          "nombre": "Video3",
-          "imagen": "assets/img/gameplay1.png",
-          "visitas": 200,
+          "nombre": "Jugando Minecraft #1",
+          "imagen": "assets/img/video_12manel123.png",
+          "visitas": 23,
           "description":"Jugando mucho rato!"
-        },
-        {
-          "nombre": "Video4",
-          "imagen": "assets/img/gameplay1.png",
-          "visitas": 300,
-          "description":"Jugando poco rato!"
         }
       ]
     },
     {
-      "name": "JuanJose",
-      "category": "Only Up",
-      "image":"assets/img/el rubius (2).png",
-      "descripcion": "¡Bienvenidos a mi canal de juegos!",
-      "banner":"assets/img/cabecera.png",
+      "name": "IlloJuan",
+      "category": "Just Chatting",
+      "image":"assets/img/icon_illojuan.png",
+      "descripcion": "¡El andaluz esta aqui!",
+      "banner":"assets/img/head_default.png",
       "subs":233460,
       "isLive": true,
       "users":243,
-      "direct":"assets/img/gameplay1.png",
-      "directName":"Increible! Jugando a among us",
-      "grupo":"Juegos"
+      "direct":"assets/img/direct_illojuan.png",
+      "directName":"A la antiguedade",
+      "grupo":"Juegos",
+      "videos": [
+        {
+          "nombre": "El zelda #1",
+          "imagen": "assets/img/video_illojuan.png",
+          "visitas": 100,
+          "description":"Mu guapo muchas gracias"
+        },
+        {
+          "nombre": "La resistencia",
+          "imagen": "assets/img/video_illojuan2.jpg",
+          "visitas": 5000,
+          "description":"Quiero dormir"
+        }
+      ]
     },
     {
-      "name": "JuanVegas",
+      "name": "Arroz y desgracias",
       "category": "Comida",
-      "image":"assets/img/el rubius (2).png",
-      "descripcion": "¡Bienvenidos a mi canal de juegos!",
-      "banner":"assets/img/cabecera.png",
+      "image":"assets/img/icon_arrozydesgracias.png",
+      "descripcion": "¡Cocinando paella picante!",
+      "banner":"assets/img/head_default.png",
       "subs":25330,
       "isLive": true,
       "users":273,
-      "direct":"assets/img/gameplay1.png",
-      "directName":"Me han ganado ;-;",
-      "grupo":"IRL",
+      "direct":"assets/img/direct_arrozydesgracias.png",
+      "directName":"Que jugoso el arroz",
+      "grupo":"Musica",
       "videos": [
         {
-          "nombre": "Video1",
-          "imagen": "assets/img/gameplay2.png",
+          "nombre": "Aaron baneado",
+          "imagen": "assets/img/video_arrozydesgracias.jpg",
           "visitas": 100,
-          "description":"Jugando poco!"
+          "description":"Aaron ha sido baneado! Mira el por que paso..."
         },
         {
-          "nombre": "Video2",
-          "imagen": "assets/img/gameplay2.png",
+          "nombre": "Bisexual aaron?",
+          "imagen": "assets/img/video_arrozydesgracias2.jpg",
           "visitas": 50,
-          "description":"Me encanta esto"
+          "description":"Parece que en la cocina hay temas extraños."
         }
       ]
     },
     {
       "name": "Tekapps",
-      "image":"assets/img/Pokemon.png",
-      "descripcion": "¡Bienvenidos a mi canal de juegos!",
-      "banner":"assets/img/cabecera.png",
+      "image":"assets/img/icon_tekapps.png",
+      "descripcion": "¡Hola a todos!",
+      "banner":"assets/img/head_default.png",
       "subs":24330,
       "isLive": false,
-      "grupo":"Musica",
-      "videos": [
-        {
-          "nombre": "Video1",
-          "imagen": "assets/img/gameplay2.png",
-          "visitas": 10330,
-          "description":"Jugando poco!"
-        },
-        {
-          "nombre": "Video2",
-          "imagen": "assets/img/gameplay2.png",
-          "visitas": 5111110,
-          "description":"Me encanta esto"
-        }
-      ]
-    },
-    {
-      "name": "Illojuan",
-      "category": "Just Chatting",
-      "image":"assets/img/el rubius (2).png",
-      "descripcion": "¡Bienvenidos a mi canal de juegos!",
-      "banner":"assets/img/cabecera.png",
-      "subs":0,
-      "isLive": true,
-      "users":2333,
-      "direct":"assets/img/gameplay1.png",
-      "directName":"Increible! Jugando a among us",
       "grupo":"IRL",
       "videos": [
         {
-          "nombre": "Video5",
-          "imagen": "assets/img/gameplay2.png",
-          "visitas": 100,
-          "description":"Muy entretenido"
-        },
-        {
-          "nombre": "Video6",
-          "imagen": "assets/img/gameplay1.png",
-          "visitas": 50,
-          "description":"Quiero dormir"
+          "nombre": "Como desgargar github",
+          "imagen": "assets/img/video_tekapps.jpg",
+          "visitas": 10330,
+          "description":"Jugando poco!"
         }
       ]
     },
     {
       "name": "Juanito123",
       "category": "Eventos",
-      "image":"assets/img/el rubius (2).png",
+      "image":"assets/img/icon_juanito123.png",
       "descripcion": "¡Bienvenidos a mi canal de juegos!",
-      "banner":"assets/img/cabecera.png",
+      "banner":"assets/img/head_default.png",
       "subs":2,
       "isLive": true,
       "users":3,
-      "direct":"assets/img/gameplay2.png",
-      "directName":"Increible! Jugando a among us",
+      "direct":"assets/img/direct_juanito123.jpg",
+      "directName":"Increible! Jugando a minecraft",
       "grupo":"Juegos",
       "videos": [
         {
-          "nombre": "Video7",
-          "imagen": "assets/img/gameplay2.png",
+          "nombre": "Como hacer pociones",
+          "imagen": "assets/img/video_juanito123.jpg",
           "visitas": 1200,
-          "description":"Muy entretenido"
+          "description":"Como hacer las maravillosas pociones de minecraft"
         },
         {
-          "nombre": "Video8",
-          "imagen": "assets/img/gameplay1.png",
+          "nombre": "Datos del mapa",
+          "imagen": "assets/img/video_juanito1232.jpg",
           "visitas": 150,
-          "description":"Quiero dormir"
+          "description":"En el zelda es el mapa"
         }
       ]
     },
     {
-      "name": "Manelxtrem",
+      "name": "Manuelxtrem",
       "category": "Only Up",
-      "image":"assets/img/el rubius (2).png",
-      "descripcion": "¡Bienvenidos a mi canal de juegos!",
-      "banner":"assets/img/cabecera.png",
+      "image":"assets/img/icon_manuelxtrem.png",
+      "descripcion": "¡Bienvenidos a la escalada!",
+      "banner":"assets/img/head_default.png",
       "subs":23,
       "isLive": true,
       "users":23,
-      "direct":"assets/img/gameplay2.png",
-      "directName":"Increible! Jugando a among us",
-      "grupo":"Juegos"
+      "direct":"assets/img/direct_manuelxtrem.png",
+      "directName":"Increible! Bici a todo trapo",
+      "grupo":"IRL"
     },
     {
       "name": "Elpepe123",
       "category": "Eventos",
-      "image":"assets/img/el rubius (2).png",
-      "descripcion": "¡Bienvenidos a mi canal de juegos!",
-      "banner":"assets/img/cabecera.png",
+      "image":"assets/img/icon_elpepe123.png",
+      "descripcion": "¡Bienvenidos aquí!",
+      "banner":"assets/img/head_default.png",
       "subs":20,
       "isLive": true,
       "users":23,
-      "direct":"assets/img/gameplay2.png",
-      "directName":"Increible! Jugando a among us",
-      "grupo":"Juegos",
-      "videos": [
-        {
-          "nombre": "Video7",
-          "imagen": "assets/img/gameplay2.png",
-          "visitas": 1200,
-          "description":"Muy entretenido"
-        },
-        {
-          "nombre": "Video8",
-          "imagen": "assets/img/gameplay1.png",
-          "visitas": 150,
-          "description":"Quiero dormir"
-        }
-      ]
+      "direct":"assets/img/direct_elpepe123.jpg",
+      "directName":"Geometry dash on fire",
+      "grupo":"Juegos"
     },
     {
-      "name": "Buenas123",
+      "name": "MangelRogel",
       "category": "Eventos",
-      "image":"assets/img/el rubius (2).png",
-      "descripcion": "¡Bienvenidos a mi canal de juegos!",
-      "banner":"assets/img/cabecera.png",
+      "image":"assets/img/icon_mangelrogel.png",
+      "descripcion": "¡Bienvenidos de nuevo!",
+      "banner":"assets/img/head_mangelrogel.png",
       "subs":30,
       "isLive": true,
       "users":23,
-      "direct":"assets/img/gameplay2.png",
-      "directName":"Increible! Jugando a among us",
+      "direct":"assets/img/direct_mangelrogel.jpg",
+      "directName":"Increible! La vida como va",
       "grupo":"Juegos",
       "videos": [
         {
-          "nombre": "Video7",
-          "imagen": "assets/img/gameplay2.png",
+          "nombre": "Pionero en gta",
+          "imagen": "assets/img/video_mangelrogel.jpg",
           "visitas": 1200,
           "description":"Muy entretenido"
         },
         {
-          "nombre": "Video8",
-          "imagen": "assets/img/gameplay1.png",
+          "nombre": "Noche en miami",
+          "imagen": "assets/img/video_mangelrogel2.jpg",
           "visitas": 150,
-          "description":"Quiero dormir"
+          "description":"Este viaje es gracias a vosotros"
         }
       ]
-    },
-    {
-      "name": "Manel202",
-      "category": "Eventos",
-      "image":"assets/img/el rubius (2).png",
-      "descripcion": "¡Bienvenidos a mi canal de juegos!",
-      "banner":"assets/img/cabecera.png",
-      "subs":2130,
-      "isLive": true,
-      "users":23,
-      "direct":"assets/img/gameplay1.png",
-      "directName":"Increible! Jugando a among us",
-      "grupo":"Musica"
-    },
-    {
-      "name": "Mangell22222",
-      "category": "Eventos",
-      "image":"assets/img/el rubius (2).png",
-      "descripcion": "¡Bienvenidos a mi canal de juegos!",
-      "banner":"assets/img/cabecera.png",
-      "subs":2330,
-      "isLive": true,
-      "users":23,
-      "direct":"assets/img/gameplay1.png",
-      "directName":"Increible! Jugando a among us",
-      "grupo":"Musica"
     }
   ]
   

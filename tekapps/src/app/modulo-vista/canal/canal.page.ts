@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http'; // Importa HttpClient para ha
 export class CanalPage implements OnInit {
   usuarioExistente: string = "Tekapps";
   nombreCanal: string = "User";
-  imagen: string = "../assets/img/User.png";
+  imagen: string = "../assets/img/icon_user.png";
   descripcion: string = "Description";
   banner:string = '';
   suscrito: boolean = false;

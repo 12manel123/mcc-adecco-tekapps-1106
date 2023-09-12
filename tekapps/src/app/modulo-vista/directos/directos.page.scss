@@ -146,6 +146,26 @@ ion-header {
   ion-content {
     min-height: 100vh;//ccs de los contenedores.
   }
+  .message-container-father {
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el relleno */
+  }
+  
+  .message-container {
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el relleno */
+  }
+  
+  .message-list {
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el relleno */
+  }
+  
+  .message-body {
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el relleno */
+  }
+  
   @media (prefers-color-scheme: dark) {
   .ios ion-footer ion-toolbar{
     --background: #1C1C1C !important;//Color de la capsula de donde se envian los mensajes.
