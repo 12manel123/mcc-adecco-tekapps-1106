@@ -54,7 +54,7 @@
       "users":273,
       "direct":"assets/img/direct_arrozydesgracias.png",
       "directName":"Que jugoso el arroz",
-      "grupo":"Musica",
+      "grupo":"IRL",
       "videos": [
         {
           "nombre": "Aaron baneado",
@@ -89,7 +89,7 @@
     },
     {
       "name": "Juanito123",
-      "category": "Eventos",
+      "category": "Minecraft",
       "image":"assets/img/icon_juanito123.png",
       "descripcion": "¡Bienvenidos a mi canal de juegos!",
       "banner":"assets/img/head_default.png",
@@ -116,7 +116,7 @@
     },
     {
       "name": "Manuelxtrem",
-      "category": "Only Up",
+      "category": "Deportes",
       "image":"assets/img/icon_manuelxtrem.png",
       "descripcion": "¡Bienvenidos a la escalada!",
       "banner":"assets/img/head_default.png",
@@ -166,6 +166,58 @@
           "description":"Este viaje es gracias a vosotros"
         }
       ]
+    },
+    {
+      "name": "Ibai",
+      "category": "Fortnite",
+      "image":"assets/img/icon_ibai.jpg",
+      "descripcion": "¡Hola koi!",
+      "banner":"assets/img/head_default.png",
+      "subs":33320,
+      "isLive": true,
+      "users":2335,
+      "direct":"assets/img/direct_ibai.jpg",
+      "directName":"Haciendo deporte",
+      "grupo":"Juegos"
+    },
+    {
+      "name": "Rubius",
+      "category": "Just Chatting",
+      "image":"assets/img/icon_rubius.jpg",
+      "descripcion": "¡Hola mis chicos!",
+      "banner":"assets/img/head_default.png",
+      "subs":3143,
+      "isLive": true,
+      "users":225535,
+      "direct":"assets/img/direct_rubius.jpg",
+      "directName":"Getusitas! Aca estamos",
+      "grupo":"Juegos"
+    },
+    {
+      "name": "DalasReview",
+      "category": "Just Chatting",
+      "image":"assets/img/icon_dalasreview.png",
+      "descripcion": "¡Hola pambisitos!",
+      "banner":"assets/img/head_default.png",
+      "subs":1,
+      "isLive": true,
+      "users":0,
+      "direct":"assets/img/direct_dalasreview.jpg",
+      "directName":"Funando a nimu",
+      "grupo":"IRL"
+    },
+    {
+      "name": "Folagor",
+      "category": "Just Chatting",
+      "image":"assets/img/icon_folagor.jpg",
+      "descripcion": "¡Hola criaturitas del señooor!",
+      "banner":"assets/img/head_default.png",
+      "subs":1,
+      "isLive": true,
+      "users":0,
+      "direct":"assets/img/direct_folagor.jpg",
+      "directName":"Me sale una pelota",
+      "grupo":"Musica"
     }
   ]
   
